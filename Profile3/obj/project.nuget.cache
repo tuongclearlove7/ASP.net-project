@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xf7ANla248IjSdj4Jl8xYbWWkKmgSb5AC8OyKu9o8kSddc4Ky2UmIBptJQkHbpVgkG1WlVyg+Rn3hd3nE688Qw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\Profile3\\Profile3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\clearlove7\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\6.0.13\\microsoft.aspnetcore.authentication.negotiate.6.0.13.nupkg.sha512",
+    "C:\\Users\\clearlove7\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.13\\microsoft.aspnetcore.connections.abstractions.6.0.13.nupkg.sha512",
+    "C:\\Users\\clearlove7\\.nuget\\packages\\microsoft.extensions.features\\6.0.13\\microsoft.extensions.features.6.0.13.nupkg.sha512",
+    "C:\\Users\\clearlove7\\.nuget\\packages\\system.directoryservices.protocols\\6.0.1\\system.directoryservices.protocols.6.0.1.nupkg.sha512",
+    "C:\\Users\\clearlove7\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
