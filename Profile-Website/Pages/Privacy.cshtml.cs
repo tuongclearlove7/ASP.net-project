@@ -14,6 +14,10 @@ namespace Profile_Website.Pages
 
         public void OnGet()
         {
+
+            Console.WriteLine("app run");
+
+
         }
     }
 }
