@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Documentation page";
+}
+
+<div class="container">
+    <h2 style="color: red;">@ViewData["Title"]</h2>
+        <br></br>
+            <b>Document</b>
+                <u>
+                    @ViewBag.documentation.text
+                    </u>
+                         <div class="text-center" >
+                             <div class="text-content">
+                         <u>
+                     <b>@ViewData["number"] Image</b>
+                 </u>
+                  <br>
+                    </br>
+                        @for (int i = 0; i < (int)@ViewData["number"]!; i++) {
+                            //ViewData is 5 number
+                                <img class="tiger" src="@ViewBag.documentation.image">
+                         }
+                        </div>
+                        </div>
+                        </div>
+                    <br></br>
+                 <br></br>
+                <br></br>
+            <br></br>
+        <br></br>
+        <br></br>
+    <br></br>
+<br></br>
+    <div class="text-center">
+        <b>
+            Learn about
+        <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
+    </b>
+</div>
+
+
+
+
+
+

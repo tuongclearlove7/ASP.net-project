@@ -1,5 +1,4 @@
 ﻿
-
 const static_privateData = (
 
     function () {
@@ -24,14 +23,46 @@ const static_privateData = (
     }
 )();
 
+
+
+
 function app() {
 
     getKnowledge(renderKnowledge);
     handleCreateForm();
-
+    
 }
 
 app();
+
+function topDown() {
+
+   
+        let scrollPane = document.querySelector('.drop-down');
+
+        scrollPane.onclick = function () {
+
+        console.log("click");
+       
+
+    }
+}
+
+function scrollClick(click) {
+
+    let obj1 = {
+
+        top: click,
+        left: 0,
+        behavior: 'smooth'
+    }
+
+
+    window.scrollTo(obj1);
+    console.log("click");
+
+}
+
 
 function getKnowledge(call) {
 
@@ -58,9 +89,11 @@ function getKnowledge(call) {
             console.log(notification);
 
             return listKnowlegdeBlock.innerHTML = `
-                <h1 style="font-size:23px;">${error}</h1>
-                            <p>${notification}</p>
-        <div class="errImg"><img src="${link_imgErr1}" alt=""></div>`;
+            <div class= "">
+               <h1 style="font-size:23px;">${error}</h1>
+                  <p>${notification}</p>
+                 <div class="errImg"><img src="${link_imgErr1}" alt=""></div>
+            </div>`;
         })
 }
 

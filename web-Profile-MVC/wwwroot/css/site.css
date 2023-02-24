@@ -1,40 +1,53 @@
 html {
-  font-size: 14px;
+
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+  
+    html {
+
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+
+    margin-bottom: 60px;
 }
 
-.list_api{
-
+.list_api {
     position: relative;
-    left: 0px;
-    width: 40%;
-
+    display: block;
+    left: -50px;
+    top: 0px;
+    padding: 20px;
+    margin: 20px;
+    width: 17%;
 }
 
-#product{
-
+#product {
+    position: relative;
+    right: 17px;
     font-size: 15px;
-    color : red;
-
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    width: 100px;
+    white-space: nowrap;
+    color: red;
+    font-family: "Fredoka", serif;
 }
 .my-image{
 
 
-    width: 350px;
+    width: 300px;
 }
 
 
@@ -55,6 +68,8 @@ body {
 
 .nav-item {
 
+    position: relative;
+    top: -5px;
     background: white;
     padding: 5px 10px;
     margin: 0px 20px;
@@ -86,7 +101,89 @@ body {
 
 
 
-#linkf1:hover, #linkf2:hover{
+#linkf1:hover{
 
     text-decoration: underline;
+}
+
+.navbar-light .navbar-brand {
+
+    position: relative;
+    top: 3px;
+   
+}
+
+
+.navbar-nav {
+
+    text-align: center;
+    position: relative;
+    top: 9px;
+}
+
+.text-content {
+
+    position: relative;
+    top: 0px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+.drop-down {
+
+    position: fixed;
+    display: flex;
+    color: rgb(0 0 0 / 15%);
+    text-decoration: none;
+    right: 70px;
+    bottom: 125px;
+    height: 100px;
+    padding: 5px;
+    font-size: 85px;
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+}
+
+.drop-down:hover {
+
+    transform: rotate(360deg);
+    color: #616161;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .drop-down {
+        
+        display : none;
+    }
+}
+
+.deleteFeed {
+    position: relative;
+    transition: all 0.5s ease;
+    display: block;
+    left: 145px;
+    margin: 5px;
+    padding: 0px;
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: white;
+    color: #3e3e3e;
+    font-family: "Fredoka", serif;
+}
+
+.deleteFeed:hover {
+
+    color: snow;
+    background: #3e3e3e;
+    border: 2px solid snow;
+}
+
+.tiger{
+
+    width: 200px;
 }
