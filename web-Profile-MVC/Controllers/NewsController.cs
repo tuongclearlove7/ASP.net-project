@@ -31,9 +31,5 @@ namespace web_Profile_MVC.Controllers
 
             return View();
         }
-
-
-
-
     }
 }
