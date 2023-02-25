@@ -1,51 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
 <div class="text-center">
     <h1 style="color: red;" class="display-4">Welcome to home page</h1>
-</div>
-       
+      </div>
         <div class="list_api_error">
-    </div>
-    <div class="home-content">
-
-        @for (int i = 0; i < ViewBag.number.num_2; i++) {
-            <b>About</b>
-            <p>
-                @ViewBag.documentation.text
-
-            </p>           
-        }
-    <b>Product</b>
-    <p>
+          </div>
+            <div class="home-content">
+            @for (int i = 0; i < ViewBag.number.num_2; i++) {
+                <b>About</b>
+                  <p>@ViewBag.documentation.text</p>}
+                    <b>Product</b>
+                      <p>@ViewBag.documentation.text
+                        </p>
+                     <b>Documentation</b>
+                     <p>@ViewBag.documentation.text
+                     </p>
+                    <b>Example</b>
+                <p>@ViewBag.documentation.text
+                 </p>
+            <b>Error</b>
+        <p>
         @ViewBag.documentation.text
-
-    </p>
-    <b>Documentation</b>
-    <p>
-        @ViewBag.documentation.text
-
-    </p>
-    <b>Example</b>
-    <p>
-        @ViewBag.documentation.text
-
-    </p>
-    <b>Error</b>
-    <p>
-        @ViewBag.documentation.text
-
-    </p>
-</div>
-<div class="list_api">
-</div>
-    <br></br>
-    <br></br>
-
-<div class="text-center">
-    <b>
-        Learn about
+         </p>
+            </div>
+                <div class="list_api">
+                    </div>
+                        <br></br>
+                    <br></br>
+                <div class="text-center">
+            <b>Learn about
         <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
     </b>
 </div>
