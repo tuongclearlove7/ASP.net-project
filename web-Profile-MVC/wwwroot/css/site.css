@@ -22,24 +22,26 @@ body {
     margin-bottom: 60px;
 }
 
+
+
 .list_api {
     position: relative;
     display: block;
-    left: -50px;
+    right: 0px;
     top: 0px;
     padding: 20px;
-    margin: 20px;
-    width: 17%;
+    margin: auto;
+    width: 350px;
 }
 
 #product {
     position: relative;
-    right: 17px;
+    left: 10px;
     font-size: 15px;
     display: flex;
     padding: 20px;
     margin: auto;
-    width: 100px;
+    width: 100%;
     white-space: nowrap;
     color: red;
     font-family: "Fredoka", serif;
@@ -53,16 +55,22 @@ body {
 
 
 
-.list_api_error{
+.list_api_error {
 
-    position : relative;
-    top: 30px;
+    position: relative;
+    font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;
+    display: flex;
+    top: 10px;
+    left: 20px;
+    margin: auto;
+    padding: 20px;
+    width: 330px;
 }
 
 .errImg img{
 
 
-    width: 350px;
+    width: 250px;
 }
 
 
@@ -113,9 +121,31 @@ body {
    
 }
 
+.home-content {
+
+    font-family: ui-sans-serif;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 30px;
+    left: 0px;
+    top: 25px;
+    column-count: 3;
+    column-gap: 100px;
+    width: 100%;
+}
+
+.content-info {
+
+    font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;
+    font-size: 18px;
+}
+
 
 .navbar-nav {
-
     text-align: center;
     position: relative;
     top: 9px;
@@ -123,12 +153,22 @@ body {
 
 .text-content {
 
+    font-family: ui-sans-serif;
+    font-size: 18px; 
+}
+
+
+
+.image-content {
+
     position: relative;
+    display: block;
+    left: 0px;
     top: 0px;
-    margin: 20px auto;
+    margin: 20px px auto;
     padding: 20px;
     text-align: center;
-    width: 400px;
+    width: 100%;
 }
 
 .drop-down {
@@ -186,4 +226,9 @@ body {
 .tiger{
 
     width: 200px;
+}
+
+.text-muted {
+
+    font-family: ui-sans-serif;
 }

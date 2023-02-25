@@ -5,18 +5,18 @@
 <div class="container">
     <h2 style="color: red;">@ViewData["Title"]</h2>
         <br></br>
-            <b>Document</b>
+            <div class="text-content">
+                <b>Document</b>
                 <u>
                     @ViewBag.documentation.text
-                    </u>
-                         <div class="text-center" >
-                             <div class="text-content">
-                         <u>
-                     <b>@ViewData["number"] Image</b>
-                 </u>
-                  <br>
+                </u>
+                </div>
+                    <div class="text-center" >
+                             <div class="image-content">
+                     <b>@ViewBag.number.num_5 Image</b>
+                     <br>
                     </br>
-                        @for (int i = 0; i < (int)@ViewData["number"]!; i++) {
+                        @for (int i = 0; i < ViewBag.number.num_5; i++) {
                             //ViewData is 5 number
                                 <img class="tiger" src="@ViewBag.documentation.image">
                          }

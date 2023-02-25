@@ -5,30 +5,33 @@
 }
 
     <div class="container">
-
-        <div class="text-center">
-
             <h1 style="color: red;">@ViewData["Title"]</h1>
-            <br>
-            @ViewBag.Greeting
 
-        <address>
             <br>
-            <b>
-                Sản phẩm : 
-            </b>
-            @ViewBag.product.name<br>
-            <b>
-                Địa chỉ : 
-            </b>@ViewBag.product.address<br>
-            <b>
-                Quốc gia : 
-            </b>@ViewBag.product.city,
-            @ViewBag.product.nation
-            @ViewBag.product.postalCode
-        </address>
+            <div class="content-info">
 
-        </div>
+                 @ViewBag.Greeting
+                <div class="text-content">
+
+            <address>
+                <br>
+                <b>
+                    Sản phẩm :
+                </b>
+                @ViewBag.product.name<br>
+                <b>
+                    Địa chỉ :
+                </b>@ViewBag.product.address<br>
+                <b>
+                    Quốc gia :
+                </b>@ViewBag.product.city,
+                @ViewBag.product.nation
+                @ViewBag.product.postalCode
+            </address>
+                </div>
+              
+            </div>
+        
         </div>
         <br></br>
         <br></br>

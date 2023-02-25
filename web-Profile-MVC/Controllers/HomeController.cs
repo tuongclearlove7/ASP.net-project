@@ -36,6 +36,27 @@ namespace web_Profile_MVC.Controllers {
 
             };
 
+            ViewBag.documentation = new documentation()
+            {
+
+                image = "../css/image/error1.png",
+                text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
+
+            };
+
+            ViewBag.number = new number()
+            {
+
+                num_1 = 1,
+                num_2 = 2,
+                num_3 = 3,
+                num_4 = 4,
+                num_5 = 5,
+
+            };
+
+
+
             return View();
         }
 
@@ -67,6 +88,17 @@ namespace web_Profile_MVC.Controllers {
           
             };
 
+            ViewBag.number = new number()
+            {
+
+                num_1 = 1,
+                num_2 = 2,
+                num_3 = 3,
+                num_4 = 4,
+                num_5 = 5,
+
+            };
+
             return View();
         }
 
@@ -88,6 +120,17 @@ namespace web_Profile_MVC.Controllers {
                 fb = "Facebook",
                 git = "Github",
                 ins = "Instagram",
+
+            };
+
+            ViewBag.number = new number()
+            {
+
+                num_1 = 1,
+                num_2 = 2,
+                num_3 = 3,
+                num_4 = 4,
+                num_5 = 5,
 
             };
 
@@ -123,7 +166,16 @@ namespace web_Profile_MVC.Controllers {
             };
 
 
-            ViewData["number"] = 5;
+            ViewBag.number = new number()
+            {
+
+                num_1 = 1,
+                num_2 = 2,
+                num_3 = 3,
+                num_4 = 4,
+                num_5 = 5,
+
+            };
 
 
             return View();
