@@ -60,6 +60,8 @@ namespace web_Profile_MVC.Controllers {
             return View();
         }
 
+  
+
         public string Example(){
 
             return "This is the Example action method...";

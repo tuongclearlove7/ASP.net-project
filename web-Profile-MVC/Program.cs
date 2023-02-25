@@ -45,15 +45,32 @@ namespace web_Profile_MVC
 
             Console.WriteLine("_______________________________________________________");
 
-          
 
-            app.MapControllerRoute(
-                
-                name: "default",
-                pattern: "{controller=Home}/{action=homePage}/{id?}");
+            app.UseEndpoints(endpoints => {
+
+                endpoints.MapControllerRoute(
+
+                   name: "default",
+                   pattern: "{controller=Home}/{action=homePage}/{id?}"
+
+
+                );
+            });
+
+
+            app.UseEndpoints(endpoints => {
+
+                endpoints.MapControllerRoute(
+
+                   name: "default",
+                   pattern: "{controller=News}/{action=Index}/{id?}"
+
+
+                );
+            });
+
 
             app.Run();
-
 
             
         }
