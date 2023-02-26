@@ -1,43 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="text-center">
-    <h1 style="color: red;" class="display-4">Welcome to home page</h1>
-      </div>
-        <div class="list_api_error">
-          </div>
-            <div class="home-content">
-            @for (int i = 0; i < ViewBag.number.num_2; i++) {
+<div class="container">
+    <h1 class="display-4">Welcome to home page</h1>
+     <div class="list_api_error">
+       </div>
+         <div class="home-content">
+            @for (int i = 0; i < ViewBag.number.num_1; i++) {
                 <b>About</b>
-                  <p>@ViewBag.documentation.text</p>}
+                  <p>@ViewBag.documentation.text
+                    <img width="250px" height="200px" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac4c6c13-f47e-4ab9-b5ed-217c038882d5/dvkn1o-17f41555-d59b-466f-a227-6b648b9b8635.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FjNGM2YzEzLWY0N2UtNGFiOS1iNWVkLTIxN2MwMzg4ODJkNVwvZHZrbjFvLTE3ZjQxNTU1LWQ1OWItNDY2Zi1hMjI3LTZiNjQ4YjliODYzNS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.edicEDZoffglbRo5kYuzOPXA4nxvTNM4MJyzPShySLw"></img>
+                    </p>
+                     }
                     <b>Product</b>
                       <p>@ViewBag.documentation.text
+                        <img class="my-image" width="200px" height="200px" src="https://deaconn.net/static/home/whatis.jpg">
                         </p>
                      <b>Documentation</b>
                      <p>@ViewBag.documentation.text
+                        <img class="my-image" width="200px" height="200px" src="https://images.wsj.net/im-568211">
                      </p>
                     <b>Example</b>
                 <p>@ViewBag.documentation.text
-                 </p>
+                </p>
             <b>Error</b>
-        <p>
-        @ViewBag.documentation.text
-         </p>
+            <p>
+             @ViewBag.documentation.text
+              </p>
+              <div class="footer-content">
+                <b style="color:#e92a59; text-decoration: underline;">
+                 Learn about
+                 <a style="color:#ef0b6e;" href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
+                 </b>
+                  <div class="footer-icon">
+                  <a class="fa fa-facebook" href="https://www.facebook.com/Ytttuong1"></a>
+                  <a class="fa fa-github" href="https://github.com/tuongclearlove7"></a>
+                 <a class="fa fa-instagram" href="https://www.instagram.com/warkeryt/"></a>
+                </div>
+                </div>
             </div>
-                <div class="list_api">
-                    </div>
-                        <br></br>
-                    <br></br>
-                <div class="text-center">
-            <b>Learn about
-        <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
-    </b>
+        <div class="list_api">
+    </div>
 </div>
-           
-
-
-
-
 
 
 

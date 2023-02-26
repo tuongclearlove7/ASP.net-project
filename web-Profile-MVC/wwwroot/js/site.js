@@ -35,6 +35,22 @@ function app() {
 
 app();
 
+function music() {
+
+    var audio = new Audio("../css/image/anhkhongthathu.mp3")
+
+    audio.volume = 0.05;
+    audio.loop = true;
+
+  
+
+    console.log("clickk");
+
+    audio.play();
+    
+    
+}
+
 function topDown() {
 
    
@@ -89,10 +105,12 @@ function getKnowledge(call) {
             console.log(notification);
 
             return listKnowlegdeBlock.innerHTML = `
-            <div class= "">
+            <div class= "content-block">
                <h1 style="font-size:23px;">${error}</h1>
                   <p>${notification}</p>
                  <div class="errImg"><img src="${link_imgErr1}" alt=""></div>
+
+                 <p style="font-style: oblique;"></p>
             </div>`;
         })
 }
@@ -159,7 +177,7 @@ function renderKnowledge(myKnowledge) {
 
         return `<div class="knowlegdeItem_id_${knowledge.id}">
                 <h2 id="product">Product ${knowledge.id}</h2>
-                <p><img class="my-image" src="${knowledge.img}"></p>
+                <p><img width: 300px; class="my-image" src="${knowledge.img}"></p>
                 <button class="deleteFeed" onclick = "handleDeleteKnowlegde(${knowledge.id});">
                 xóa</button>
                 </div>

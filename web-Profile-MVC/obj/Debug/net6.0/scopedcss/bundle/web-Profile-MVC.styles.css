@@ -8,10 +8,6 @@ a.navbar-brand[b-bwpf0c1mkk] {
   word-break: break-all;
 }
 
-a[b-bwpf0c1mkk] {
-  color: #0077cc;
-}
-
 .btn-primary[b-bwpf0c1mkk] {
   color: #fff;
   background-color: #1b6ec2;
@@ -26,6 +22,7 @@ a[b-bwpf0c1mkk] {
 
 .border-top[b-bwpf0c1mkk] {
   border-top: 1px solid #e5e5e5;
+  width: 100%;
 }
 .border-bottom[b-bwpf0c1mkk] {
   border-bottom: 1px solid #e5e5e5;
