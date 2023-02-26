@@ -1,9 +1,9 @@
-namespace web_Profile_MVC
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
+namespace web_Profile_MVC {
+
+    public class Program {
+
+        public static void Main(string[] args) {
+
             var builder = WebApplication.CreateBuilder(args);
 
             Console.WriteLine(builder);//building app
@@ -21,7 +21,7 @@ namespace web_Profile_MVC
             Console.WriteLine("_______________________________________________________");
 
             // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment()){
+            if (!app.Environment.IsDevelopment()) {
 
                 app.UseExceptionHandler("/Home/Error");
                 
@@ -65,14 +65,11 @@ namespace web_Profile_MVC
                    name: "default",
                    pattern: "{controller=News}/{action=Index}/{id?}"
 
-
                 );
             });
 
-
             app.Run();
 
-            
         }
     }
 }
