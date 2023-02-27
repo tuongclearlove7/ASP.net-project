@@ -5,32 +5,36 @@
       "PackagePath": "staticwebassets\\web-Profile-MVC.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\anhkhongthathu.mp3",
-      "PackagePath": "staticwebassets\\css\\image\\anhkhongthathu.mp3"
-    },
-    {
-      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\cl7-nobg.png",
-      "PackagePath": "staticwebassets\\css\\image\\cl7-nobg.png"
-    },
-    {
-      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\clearlove7.png",
-      "PackagePath": "staticwebassets\\css\\image\\clearlove7.png"
-    },
-    {
-      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\error1.png",
-      "PackagePath": "staticwebassets\\css\\image\\error1.png"
-    },
-    {
-      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
     },
     {
       "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\image\\anhkhongthathu.mp3",
+      "PackagePath": "staticwebassets\\image\\anhkhongthathu.mp3"
+    },
+    {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\image\\cl7-nobg.png",
+      "PackagePath": "staticwebassets\\image\\cl7-nobg.png"
+    },
+    {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\image\\clearlove7.png",
+      "PackagePath": "staticwebassets\\image\\clearlove7.png"
+    },
+    {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\image\\error1.png",
+      "PackagePath": "staticwebassets\\image\\error1.png"
+    },
+    {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\home\\home.js",
+      "PackagePath": "staticwebassets\\js\\home\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\product\\product.js",
+      "PackagePath": "staticwebassets\\js\\product\\product.js"
     },
     {
       "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\lib\\bootstrap\\LICENSE",

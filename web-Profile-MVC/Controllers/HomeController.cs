@@ -2,6 +2,7 @@
 using Microsoft.VisualBasic;
 using System.Diagnostics;
 using System.Net;
+using System.Text.Json;
 using web_Profile_MVC.Models;
 
 namespace web_Profile_MVC.Controllers {
@@ -16,6 +17,12 @@ namespace web_Profile_MVC.Controllers {
         }
 
         public IActionResult homePage() {
+
+            string skill = "<p align='left'><a href='https://github.com/tuongclearlove7'><img height='180em' src='https://github-readme-stats-eight-theta.vercel.app/api?username=tuongclearlove7&show_icons=true&theme=algolia&include_all_commits=true&count_private=true'/><img height='180em' src='https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=tuongclearlove7&layout=compact&langs_count=8&theme=algolia'/></a></p>";
+
+            Console.WriteLine(skill);
+
+            ViewData[nameof(skill)] = skill;
 
             ViewBag.product = new product()
             {
@@ -33,13 +40,20 @@ namespace web_Profile_MVC.Controllers {
                 fb = "Facebook",
                 git = "Github",
                 ins = "Instagram",
+                id = "7",
+                name = " tuong tran",
+                firstname = "tran",
+                lastname = "tuong",
+                fullname = "Tran The Tuong",
+                nickname = "clearlove7",
+                email = "lol00sever@gmail.com"
 
             };
 
             ViewBag.documentation = new documentation()
             {
 
-                image = "../css/image/error1.png",
+                image = "../image/error1.png",
                 text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
 
             };
@@ -126,7 +140,13 @@ namespace web_Profile_MVC.Controllers {
                 fb = "Facebook",
                 git = "Github",
                 ins = "Instagram",
-          
+                id = "7",
+                name = " tuong tran",
+                firstname = "tran",
+                lastname = "tuong",
+                fullname = "Tran The Tuong",
+                nickname = "clearlove7",
+                email = "lol00sever@gmail.com"
             };
 
             ViewBag.number = new number()
@@ -139,6 +159,10 @@ namespace web_Profile_MVC.Controllers {
                 num_5 = 5,
 
             };
+
+            string json = JsonSerializer.Serialize(ViewBag.infomation);
+
+            ViewData["json"] = json;
 
             return View();
         }

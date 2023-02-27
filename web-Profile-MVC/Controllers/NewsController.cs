@@ -6,8 +6,11 @@ namespace web_Profile_MVC.Controllers
     public class NewsController : Controller
     {
         // GET: NewsController
-        public ActionResult Index()
+        public ActionResult Index(string id, string name)
         {
+
+            id = "7e5w3r0er";
+            name = "tuongclearlove7";
 
             ViewBag.product = new product()
             {
@@ -25,6 +28,13 @@ namespace web_Profile_MVC.Controllers
                 fb = "Facebook",
                 git = "Github",
                 ins = "Instagram",
+                id = id,
+                name = name,
+                firstname = "tran",
+                lastname = "tuong",
+                fullname = "Tran The Tuong",
+                nickname = "clearlove7",
+                email = "lol00sever@gmail.com"
 
             };
 

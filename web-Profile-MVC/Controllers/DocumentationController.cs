@@ -24,13 +24,20 @@ namespace web_Profile_MVC.Controllers
                 fb = "Facebook",
                 git = "Github",
                 ins = "Instagram",
+                id = "7",
+                name = " tuong tran",
+                firstname = "tran",
+                lastname = "tuong",
+                fullname = "Tran The Tuong",
+                nickname = "clearlove7",
+                email = "lol00sever@gmail.com"
 
             };
 
             ViewBag.documentation = new documentation()
             {
 
-                image = "../css/image/error1.png",
+                image = "../image/error1.png",
                 text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
 
             };

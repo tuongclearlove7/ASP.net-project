@@ -8,8 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\image\**" />
+    <Content Remove="wwwroot\css\image\**" />
+    <EmbeddedResource Remove="wwwroot\css\image\**" />
+    <None Remove="wwwroot\css\image\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\" />
-    <Folder Include="wwwroot\css\image\" />
+    <Folder Include="wwwroot\js\home\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -27,6 +27,13 @@ namespace web_Profile_MVC.Controllers
                 fb = "Facebook",
                 git = "Github",
                 ins = "Instagram",
+                id = "7",
+                name = " Tuong Tran",
+                firstname = "Tran",
+                lastname = "Tuong",
+                fullname = "Tran The Tuong",
+                nickname = "Clearlove7",
+                email = "lol00sever@gmail.com"
 
             };
 
