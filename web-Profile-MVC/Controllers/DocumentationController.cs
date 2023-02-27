@@ -3,12 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace web_Profile_MVC.Controllers
 {
-    public class NewsController : Controller
+    public class DocumentationController : Controller
     {
-        // GET: NewsController
+        // GET: DocumentationController
         public ActionResult Index()
         {
-
             ViewBag.product = new product()
             {
 
@@ -50,19 +49,19 @@ namespace web_Profile_MVC.Controllers
             return View();
         }
 
-        // GET: NewsController/Details/5
+        // GET: DocumentationController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: NewsController/Create
+        // GET: DocumentationController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: NewsController/Create
+        // POST: DocumentationController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -77,13 +76,13 @@ namespace web_Profile_MVC.Controllers
             }
         }
 
-        // GET: NewsController/Edit/5
+        // GET: DocumentationController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: NewsController/Edit/5
+        // POST: DocumentationController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -98,13 +97,13 @@ namespace web_Profile_MVC.Controllers
             }
         }
 
-        // GET: NewsController/Delete/5
+        // GET: DocumentationController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: NewsController/Delete/5
+        // POST: DocumentationController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

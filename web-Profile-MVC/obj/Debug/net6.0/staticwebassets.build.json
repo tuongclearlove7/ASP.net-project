@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ua+IvQ59XoEhGh4AKM1rylSVXRdLqfnaY4iQkQgCLbE=",
+  "Hash": "e1H3v66v9o7rCjy+T+huH2oWYvkXV9OgahwPwssD4QM=",
   "Source": "web-Profile-MVC",
   "BasePath": "_content/web-Profile-MVC",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\image\\anhkhongthathu.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\cl7-nobg.png",
+      "SourceId": "web-Profile-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\",
+      "BasePath": "_content/web-Profile-MVC",
+      "RelativePath": "css/image/cl7-nobg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\cl7-nobg.png"
+    },
+    {
+      "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\clearlove7.png",
+      "SourceId": "web-Profile-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\",
+      "BasePath": "_content/web-Profile-MVC",
+      "RelativePath": "css/image/clearlove7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\clearlove7.png"
     },
     {
       "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\image\\error1.png",

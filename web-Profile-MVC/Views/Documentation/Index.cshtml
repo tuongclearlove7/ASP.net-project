@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="container">
+    <h2 style="color: red;">Documentation page</h2>
+    <br></br>
+    <div class="text-content">
+        <b>Document</b>
+        <u>
+            @ViewBag.documentation.text
+        </u>
+    </div>
+    <div class="text-center">
+        <div class="image-content">
+            <b>@ViewBag.number.num_5 Image</b>
+            <br>
+            </br>
+            @for (int i = 0; i < ViewBag.number.num_5; i++)
+            {
+                //ViewData is 5 number
+                <img class="tiger" src="@ViewBag.documentation.image">
+            }
+        </div>
+    </div>
+</div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<div class="text-center">
+    <b>
+        Learn about
+        <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
+    </b>
+</div>

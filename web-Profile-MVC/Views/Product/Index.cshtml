@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="container">
+    <h1 style="color: red;">Product page</h1>
+    <br>
+    <div class="content-info">
+        @ViewBag.Greeting
+        <div class="text-content">
+
+            <address>
+                <br>
+                <b>
+                    Sản phẩm :
+                </b>
+                @ViewBag.product.name<br>
+                <b>
+                    Địa chỉ :
+                </b>@ViewBag.product.address<br>
+                <b>
+                    Quốc gia :
+                </b>@ViewBag.product.city,
+                @ViewBag.product.nation
+                @ViewBag.product.postalCode
+            </address>
+        </div>
+    </div>
+</div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<div class="text-center">
+    <b>
+        Learn about
+        <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
+    </b>
+</div>
+

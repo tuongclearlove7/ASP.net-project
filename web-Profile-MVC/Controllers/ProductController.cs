@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace web_Profile_MVC.Controllers
 {
-    public class NewsController : Controller
+    public class ProductController : Controller
     {
-        // GET: NewsController
+        // GET: ProductController
         public ActionResult Index()
         {
+
+            ViewBag.Greeting = "Hello  World! Chào mừng bạn đến với website của chúng tôi ^^";
 
             ViewBag.product = new product()
             {
@@ -28,14 +30,6 @@ namespace web_Profile_MVC.Controllers
 
             };
 
-            ViewBag.documentation = new documentation()
-            {
-
-                image = "../css/image/error1.png",
-                text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
-
-            };
-
             ViewBag.number = new number()
             {
 
@@ -50,19 +44,19 @@ namespace web_Profile_MVC.Controllers
             return View();
         }
 
-        // GET: NewsController/Details/5
+        // GET: ProductController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: NewsController/Create
+        // GET: ProductController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: NewsController/Create
+        // POST: ProductController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -77,13 +71,13 @@ namespace web_Profile_MVC.Controllers
             }
         }
 
-        // GET: NewsController/Edit/5
+        // GET: ProductController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: NewsController/Edit/5
+        // POST: ProductController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -98,13 +92,13 @@ namespace web_Profile_MVC.Controllers
             }
         }
 
-        // GET: NewsController/Delete/5
+        // GET: ProductController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: NewsController/Delete/5
+        // POST: ProductController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

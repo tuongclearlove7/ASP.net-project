@@ -1,25 +1,8 @@
 ﻿
 @{
-    Layout = null;
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h1 style="color: red;">News page</h1>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>View</title>
-</head>
-<body>
-    <h1>
-
-        News page
-    </h1>
-
-    <p>this is my id : @ViewBag.infomation.id</p>
-    <p>this is my name is : @ViewBag.infomation.name</p>
-    @ViewData["json"]
-   
-
-</body>
-</html>
