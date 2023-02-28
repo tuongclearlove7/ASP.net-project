@@ -74,8 +74,8 @@ body {
     flex-wrap: wrap;
     position: relative;
     text-align: start;
-    /*box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
-    background-color: currentcolor;*/
+    box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
+    background-color: currentcolor;
     border-radius: 15px;
     font-size: 18px;
     line-height: 30px;
