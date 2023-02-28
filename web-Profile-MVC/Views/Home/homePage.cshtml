@@ -3,8 +3,8 @@
 }
 <div class="container">
     <h1 class="display-4">Welcome to home page</h1>
-     <div class="list_api_error">
-       </div>
+    <div class="list_api_error">
+    </div>
          <div class="home-content">
             @for (int i = 0; i < ViewBag.number.num_1; i++) {
                 <b>About</b>
@@ -14,10 +14,10 @@
                      }
                       <b>skill</b>
                       <p>@ViewBag.documentation.text
-                       <a href='https://github.com/tuongclearlove7'>
+                       
                        <img class="my-image" src='https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=tuongclearlove7&layout=compact&langs_count=8&theme=algolia' />
                        <img class="my-image" src='https://github-readme-stats-eight-theta.vercel.app/api?username=tuongclearlove7&show_icons=true&theme=algolia&include_all_commits=true&count_private=true' />
-                       </a>
+                      
                         </p>
                          <b>Product</b>
                         <p>@ViewBag.documentation.text
@@ -34,15 +34,18 @@
             <p>
              @ViewBag.documentation.text
               </p>
-              <div class="footer-content">
-                <b style="color:#e92a59; text-decoration: none;">
-                 Learn about
-                 <a style="color:#ef0b6e;" href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
-                 </b>
+                <div class="footer-content">
+                    <b style="color:aqua; text-decoration: none;">
+                        Learn about
+                        <a style="color:white;" href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
+                    </b>
                 </div>
+
+        
             </div>
-        <div class="list_api">
-    </div>
+            <div class="list_api">
+        </div>
+       
 </div>
 
 

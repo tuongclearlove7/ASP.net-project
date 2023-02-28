@@ -19,9 +19,9 @@ html {
 }
 
 body {
+
     margin-bottom: 100px;
-   
-    
+    background-color: white;
 }
 
 .navbar-toggler {
@@ -42,6 +42,11 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.nav-link:hover{
+
+    text-decoration: underline;
 }
 
 .display-4 {
@@ -69,20 +74,23 @@ body {
     flex-wrap: wrap;
     position: relative;
     text-align: start;
+    /*box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
+    background-color: currentcolor;*/
+    border-radius: 15px;
     font-size: 18px;
     line-height: 30px;
     left: 0px;
-    bottom: 55px;
+    top: 0px;
     column-count: 3;
     column-gap: 100px;
-    width: 60%;
-    margin: auto;
+    width: 31%;
+    margin: 0px;
     padding: 20px;
 }
 
 #product {
     position: relative;
-    right: 20px;
+    left: 10px;
     font-size: 15px;
     display: flex;
     padding: 20px;
@@ -92,12 +100,11 @@ body {
     color: red;
     font-family: "Fredoka", serif;
 }
-.my-image{
-
+.my-image {
 
     width: 300px;
     border-radius: 10px;
-    border: 1px solid black;
+    
 }
 
 
@@ -166,28 +173,30 @@ body {
 }
 
 .home-content {
-
-    font-family: ui-sans-serif;
-    font-style: oblique;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    float: right;
-    position: relative;
     text-align: start;
+    float: right;
+    font-family: ui-sans-serif;
+    font-style: oblique;
+    box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
+    color: white;
+    background-color: #212129;
+    border-radius: 20px;
     font-size: 18px;
     line-height: 30px;
-    right: 160px;
-    bottom: 65px;
+    right: 0px;
     column-count: 3;
     column-gap: 100px;
-    width: 40%;
-    margin: auto;
+    width: 700px;
     padding: 20px;
+    bottom: 20px;
 }
 
 
 .home-content b {
-    color: #fb5151;
+    color: aqua;
     height: 50px;
     line-height: 50px;
 }
@@ -258,20 +267,27 @@ body {
     color: #616161;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px){
 
     .home-content {
+
         position: relative;
-        width: 50%;
+        width: 100%;
         right: 0px;
     }
 
     .list_api {
-        width: 50%;
+
+        width: 339px;
+        margin: 0 auto;
     }
+
+    
 }
 
-@media only screen and (max-width: 991.2px){
+@media only screen and (max-width: 991.2px) and (min-width: 991.2px){
+
+  
 
     .drop-down {
         display: none;
@@ -384,11 +400,12 @@ body {
 }
 
 .footer-content {
+
     text-align: center;
     white-space: nowrap;
     position: relative;
-    margin: 50px auto;
     padding: 0px;
+    
 }
 
 footer {
