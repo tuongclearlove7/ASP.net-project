@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\web-Profile-MVC.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\about.css",
+      "PackagePath": "staticwebassets\\css\\about.css"
+    },
+    {
       "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },
@@ -87,6 +91,10 @@
     {
       "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\image\\error1.png",
       "PackagePath": "staticwebassets\\image\\error1.png"
+    },
+    {
+      "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\about\\about.js",
+      "PackagePath": "staticwebassets\\js\\about\\about.js"
     },
     {
       "Id": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\home\\home.js",

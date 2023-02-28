@@ -4,38 +4,37 @@
 }
 
 
-<h1 style="color: red;">@ViewData["Title"]</h1>
+<h1 class="display-4">@ViewData["Title"]</h1>
 
+
+<div class="block-content">
+    <p>Use this page to detail your site's privacy policy.</p>
+
+    <p>@ViewData["json"]</p>
+
+    <b>
+        @ViewData["Message"]
+    </b>
     <br>
+    <br />
 
-    <div class="text-content">
-         <b>
-            @ViewData["Message"]
-         </b>
-         <br><br/>
-         <p>Use this page to detail your site's privacy policy.</p>
-         <div >
-            <h4>My Info</h4>
-            <p>id : @ViewBag.infomation.id</p>
-            <p>name : @ViewBag.infomation.name</p>
-            <p>firstname : @ViewBag.infomation.firstname</p>
-            <p>lastname : @ViewBag.infomation.lastname</p>
-            <p>fullname : @ViewBag.infomation.fullname</p>
-            <p>nickname : @ViewBag.infomation.nickname</p>
-            <p>email : @ViewBag.infomation.email</p>
-            <p>@ViewData["json"]</p>
-         </div>
-        </div>
+    Learn about
+    <a style="color: white;" href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
 
-            @for (int i = 0; i < 3; i++)
-            {
-                <br></br>
 
-            }
-            <b>
-            Learn about
-            <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
-        </b>
+</div>
+
+   <div class="api-about">
+
+
+
+
+   </div>
+
+
+
+
+
        
        
  

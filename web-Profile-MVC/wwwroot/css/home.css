@@ -76,17 +76,18 @@ body {
     text-align: start;
     box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
     background-color: currentcolor;
-    border-radius: 15px;
-    font-size: 18px;
-    line-height: 30px;
-    left: 0px;
-    top: 0px;
     column-count: 3;
     column-gap: 100px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 20px;
+    left: 0px;
+    top: 0px;
     width: 31%;
     margin: 0px;
     margin-bottom: 100px;
     padding: 20px;
+    padding-bottom: 20px;
 }
 
 #product {
@@ -111,8 +112,7 @@ body {
 
 
 
-.list_api_error {
-
+.home_api_error {
     position: relative;
     float: left;
     font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;
@@ -298,7 +298,7 @@ body {
 
 @media only screen and (max-width: 1200px){
 
-    .list_api_error {
+    .home_api_error {
         position: relative;
         display: block;
         float: none;
@@ -392,16 +392,17 @@ body {
     position: relative;
     transition: all 0.5s ease;
     display: block;
+    background: white;
+    color: #3e3e3e;
+    font-family: "Fredoka", serif;
     left: 0px;
     margin: auto;
+    top: 20px;
     padding: 0px;
     width: 75px;
     height: 30px;
     border-radius: 10px;
     border: 2px solid black;
-    background: white;
-    color: #3e3e3e;
-    font-family: "Fredoka", serif;
 }
 
 .deleteFeed:hover {

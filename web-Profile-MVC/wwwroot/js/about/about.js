@@ -1,5 +1,5 @@
 ﻿
-const static_privateData = (
+const privateData = (
 
     function () {
 
@@ -7,7 +7,7 @@ const static_privateData = (
 
         const apiData = [{
 
-            list_knowledge: 'http://localhost:3000/home',
+            list_knowledge: 'http://localhost:3000/about',
 
             createbtn: document.getElementById('newCreate'),
 
@@ -25,74 +25,19 @@ const static_privateData = (
 
 
 
+function aboutApp() {
 
-function homeApp() {
-
-    getHomeItem(renderHomeItem);
-
-    getHomeItem(function (api) {
-
-        
-        console.log(api)
-    });
-
+    getAboutItem(renderAboutItem);
     handleCreateForm();
 
 }
 
-homeApp();
+aboutApp();
 
 
+function getAboutItem(call) {
 
-
-function music() {
-
-    var audio = new Audio("../image/anhkhongthathu.mp3")
-
-    audio.volume = 0.05;
-    audio.loop = true;
-
-  
-
-    console.log("clickk");
-
-    audio.play();
-    
-    
-}
-
-function topDown() {
-
-   
-        let scrollPane = document.querySelector('.drop-down');
-
-        scrollPane.onclick = function () {
-
-        console.log("click");
-       
-
-    }
-}
-
-function scrollClick(click) {
-
-    let obj1 = {
-
-        top: click,
-        left: 0,
-        behavior: 'smooth'
-    }
-
-
-    window.scrollTo(obj1);
-    console.log("click");
-
-}
-
-
-function getHomeItem(call) {
-
-    fetch(static_privateData.get(0).list_knowledge)
+    fetch(privateData.get(0).list_knowledge)
 
 
         .then(function (response) {
@@ -104,7 +49,7 @@ function getHomeItem(call) {
 
         .then(call).catch(function (error) {
 
-            var listKnowlegdeBlock = document.querySelector(".home_api_error");
+            var listKnowlegdeBlock = document.querySelector(".about_api_error");
 
             let notification = "Hệ thống FAKE API đã tắt!!!";
 
@@ -139,7 +84,7 @@ function errorMessage(message) {
 
     }).catch(function (err) {
 
-        let notification = document.querySelector('.home_api_error');
+        let notification = document.querySelector('.about_api_error');
 
         notification.innerHTML = `<p>${err}</p>`
 
@@ -162,7 +107,7 @@ function createFeed(data, call) {
         body: JSON.stringify(data),
     }
 
-    fetch(static_privateData.get(0).list_knowledge, option)
+    fetch(privateData.get(0).list_knowledge, option)
 
         .then(function (response) {
 
@@ -177,19 +122,26 @@ function createFeed(data, call) {
         });
 }
 
-function renderHomeItem(myKnowledge) {
+function renderAboutItem(myKnowledge) {
 
-    var listKnowlegdeBlock = document.querySelector(".list_api");
+    var listKnowlegdeBlock = document.querySelector(".api-about");
 
 
     var html = myKnowledge.map((knowledge) => {
 
 
         return `<div class="knowlegdeItem_id_${knowledge.id}">
-                <h2 id="product">Item ${knowledge.id}</h2>
-                <p><img width: 300px; class="my-image" src="${knowledge.img}"></p>
-                <h2 style="color: white;font-size: 15px;word-break: break-word;">${knowledge.text}</h2>
-                <button class="deleteFeed" onclick = "handleDeleteHomeItem(${knowledge.id});">
+                
+                <h4 class="my-info">My Info</h4>
+                <p><img width: 300px; class="image-about" src="${knowledge.img}"></p>
+                <h1 id="info-id">id : @Viewbag.infomation.id</h1>
+                <h1 id="info-id">name : @Viewbag.infomation.name</h1>
+                <h1 id="info-id">firstname : @Viewbag.infomation.firstname</h1>
+                <h1 id="info-id">lastname : @Viewbag.infomation.lastname</h1>
+                <h1 id="info-id">fullname : @Viewbag.infomation.fullname</h1>
+                <h1 id="info-id">nickname : @Viewbag.infomation.nickname</h1>
+                <h1 id="info-id">email : @Viewbag.infomation.email</h1>
+                <button class="delete-about" onclick = "handleDeleteAboutItem(${knowledge.id});">
                 xóa</button>
                 </div>
                 <br>`;
@@ -217,7 +169,7 @@ function handleCreateForm() {
 }
 
 
-function handleDeleteHomeItem(id) {
+function handleDeleteAboutItem(id) {
 
     var option = {
 
@@ -228,7 +180,7 @@ function handleDeleteHomeItem(id) {
         },
     }
 
-    fetch(static_privateData.get(0).list_knowledge + "/" + id, option)
+    fetch(privateData.get(0).list_knowledge + "/" + id, option)
 
         .then(function (response) {
 
@@ -246,11 +198,3 @@ function handleDeleteHomeItem(id) {
 
     console.log(id);
 }
-
-
-
-
-
-
-
-

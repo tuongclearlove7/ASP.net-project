@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EdAa/Irq54k8TT81F0czIS/JAekWzztJtzXlZEhNnwA=",
+  "Hash": "Sn872Tmd4s69l/UmYZxW3X9IPmqOgmmzxBRi3NDS6d8=",
   "Source": "web-Profile-MVC",
   "BasePath": "_content/web-Profile-MVC",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\web-Profile-MVC.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\about.css",
+      "SourceId": "web-Profile-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\",
+      "BasePath": "_content/web-Profile-MVC",
+      "RelativePath": "css/about.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\about.css"
     },
     {
       "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\home.css",
@@ -406,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\error1.png"
+    },
+    {
+      "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\about\\about.js",
+      "SourceId": "web-Profile-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\",
+      "BasePath": "_content/web-Profile-MVC",
+      "RelativePath": "js/about/about.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\about\\about.js"
     },
     {
       "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\js\\home\\home.js",

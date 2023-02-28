@@ -1,0 +1,142 @@
+﻿
+
+
+
+.api-about {
+    font-family: ui-sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: start;
+    background-image: url(https://miro.medium.com/max/1280/1*C7Z3JYA_yScejWcK99ZfGQ.gif);
+    background-size: 500px 515px;
+    box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
+    color: white;
+    column-count: 3;
+    column-gap: 100px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 20px;
+    left: 0px;
+    top: 50px;
+    width: 400px;
+    margin: 0px;
+    margin-bottom: 100px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+}
+
+
+.image-about {
+    position: relative;
+    box-shadow: 0 0 0 5px rgb(222 222 222 / 50%);
+    border-radius: 50%;
+    margin: 0px 120px;
+    width: 120px;
+    left: 0px;
+    top: 10px;
+}
+
+.delete-about {
+    position: relative;
+    transition: all 0.5s ease;
+    display: block;
+    background: white;
+    color: #3e3e3e;
+    font-family: "Fredoka", serif;
+    margin: auto;
+    margin-top: 35px;
+    top: 15px;
+    padding: 0px;
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+    .delete-about:hover {
+        transition: all 1s ease;
+        color: snow;
+        background: #3e3e3e;
+        border: 2px solid snow;
+    }
+
+.my-info {
+    
+    font-size: 20px;
+    font-family: "Fredoka", serif;
+    font-style: italic;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    margin: auto;
+    width: 70px;
+}
+
+#info-id {
+    position: relative;
+    font-family: "Fredoka", serif;
+    font-style: italic;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 15px;
+    margin: auto;
+    width: 100%;
+    top: 20px;
+    line-height: 23px;
+}
+
+.block-content {
+    position: relative;
+    text-align: start;
+    float: right;
+    font-family: ui-sans-serif;
+    font-style: oblique;
+    background-color: #1f2326;
+    color: aqua;
+    border-radius: 20px;
+    font-size: 18px;
+    right: 0px;
+    width: 700px;
+    padding: 20px;
+    margin-bottom: 100px;
+    top: 50px;
+}
+
+
+
+@media only screen and (max-width: 1285.60px) {
+
+   .block-content{
+
+       width: 600px;
+   }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .block-content {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        right: 0px;
+        top: 0px;
+    }
+
+    .api-about {
+
+        width: 400px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+
+    .display-4{
+
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+}
