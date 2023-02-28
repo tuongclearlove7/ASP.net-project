@@ -57,9 +57,9 @@ body {
     line-height: 1.2;
     font-family: unset;
     white-space: nowrap;
-    width: 305px;
+    width: 345px;
     margin-top: 50px;
-    color: coral;
+    color: #212129;
 }
 
 .display-4:hover {
@@ -85,12 +85,13 @@ body {
     column-gap: 100px;
     width: 31%;
     margin: 0px;
+    margin-bottom: 100px;
     padding: 20px;
 }
 
 #product {
     position: relative;
-    left: 10px;
+    right: 15px;
     font-size: 15px;
     display: flex;
     padding: 20px;
@@ -191,6 +192,7 @@ body {
     column-gap: 100px;
     width: 700px;
     padding: 20px;
+    margin-bottom: 100px;
     bottom: 20px;
 }
 
@@ -267,19 +269,57 @@ body {
     color: #616161;
 }
 
+@media only screen and (min-width: 1285.60px) {
+
+    .display-4{
+
+        margin-left: 20px;
+    }
+    .my-image {
+        width: 300px;
+        border-radius: 10px;
+        margin-left: 27px;
+    }
+}
+
+
+@media only screen and (max-width: 1285.60px) {
+
+    .display-4 {
+        margin-left: 0px;
+    }
+
+    .my-image {
+        width: 300px;
+        border-radius: 10px;
+        margin-left: auto;
+    }
+}
+
 @media only screen and (max-width: 1200px){
+
+    .list_api_error {
+        position: relative;
+        display: block;
+        float: none;
+        margin: auto;
+        padding: 20px;
+        text-align: start;
+    }
 
     .home-content {
 
         position: relative;
+        margin: 50px auto;
         width: 100%;
         right: 0px;
+        top: 0px;
     }
 
     .list_api {
 
         width: 339px;
-        margin: 0 auto;
+        margin: 50px auto;
     }
 
     
@@ -299,13 +339,7 @@ body {
         padding: 30px;
     }
 
-    .list_api_error {
-        position: relative;
-        display: block;
-        float: none;
-        margin: auto;
-        text-align: start;
-    }
+    
 
     
 }
@@ -313,6 +347,11 @@ body {
 
 
 @media only screen and (max-width: 990px) {
+
+    .drop-down{
+
+        display: none;
+    }
 
     .footer-content {
         display: none;
@@ -326,9 +365,16 @@ body {
     }
 }
 
+@media only screen (max-width: 600px) {
+    .my-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @media only screen (max-width: 400px){
 
-
+   
     .list_api {
         
         

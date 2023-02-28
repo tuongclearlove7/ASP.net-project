@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\css\image\**" />
-    <Content Remove="wwwroot\css\image\**" />
-    <EmbeddedResource Remove="wwwroot\css\image\**" />
-    <None Remove="wwwroot\css\image\**" />
+    <Compile Remove="wwwroot\image\css\image\**" />
+    <Content Remove="wwwroot\image\css\image\**" />
+    <EmbeddedResource Remove="wwwroot\image\css\image\**" />
+    <None Remove="wwwroot\image\css\image\**" />
   </ItemGroup>
 
   <ItemGroup>
