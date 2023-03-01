@@ -186,9 +186,9 @@ function renderHomeItem(myAPI) {
 
 
         return `<div class="knowlegdeItem_id_${api.id}">
-                <h2 id="product">Item ${api.id}</h2>
-                <p><img width: 300px; class="my-image" src="${api.img}"></p>
-                <h2 style="color: white;font-size: 15px;word-break: break-word;">${api.text}</h2>
+                <h2 id="iTem">Framework ${api.id}</h2>
+                <p class="animate_img"><img width: 300px; class="my-image" src="${api.img}"></p>
+                <h2 class="animate_text" style="color: white;font-size: 15px;word-break: break-word;">${api.text}</h2>
                 <button class="deleteFeed" onclick = "handleDeleteHomeItem(${api.id});">
                 xóa</button>
                 </div>

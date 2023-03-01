@@ -134,13 +134,13 @@ function renderAboutItem(myAPI) {
                 
                 <h4 class="my-info">My Info</h4>
                 <p><img width: 300px; class="image-about" src="${api.img}"></p>
-                <h1 id="info-id">id : @Viewbag.infomation.id</h1>
-                <h1 id="info-id">name : @Viewbag.infomation.name</h1>
-                <h1 id="info-id">firstname : @Viewbag.infomation.firstname</h1>
-                <h1 id="info-id">lastname : @Viewbag.infomation.lastname</h1>
-                <h1 id="info-id">fullname : @Viewbag.infomation.fullname</h1>
-                <h1 id="info-id">nickname : @Viewbag.infomation.nickname</h1>
-                <h1 id="info-id">email : @Viewbag.infomation.email</h1>
+                <h1 id="info-id">id : ${api.ID}</h1>
+                <h1 id="info-id">name :  ${api.name}</h1>
+                <h1 id="info-id">firstname :  ${api.firstname}</h1>
+                <h1 id="info-id">lastname :  ${api.lastname}</h1>
+                <h1 id="info-id">fullname :  ${api.fullname}</h1>
+                <h1 id="info-id">nickname :  ${api.nickname}</h1>
+                <h1 id="info-id">email :  ${api.email}</h1>
                 <button class="delete-about" onclick = "handleDeleteAboutItem(${api.id});">
                 xóa</button>
                 </div>

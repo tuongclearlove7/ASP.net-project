@@ -7,6 +7,7 @@
        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
       <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/about.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/animation.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/web_Profile_MVC.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -52,8 +53,6 @@
             @RenderBody()
 
         </main>
-
-
         <div class="scroll-pane-down-top">
 
             <a class="drop-down" href="javascript:void(0);" onclick="scrollClick(1000000);">
@@ -64,7 +63,7 @@
     </div>
         <footer class="border-top footer text-muted">
             <div class="container">
-    &copy; 2023 - Profile - 
+    <i style="color: white;">&copy; 2023 - Profile - </i>
     <a id="linkf1" asp-area="" asp-controller="" asp-action="About">Contact</a> -
     <a id="linkf1" asp-area="" asp-controller="Home" asp-action="">Info 👉</a> -
     <a id="linkf1" href="https://www.facebook.com/Ytttuong1">@ViewBag.infomation.fb

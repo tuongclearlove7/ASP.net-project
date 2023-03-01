@@ -12,16 +12,15 @@ html {
 }
 
 html {
-
     position: relative;
     min-height: 100%;
-
+    
 }
 
 body {
 
     margin-bottom: 100px;
-    background-color: white;
+    background-color: currentColor;
 }
 
 .navbar-toggler {
@@ -59,7 +58,7 @@ body {
     white-space: nowrap;
     width: 345px;
     margin-top: 50px;
-    color: #212129;
+    color: white;
 }
 
 .display-4:hover {
@@ -87,10 +86,11 @@ body {
     margin: 0px;
     margin-bottom: 100px;
     padding: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    animation: fadeIn 1.5s ease-in;
 }
 
-#product {
+#iTem {
     position: relative;
     right: 15px;
     font-size: 15px;
@@ -99,24 +99,43 @@ body {
     margin: auto;
     width: 100%;
     white-space: nowrap;
-    color: red;
+    color: aqua;
     font-family: "Fredoka", serif;
+    font-style: normal;
+    animation: itemLeft 2s;
 }
-.my-image {
 
+.animate_img {
+
+    position: relative;
+    animation: dsLeft 2s;
+}
+
+.animate_text {
+
+    position :relative;
+    animation: dsLeft 2s;
+}
+
+.my-image {
     width: 300px;
     border-radius: 10px;
-    
+    transition: all 1s ease;
+    box-shadow: 0 20px 50px black;
 }
 
-
-
+.my-image:hover {
+    transition: all 1s ease;
+    width: 310px;
+    margin-left: 23px;
+}
 
 .home_api_error {
     position: relative;
     float: left;
     font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;
     display: flex;
+    color: aliceblue;
     top: 10px;
     left: 10px;
     margin: auto;
@@ -194,13 +213,23 @@ body {
     padding: 20px;
     margin-bottom: 100px;
     bottom: 20px;
+    animation: fadeIn 1s ease-in;
 }
 
 
 .home-content b {
+    position: relative;
+    animation: titlebottom 2s;
     color: aqua;
     height: 50px;
     line-height: 50px;
+}
+
+.home-content p {
+
+    position: relative;
+    animation: titlebottom 2s;
+  
 }
 
 .text-center b {
@@ -280,6 +309,8 @@ body {
         border-radius: 10px;
         margin-left: 27px;
     }
+
+   
 }
 
 
@@ -293,6 +324,12 @@ body {
         width: 300px;
         border-radius: 10px;
         margin-left: auto;
+    }
+
+    .my-image:hover {
+
+        width: 300px;
+        margin-left: 0px;
     }
 }
 
@@ -322,6 +359,17 @@ body {
         margin: 50px auto;
     }
 
+    .home-content p {
+        position: relative;
+        animation: titletop 2s;
+    }
+
+    .home-content b {
+        position: relative;
+        animation: titletop 2s;
+    }
+
+  
     
 }
 
@@ -403,6 +451,7 @@ body {
     height: 30px;
     border-radius: 10px;
     border: 2px solid black;
+    animation: dsLeft 2s;
 }
 
 .deleteFeed:hover {
@@ -422,10 +471,7 @@ body {
     line-height: 50px;
 }
 
-    .footer-icon a:hover {
-        transition: all 1s ease;
-        color: black;
-    }
+
 
 
 .tiger {
@@ -437,7 +483,7 @@ body {
 }
 
 #linkf1 {
-    color: #ef0b6e;
+    color: aqua;
     text-decoration: none;
 }
 

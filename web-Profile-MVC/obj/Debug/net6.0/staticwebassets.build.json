@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sn872Tmd4s69l/UmYZxW3X9IPmqOgmmzxBRi3NDS6d8=",
+  "Hash": "0hW00A23CREIriZlCRA3XGlGn9dRYgDWIBpT4gEDBFY=",
   "Source": "web-Profile-MVC",
   "BasePath": "_content/web-Profile-MVC",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\about.css"
+    },
+    {
+      "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\animation.css",
+      "SourceId": "web-Profile-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\",
+      "BasePath": "_content/web-Profile-MVC",
+      "RelativePath": "css/animation.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\animation.css"
     },
     {
       "Identity": "C:\\Users\\clearlove7\\Documents\\GitHub\\ASP.net-project\\web-Profile-MVC\\wwwroot\\css\\home.css",

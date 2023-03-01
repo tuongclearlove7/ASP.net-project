@@ -12,6 +12,7 @@
     background-size: 500px 515px;
     box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
     color: white;
+    animation: fadeIn 2s ease-in;
     column-count: 3;
     column-gap: 100px;
     border-radius: 15px;
@@ -32,6 +33,7 @@
     float: left;
     font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;
     display: flex;
+    color: aliceblue;
     top: 10px;
     left: 10px;
     margin: auto;
@@ -66,14 +68,16 @@
     height: 30px;
     border-radius: 10px;
     border: 2px solid black;
+    opacity: 0.5;
 }
 
-    .delete-about:hover {
-        transition: all 1s ease;
-        color: snow;
-        background: #3e3e3e;
-        border: 2px solid snow;
-    }
+.delete-about:hover {
+    opacity: 10;
+    transition: all 1s ease;
+    color: snow;
+    background: #3e3e3e;
+    border: 2px solid snow;
+}
 
 .my-info {
     
