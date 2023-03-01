@@ -7,7 +7,7 @@ const static_privateData = (
 
         const apiData = [{
 
-            list_knowledge: 'http://localhost:3000/home',
+            listItem: 'http://localhost:3000/home',
 
             createbtn: document.getElementById('newCreate'),
 
@@ -92,7 +92,7 @@ function scrollClick(click) {
 
 function getHomeItem(call) {
 
-    fetch(static_privateData.get(0).list_knowledge)
+    fetch(static_privateData.get(0).listItem)
 
 
         .then(function (response) {
@@ -104,7 +104,7 @@ function getHomeItem(call) {
 
         .then(call).catch(function (error) {
 
-            var listKnowlegdeBlock = document.querySelector(".home_api_error");
+            var listApiBlock = document.querySelector(".home_api_error");
 
             let notification = "Hệ thống FAKE API đã tắt!!!";
 
@@ -114,7 +114,7 @@ function getHomeItem(call) {
 
             console.log(notification);
 
-            return listKnowlegdeBlock.innerHTML = `
+            return listApiBlock.innerHTML = `
             <div class= "content-block">
                <h1 style="font-size:23px;">${error}</h1>
                   <p>${notification}</p>
@@ -162,7 +162,7 @@ function createFeed(data, call) {
         body: JSON.stringify(data),
     }
 
-    fetch(static_privateData.get(0).list_knowledge, option)
+    fetch(static_privateData.get(0).listItem, option)
 
         .then(function (response) {
 
@@ -177,26 +177,26 @@ function createFeed(data, call) {
         });
 }
 
-function renderHomeItem(myKnowledge) {
+function renderHomeItem(myAPI) {
 
-    var listKnowlegdeBlock = document.querySelector(".list_api");
-
-
-    var html = myKnowledge.map((knowledge) => {
+    var listApiBlock = document.querySelector(".list_api");
 
 
-        return `<div class="knowlegdeItem_id_${knowledge.id}">
-                <h2 id="product">Item ${knowledge.id}</h2>
-                <p><img width: 300px; class="my-image" src="${knowledge.img}"></p>
-                <h2 style="color: white;font-size: 15px;word-break: break-word;">${knowledge.text}</h2>
-                <button class="deleteFeed" onclick = "handleDeleteHomeItem(${knowledge.id});">
+    var html = myAPI.map((api) => {
+
+
+        return `<div class="knowlegdeItem_id_${api.id}">
+                <h2 id="product">Item ${api.id}</h2>
+                <p><img width: 300px; class="my-image" src="${api.img}"></p>
+                <h2 style="color: white;font-size: 15px;word-break: break-word;">${api.text}</h2>
+                <button class="deleteFeed" onclick = "handleDeleteHomeItem(${api.id});">
                 xóa</button>
                 </div>
                 <br>`;
 
     });
 
-    listKnowlegdeBlock.innerHTML = html.join('');
+    listApiBlock.innerHTML = html.join('');
 }
 
 function handleCreateForm() {
@@ -228,7 +228,7 @@ function handleDeleteHomeItem(id) {
         },
     }
 
-    fetch(static_privateData.get(0).list_knowledge + "/" + id, option)
+    fetch(static_privateData.get(0).listItem + "/" + id, option)
 
         .then(function (response) {
 
@@ -239,9 +239,9 @@ function handleDeleteHomeItem(id) {
 
         .then(function () {
 
-            let knowledgeItem = document.querySelector(".knowlegdeItem_id_" + id);
+            let ApiItem = document.querySelector(".knowlegdeItem_id_" + id);
 
-            knowledgeItem.remove();
+            ApiItem.remove();
         });
 
     console.log(id);

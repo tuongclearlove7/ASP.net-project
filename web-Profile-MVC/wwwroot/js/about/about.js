@@ -7,7 +7,7 @@ const privateData = (
 
         const apiData = [{
 
-            list_knowledge: 'http://localhost:3000/about',
+            listItem: 'http://localhost:3000/about',
 
             createbtn: document.getElementById('newCreate'),
 
@@ -37,7 +37,7 @@ aboutApp();
 
 function getAboutItem(call) {
 
-    fetch(privateData.get(0).list_knowledge)
+    fetch(privateData.get(0).listItem)
 
 
         .then(function (response) {
@@ -49,7 +49,7 @@ function getAboutItem(call) {
 
         .then(call).catch(function (error) {
 
-            var listKnowlegdeBlock = document.querySelector(".about_api_error");
+            var listItemBlock = document.querySelector(".about_api_error");
 
             let notification = "Hệ thống FAKE API đã tắt!!!";
 
@@ -59,7 +59,7 @@ function getAboutItem(call) {
 
             console.log(notification);
 
-            return listKnowlegdeBlock.innerHTML = `
+            return listItemBlock.innerHTML = `
             <div class= "content-block">
                <h1 style="font-size:23px;">${error}</h1>
                   <p>${notification}</p>
@@ -107,7 +107,7 @@ function createFeed(data, call) {
         body: JSON.stringify(data),
     }
 
-    fetch(privateData.get(0).list_knowledge, option)
+    fetch(privateData.get(0).listItem, option)
 
         .then(function (response) {
 
@@ -122,18 +122,18 @@ function createFeed(data, call) {
         });
 }
 
-function renderAboutItem(myKnowledge) {
+function renderAboutItem(myAPI) {
 
-    var listKnowlegdeBlock = document.querySelector(".api-about");
-
-
-    var html = myKnowledge.map((knowledge) => {
+    var listItemBlock = document.querySelector(".api-about");
 
 
-        return `<div class="knowlegdeItem_id_${knowledge.id}">
+    var html = myAPI.map((api) => {
+
+
+        return `<div class="knowlegdeItem_id_${api.id}">
                 
                 <h4 class="my-info">My Info</h4>
-                <p><img width: 300px; class="image-about" src="${knowledge.img}"></p>
+                <p><img width: 300px; class="image-about" src="${api.img}"></p>
                 <h1 id="info-id">id : @Viewbag.infomation.id</h1>
                 <h1 id="info-id">name : @Viewbag.infomation.name</h1>
                 <h1 id="info-id">firstname : @Viewbag.infomation.firstname</h1>
@@ -141,14 +141,14 @@ function renderAboutItem(myKnowledge) {
                 <h1 id="info-id">fullname : @Viewbag.infomation.fullname</h1>
                 <h1 id="info-id">nickname : @Viewbag.infomation.nickname</h1>
                 <h1 id="info-id">email : @Viewbag.infomation.email</h1>
-                <button class="delete-about" onclick = "handleDeleteAboutItem(${knowledge.id});">
+                <button class="delete-about" onclick = "handleDeleteAboutItem(${api.id});">
                 xóa</button>
                 </div>
                 <br>`;
 
     });
 
-    listKnowlegdeBlock.innerHTML = html.join('');
+    listItemBlock.innerHTML = html.join('');
 }
 
 function handleCreateForm() {
@@ -180,7 +180,7 @@ function handleDeleteAboutItem(id) {
         },
     }
 
-    fetch(privateData.get(0).list_knowledge + "/" + id, option)
+    fetch(privateData.get(0).listItem + "/" + id, option)
 
         .then(function (response) {
 
@@ -191,9 +191,9 @@ function handleDeleteAboutItem(id) {
 
         .then(function () {
 
-            let knowledgeItem = document.querySelector(".knowlegdeItem_id_" + id);
+            let apiItem = document.querySelector(".knowlegdeItem_id_" + id);
 
-            knowledgeItem.remove();
+            apiItem.remove();
         });
 
     console.log(id);
