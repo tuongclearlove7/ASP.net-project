@@ -1,0 +1,48 @@
+﻿@model web_profile_MVC_VS2019.Models.documentation
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <h1 class="display-4">Welcome to home page</h1>
+    <div class="home_api_error">
+    </div>
+         <div class="home-content">
+            @for (int i = 0; i < 2; i++) {
+                <b>About</b>
+                  <p>@Model.text
+                    <img width="250px" height="200px" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac4c6c13-f47e-4ab9-b5ed-217c038882d5/dvkn1o-17f41555-d59b-466f-a227-6b648b9b8635.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FjNGM2YzEzLWY0N2UtNGFiOS1iNWVkLTIxN2MwMzg4ODJkNVwvZHZrbjFvLTE3ZjQxNTU1LWQ1OWItNDY2Zi1hMjI3LTZiNjQ4YjliODYzNS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.edicEDZoffglbRo5kYuzOPXA4nxvTNM4MJyzPShySLw"></img>   
+                </p>
+                     }
+                      <b>skill</b>
+                      <p>@Model.text
+                       <img class="my-image" src='https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=tuongclearlove7&layout=compact&langs_count=8&theme=algolia' />
+                       <img width="330px" src='https://github-readme-stats-eight-theta.vercel.app/api?username=tuongclearlove7&show_icons=true&theme=algolia&include_all_commits=true&count_private=true' />
+                        </p>
+                         <b>Product</b>
+                        <p>@Model.text
+                        <img class="my-image" src="https://deaconn.net/static/home/whatis.jpg">
+                        </p>
+                       <b>Documentation</b>
+                       <p>@Model.text
+                        <img class="my-image"  src="https://images.wsj.net/im-568211">
+                     </p>
+                    <b>Example</b>
+                <p>@Model.text
+              </p>
+            <b>Error</b>
+            <p>@Model.text
+              </p>
+                <div class="footer-content">
+                    <b style="color:aqua; text-decoration: none;">
+                        Learn about
+                        <a style="color:white;" href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
+                    </b>
+                </div>
+            </div>
+           
+               <div class="list_api">
+        </div>
+          
+</div>
