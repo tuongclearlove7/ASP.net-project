@@ -1,15 +1,27 @@
 ﻿@model Web_Profile_VS2019.Models.documentation
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Documentation page";
 }
 
-<h1>
+<div class="container">
 
-    hello world
-</h1>
+    <h1 class="display-4">
+        @ViewBag.Title
 
-<p>
-    @Model.text
+    </h1>
 
-</p>
+    <p>
+        @Model.text
+        @ViewData["id"]
+        @ViewData["name"]
+    </p>
 
+</div>
+
+
+@for (int i = 0; i < 8; i++)
+{
+
+    <br></br>
+
+}

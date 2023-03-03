@@ -1,15 +1,61 @@
 ﻿@model Web_Profile_VS2019.Models.documentation
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "News page";
 }
 
-<h1>
+<div class="container">
 
-    hello world
-</h1>
+    <h1 class="display-4">
+        @ViewBag.Title
 
-<p>
-    @Model.text
+    </h1>
 
-</p>
+    <p>
+        @Model.text
 
+    </p>
+
+    <div style="color: red;">
+        <form action="/News">
+            <label for="id">id : </label>
+            <input type="text" name="id"><br><br>
+            <input type="submit" value="Submit"><br><br>
+        </form>
+    </div>
+    <table>
+
+        <tr>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>fullname</th>
+        </tr>
+        <tr>
+            @{
+                ViewBag.count = 0;
+
+                for (int i = 0; i < 5; i++){
+                    <tr>
+                        <td>@ViewData["firstname"]</td>
+                        <td>@ViewData["lastname"]</td>
+                        <td> @ViewData["fullname"]</td>
+                    </tr>
+
+                ViewBag.count++;
+
+                }
+            }
+            </tr>
+            <br>
+            <tr>
+                <td>count</td>
+                <td>@ViewBag.count</td>
+            </tr>
+        </table>
+    </div>
+
+
+@for (int i = 0; i < 8; i++) {
+
+    <br></br>
+
+}

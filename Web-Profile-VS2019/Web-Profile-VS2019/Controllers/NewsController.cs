@@ -10,8 +10,42 @@ namespace Web_Profile_VS2019.Controllers
     public class NewsController : Controller
     {
         // GET: News
-        public ActionResult Index()
+        public ActionResult Index(string id,string firstname,string lastname,string fullname,string notfound)
         {
+
+            switch (id) { 
+                case "16":
+
+                    firstname = "Tường";
+                    lastname = "Trần";
+                    fullname = "Trần Thế Tường";
+
+                    break;
+
+                case "9":
+
+                    firstname = "Thảo";
+                    lastname = "Hồ";
+                    fullname = "Hồ Phương Thảo";
+
+                    break;
+
+                case null:
+
+                    notfound = "ko tìm thấy";
+
+                    break;
+
+                default:
+
+                    break;
+            }
+
+             
+
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+
+        
             var obj = new documentation()
             {
                 image = "../image/error1.png",
@@ -19,9 +53,16 @@ namespace Web_Profile_VS2019.Controllers
 
             };
 
+            ViewData["firstname"] = firstname;
+            ViewData["lastname"] = lastname;
+            ViewData["fullname"] = fullname;
+            ViewData["notfound"] = notfound;
+
 
             return View(obj);
         }
+
+        
 
         // GET: News/Details/5
         public ActionResult Details(int id)

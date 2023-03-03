@@ -11,6 +11,14 @@ html {
     }
 }
 
+@media (min-width: 768px) {
+
+    .navbar-brand {
+        margin-left: -15px;
+        margin-right: 50px;
+    }
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -29,13 +37,23 @@ body {
 }
 
 .container {
+    color: white;
     height: 100%;
 }
 
 #my-logo {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    box-shadow: 0 20px 50px black;
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+}
+
+#my-logo:hover {
+    
+    transform: rotate(360deg);
+    transition: all 0.5s ease;
 }
 
 .nav-link:hover {
@@ -49,14 +67,14 @@ body {
     line-height: 1.2;
     font-family: unset;
     white-space: nowrap;
-    width: 345px;
-    margin-top: 100px;
+    width: 355px;
+    margin-top: 140px;
     color: white;
 }
 
-    .display-4:hover {
-        text-decoration: underline;
-    }
+.display-4:hover {
+    text-decoration: underline;
+}
 
 .list_api {
     font-family: ui-sans-serif;
@@ -66,7 +84,7 @@ body {
     position: relative;
     text-align: start;
     box-shadow: 0 0 0 10px rgb(222 222 222 / 50%);
-    background-color: currentcolor;
+    background-color: #333333;
     column-count: 3;
     column-gap: 100px;
     border-radius: 15px;
@@ -74,8 +92,9 @@ body {
     line-height: 20px;
     left: 0px;
     top: 0px;
-    width: 31%;
+    width: 352px;
     margin: 0px;
+    margin-top: 80px;
     margin-bottom: 100px;
     padding: 20px;
     padding-bottom: 40px;
@@ -133,38 +152,7 @@ body {
 }
 
 
-.nav-item {
-    position: relative;
-    top: -5px;
-    background: white;
-    padding: 5px 10px;
-    margin: 0px 20px;
-    transition: all 1s ease;
-    font-size: 15px;
-}
 
-.navbar-light .navbar-brand {
-    position: relative;
-    top: 3px;
-    color: coral;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #cc5151;
-}
-
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: darkred;
-    }
-
-.nav-item:hover {
-    background: #f1f1f1;
-}
-
-.navbar-light .navbar-brand {
-    position: relative;
-    top: 3px;
-}
 
 .home-content {
     position: relative;
@@ -225,7 +213,7 @@ body {
 .navbar-nav {
     text-align: center;
     position: relative;
-    top: 0px;
+    top: 10px;
 }
 
 .text-content {
@@ -266,7 +254,7 @@ body {
 @media only screen and (min-width: 1285.60px) {
 
     .display-4 {
-        margin-left: 0px;
+        margin-left: -5px;
     }
 
     .my-image {
@@ -280,7 +268,7 @@ body {
 @media only screen and (max-width: 1285.60px) {
 
     .display-4 {
-        margin-left: 0px;
+        margin-left: -5px;
     }
 
     .my-image {
@@ -310,7 +298,7 @@ body {
     }
 
     .list_api {
-        width: 339px;
+        width: 352px;
         margin: 50px auto;
     }
 
@@ -353,7 +341,7 @@ body {
     }
 
     .list_api {
-        width: 360px;
+        width: 372px;
         margin: 50px auto;
         padding: 30px;
     }
@@ -440,4 +428,23 @@ footer {
 .border-top {
     border-top: 1px solid #e5e5e5;
     width: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+
+td, th {
+    font-family: ui-sans-serif;
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
 }

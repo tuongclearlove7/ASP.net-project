@@ -108,7 +108,7 @@ function getHomeItem(call) {
 
             let notification = "Hệ thống FAKE API đã tắt!!!";
 
-            let link_imgErr1 = "../image/error1.png";
+            let link_imgErr1 = "../Content/image/error1.png";
 
             console.log(error);
 

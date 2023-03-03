@@ -10,8 +10,11 @@ namespace Web_Profile_VS2019.Controllers
     public class DocumentationController : Controller
     {
         // GET: Documentation
-        public ActionResult Index()
+        public ActionResult Index(string id, string name)
         {
+
+            ViewData["id"] = id;
+            ViewData["name"] = name;
 
             var obj = new documentation()
             {
@@ -19,6 +22,7 @@ namespace Web_Profile_VS2019.Controllers
                 text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
 
             };
+
 
             return View(obj);
         }
