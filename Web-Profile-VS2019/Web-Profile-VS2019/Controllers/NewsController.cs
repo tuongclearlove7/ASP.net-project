@@ -10,56 +10,77 @@ namespace Web_Profile_VS2019.Controllers
     public class NewsController : Controller
     {
         // GET: News
-        public ActionResult Index(string id,string firstname,string lastname,string fullname,string notfound)
+        public ActionResult Index(string id,string deFault)
         {
 
             switch (id) { 
+
                 case "16":
 
-                    firstname = "Tường";
-                    lastname = "Trần";
-                    fullname = "Trần Thế Tường";
+                    ViewBag.firstname = "Tường";
+                    ViewBag.lastname = "Trần";
+                    ViewBag.fullname = "Trần Thế Tường";
 
                     break;
 
                 case "9":
 
-                    firstname = "Thảo";
-                    lastname = "Hồ";
-                    fullname = "Hồ Phương Thảo";
+                    ViewBag.firstname = "Thảo";
+                    ViewBag.lastname = "Hồ";
+                    ViewBag.fullname = "Hồ Phương Thảo";
 
                     break;
 
                 case null:
 
-                    notfound = "ko tìm thấy";
+                    deFault = "default";
 
                     break;
 
                 default:
 
+                    deFault = "không tìm thấy";
+
                     break;
             }
 
-             
 
-            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
-
-        
-            var obj = new documentation()
+            ViewBag.documentation = new documentation()
             {
                 image = "../image/error1.png",
                 text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
 
             };
 
-            ViewData["firstname"] = firstname;
-            ViewData["lastname"] = lastname;
-            ViewData["fullname"] = fullname;
-            ViewData["notfound"] = notfound;
+            ViewBag.infomation = new infomation()
+            {
+
+                fb = "Facebook",
+                git = "Github",
+                ins = "Instagram",
+                id = "756464",
+                name = "Tường Trần",
+                firstname = ViewBag.firstname,
+                lastname = ViewBag.lastname,
+                fullname = ViewBag.fullname,
+                nickname = "clearlove7",
+                email = "lol00sever@gmail.com",
+                address = "31 Nguyen Khuyen",
+                nation = "VietNam",
+                city = "Da Nang",
+
+            };
+
+            List<string> data = new List<string>();
+            data.Add(ViewBag.infomation.firstname);
+            data.Add(ViewBag.infomation.lastname);
+            data.Add(ViewBag.infomation.fullname);
+
+            ViewBag.data = data;
+            ViewBag.Default = deFault;
 
 
-            return View(obj);
+            return View();
         }
 
         

@@ -18,6 +18,9 @@ namespace Web_Profile_VS2019.Models
         public string fullname { get; set; }
         public string nickname { get; set; }
         public string email { get; set; }
+        public string address { get; set; }
+        public string nation { get; set; }
+        public string city { get; set; }
 
         public infomation()
         {

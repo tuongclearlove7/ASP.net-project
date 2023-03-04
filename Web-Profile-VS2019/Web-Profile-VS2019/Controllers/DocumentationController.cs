@@ -16,15 +16,33 @@ namespace Web_Profile_VS2019.Controllers
             ViewData["id"] = id;
             ViewData["name"] = name;
 
-            var obj = new documentation()
+            ViewBag.documentation = new documentation()
             {
                 image = "../image/error1.png",
                 text = "The Blazor startup process via the Blazor script (blazor.{webassembly|server}.js) is automatic and asynchronous. The Blazor <script> tag is found in the wwwroot/index.html file (Blazor WebAssembly) or Pages/_Host.cshtml file (Blazor Server), except for the ASP.NET Core 6.0 release of Blazor Server (Pages/_Layout.cshtml)."
 
             };
 
+            ViewBag.infomation = new infomation()
+            {
 
-            return View(obj);
+                fb = "Facebook",
+                git = "Github",
+                ins = "Instagram",
+                id = "756464",
+                name = "Tường Trần",
+                firstname = "Trần",
+                lastname = "Tường",
+                fullname = "Trần Thế Tường",
+                nickname = "clearlove7",
+                email = "lol00sever@gmail.com",
+                address = "31 Nguyen Khuyen",
+                nation = "VietNam",
+                city = "Da Nang",
+
+            };
+
+            return View();
         }
 
         // GET: Documentation/Details/5

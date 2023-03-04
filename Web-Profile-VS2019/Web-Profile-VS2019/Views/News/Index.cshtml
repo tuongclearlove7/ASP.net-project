@@ -1,20 +1,11 @@
-﻿@model Web_Profile_VS2019.Models.documentation
-@{
+﻿@{
     ViewBag.Title = "News page";
-}
 
 <div class="container">
-
-    <h1 class="display-4">
-        @ViewBag.Title
-
-    </h1>
-
-    <p>
-        @Model.text
-
-    </p>
-
+  <h1 class="display-4">
+    @ViewBag.Title
+  </h1>
+  <p>@ViewBag.documentation.text</p>
     <div style="color: red;">
         <form action="/News">
             <label for="id">id : </label>
@@ -23,39 +14,28 @@
         </form>
     </div>
     <table>
-
         <tr>
-            <th>firstname</th>
-            <th>lastname</th>
-            <th>fullname</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Fullname</th>
         </tr>
-        <tr>
-            @{
-                ViewBag.count = 0;
+            <tr>@{ 
 
-                for (int i = 0; i < 5; i++){
-                    <tr>
-                        <td>@ViewData["firstname"]</td>
-                        <td>@ViewData["lastname"]</td>
-                        <td> @ViewData["fullname"]</td>
-                    </tr>
+                for (int iii = 0; iii < ViewBag.data.Count; iii++){
 
-                ViewBag.count++;
-
+                    <td>
+                        @ViewBag.Default
+                        @ViewBag.data[iii]
+                    </td>
                 }
             }
             </tr>
-            <br>
-            <tr>
-                <td>count</td>
-                <td>@ViewBag.count</td>
-            </tr>
-        </table>
-    </div>
+    </table>
+</div>
 
+    for (int i = 0; i < 10; i++) {
 
-@for (int i = 0; i < 8; i++) {
+        <br>
 
-    <br></br>
-
+    }
 }

@@ -1,4 +1,4 @@
-﻿@model Web_Profile_VS2019.Models.documentation
+﻿
 @{
     ViewBag.Title = "Documentation page";
 }
@@ -9,9 +9,9 @@
         @ViewBag.Title
 
     </h1>
-
+    <p>@ViewBag.documentation.text</p>
     <p>
-        @Model.text
+
         @ViewData["id"]
         @ViewData["name"]
     </p>

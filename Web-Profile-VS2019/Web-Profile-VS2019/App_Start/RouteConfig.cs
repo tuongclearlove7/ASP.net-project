@@ -37,7 +37,7 @@ namespace Web_Profile_VS2019
               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
           );
 
+
         }
     }
-
 }

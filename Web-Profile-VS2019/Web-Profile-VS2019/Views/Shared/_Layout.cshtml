@@ -7,6 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    @model Web_Profile_VS2019.Models.documentation
+    
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,9 +37,9 @@
     <div class="container body-content">
         @RenderBody()
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - @ViewBag.infomation.address - @ViewBag.infomation.city - @ViewBag.infomation.nation</p>
+    </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
