@@ -36,11 +36,6 @@ function homeApp() {
     });
 
     handleCreateForm();
-
-    document.querySelector(".dropdown").onclick = function(){
-
-        scrollClick(1000000);
-    }
 }
 
 homeApp();
@@ -76,7 +71,7 @@ function scrollClick(click) {
 
 
     window.scrollTo(obj1);
-    
+
 }
 
 

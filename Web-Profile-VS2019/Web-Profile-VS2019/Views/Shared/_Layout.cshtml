@@ -19,9 +19,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="">
+            <a class="dropdown" href="javascript:void(0);" onclick="scrollClick(1000000);">
                 <img id="my-logo" class="navbar-brand" src="../Content/image/clearlove7.png">
-                </a>
+            </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -37,14 +37,14 @@
     <div class="container body-content">
         @RenderBody()
 
-    <footer>
-        <p>&copy; @DateTime.Now.Year - @ViewBag.infomation.address - @ViewBag.infomation.city - @ViewBag.infomation.nation</p>
-    </footer>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @ViewBag.infomation.address - @ViewBag.infomation.city - @ViewBag.infomation.nation</p>
+        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <script type="text/javascript" src="~/scripts/home.js"></script>
+    <script type="text/javascript" src="~/scripts/script.js"></script>
 
 
     @RenderSection("scripts", required: false)
