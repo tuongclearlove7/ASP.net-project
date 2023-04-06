@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace DemoCsharp
     {
 
 
-        static int total(int n)
+        static int tinhtong(int n)
         {
             int s = 0;
 
@@ -23,7 +24,7 @@ namespace DemoCsharp
             return s;
         }
 
-        static int square(int n)
+        static int tinhtong_binhphuong(int n)
         {
 
             int sum = 0;
@@ -100,6 +101,7 @@ namespace DemoCsharp
             return 0;
         }
 
+        
 
         static void Main(string[] args)
         {
@@ -107,11 +109,25 @@ namespace DemoCsharp
 
             int n = 10;
             Console.WriteLine(dequy_giaithua(n));
-            Console.WriteLine(total(n));
-            Console.WriteLine(square(n));
+            Console.WriteLine(tinhtong(n));
+            Console.WriteLine(tinhtong_binhphuong(n));
             tam_giac(5);
             tam_giac_rong(5);
 
+
+            DateTime ngaysinh1 = DateTime.ParseExact("16/01/2002", "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            DateTime ngaysinh2 = DateTime.ParseExact("09/09/2003", "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            nguoi ng = new nguoi("tuong", ngaysinh1, 1, "3423434");
+            giangvien gv = new giangvien("thao", ngaysinh2, 0, "5646464", 112);
+            sinhvien sv = new sinhvien("tuong", ngaysinh1, 1, "342424", 113);
+
+            sv.nhap();
+            gv.nhap();
+            gv.xuat();
+            sv.xuat();
+            
+   
             Console.ReadLine();
 
 
