@@ -1,0 +1,7 @@
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\obj\Debug\DemoCsharp.csproj.AssemblyReference.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\obj\Debug\DemoCsharp.csproj.CoreCompileInputs.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\bin\Debug\DemoCsharp.exe.config
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\bin\Debug\DemoCsharp.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\bin\Debug\DemoCsharp.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\obj\Debug\DemoCsharp.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\DemoCsharp\obj\Debug\DemoCsharp.pdb
