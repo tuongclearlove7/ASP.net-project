@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webform_leaning1", "webform_leaning1\webform_leaning1.csproj", "{5F248D35-7E2D-4286-9006-8F950138F50B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F248D35-7E2D-4286-9006-8F950138F50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F248D35-7E2D-4286-9006-8F950138F50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F248D35-7E2D-4286-9006-8F950138F50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F248D35-7E2D-4286-9006-8F950138F50B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06F1A031-DF1D-4125-82C6-CCDF6AD69CF3}
+	EndGlobalSection
+EndGlobal

@@ -124,10 +124,10 @@ namespace DemoCsharp
 
             sv.nhap();
             gv.nhap();
-            gv.xuat();
+            gv.xuat();  
             sv.xuat();
-            
-   
+
+
             Console.ReadLine();
 
 
