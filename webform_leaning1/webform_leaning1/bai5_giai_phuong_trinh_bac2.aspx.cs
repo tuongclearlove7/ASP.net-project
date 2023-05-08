@@ -26,11 +26,11 @@ namespace webform_leaning1
                 {
                     if (c == 0)
                     {
-                        label_hienthi.Text = "Phương trình có vô số nghiệm.";
+                        label_hienthi.Text = "Phương trình có vô số nghiệm";
                     }
                     else
                     {
-                        label_hienthi.Text = "Phương trình vô nghiệm.";
+                        label_hienthi.Text = "Phương trình vô nghiệm";
                     }
                 }
                 else

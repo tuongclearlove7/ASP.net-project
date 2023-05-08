@@ -11,7 +11,7 @@
         <div>
             <h1>Gian Hàng</h1>
             <div>
-                <asp:LinkButton ID="link1" runat="server" OnClick="click_ao_quan">áo quần </asp:LinkButton>
+                <asp:LinkButton style="text-decoration:;" ID="link1" runat="server" OnClick="click_ao_quan">áo quần </asp:LinkButton>
             </div>
 
               <div>

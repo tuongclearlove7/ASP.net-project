@@ -16,15 +16,38 @@ namespace webform_leaning1
                 if (Session["tenhang"] != null && Session["dongia"] != null && 
                     Session["soluong"] != null && Session["doituong"] != null)
                 {
-                    string tenhang = Session["tenhang"].ToString();
-                    int dongia = Convert.ToInt32(Session["dongia"]);
-                    int soluong = Convert.ToInt32(Session["soluong"]);
-                    string doituong = Session["doituong"].ToString();
+                    try
+                    {
+                        string tenhang = Session["tenhang"].ToString();
+                        int dongia = Convert.ToInt32(Session["dongia"]);
+                        int soluong = Convert.ToInt32(Session["soluong"]);
+                        string doituong = Session["doituong"].ToString();
+                        double thanh_tien;
+                        lbl_tenhang.Text = tenhang;
+                        lbl_dongia.Text = dongia.ToString();
+                        lbl_soluong.Text = soluong.ToString();
+                        
+                        if (doituong == "Giảm giá")
+                        {
+                            thanh_tien = Convert.ToDouble(dongia * 10/100);
+                            double res = Convert.ToDouble(dongia * soluong - thanh_tien);
+                            doituong = "10%";
+                            lbl_doituong.Text = doituong;
+                            lbl_thanhtien.Text = res.ToString();
+                        }
+                        else
+                        {
+                            thanh_tien = dongia * soluong;
+                            lbl_doituong.Text = doituong;
+                            lbl_thanhtien.Text = thanh_tien.ToString();
+                        }
+                      
+                    }
+                    catch (Exception error)
+                    {
 
-                    lbl_tenhang.Text = tenhang;
-                    lbl_dongia.Text = dongia + "";
-                    lbl_soluong.Text = soluong + "";
-                    lbl_soluong.Text = doituong;
+                        Response.Redirect("bai7_mua_hang.aspx");
+                    }
 
                 }
                 else

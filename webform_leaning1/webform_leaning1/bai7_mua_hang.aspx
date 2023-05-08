@@ -13,7 +13,6 @@
             <div>
                 <asp:Label ID="label1" runat="server">Tên hàng</asp:Label>
                 <asp:DropDownList ID="chon_hang" runat="server" >  
-                     <asp:ListItem Value="">Chọn</asp:ListItem>  
                     <asp:ListItem >Áo sơ mi tay dài</asp:ListItem>  
                     <asp:ListItem>áo sơ mi trắng</asp:ListItem>  
                     <asp:ListItem>áo sơ mi đen</asp:ListItem> 
@@ -39,6 +38,9 @@
             <div>
                  <asp:Button style='width:70px;height:20px; margin:2px;' ID="Button1" runat="server" Text="Mua" OnClick="mua" />
                   <asp:Button style='width:70px;height:20px; margin:2px;' ID="Button2" runat="server" Text="Xóa" OnClick="xoa" />
+            </div>
+              <div>
+                <asp:Label ID="lbl_hienthi" runat="server" ></asp:Label>
             </div>
 
             

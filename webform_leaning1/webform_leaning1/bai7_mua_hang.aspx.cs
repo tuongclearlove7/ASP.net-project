@@ -17,7 +17,6 @@ namespace webform_leaning1
         protected void mua(object sender, EventArgs e) 
         {
 
-            //Response.Redirect("bai7_gio_hang.aspx?Hang=" + chon_hang.Text + don_gia.Text + so_luong.Text + doi_tuong.Text);
             Session["tenhang"] = chon_hang.Text;
             Session["dongia"] = don_gia.Text;
             Session["soluong"] = so_luong.Text;
@@ -30,11 +29,8 @@ namespace webform_leaning1
 
         protected void xoa(object sender, EventArgs e)
         {
-         
-            chon_hang.SelectedIndex = 0;
-            don_gia.Text = "";
-            so_luong.Text = "";
-            doi_tuong.SelectedIndex = 0;
+
+            Session.Clear();
         }
 
 
