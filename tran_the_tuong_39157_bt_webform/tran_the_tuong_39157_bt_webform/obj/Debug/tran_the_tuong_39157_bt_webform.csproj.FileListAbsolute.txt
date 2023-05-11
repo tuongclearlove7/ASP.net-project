@@ -64,8 +64,8 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_web
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\bin\Antlr3.Runtime.pdb
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\obj\Debug\tran_the_tuong_39157_bt_webform.csprojAssemblyReference.cache
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\obj\Debug\tran_the_tuong_39157_bt_webform.csproj.CoreCompileInputs.cache
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\obj\Debug\tran_the_tuong_39157_bt_webform.csproj.CopyComplete
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\obj\Debug\tran_the_tuong_39157_bt_webform.dll
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\obj\Debug\tran_the_tuong_39157_bt_webform.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\tran_the_tuong_39157_bt_webform\tran_the_tuong_39157_bt_webform\obj\Debug\tran_the_tuong_39157_bt_webform.csproj.AssemblyReference.cache
