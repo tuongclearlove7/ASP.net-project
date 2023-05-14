@@ -105,10 +105,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bai1_event.aspx" />
     <Content Include="bai1_phieu_tham_do_y_kien.aspx" />
+    <Content Include="bai2_hoa.aspx" />
     <Content Include="bai2_xay_dung_form_default.aspx" />
     <Content Include="bai3_form_nhap_va_hienthi.aspx" />
+    <Content Include="bai3_tinhluong.aspx" />
+    <Content Include="bai4_form.aspx" />
     <Content Include="bai4_thuc_hien_phep_tinh.aspx" />
+    <Content Include="bai5_giaodien.aspx" />
     <Content Include="bai5_gioi_phuongtrinh_bac2.aspx" />
     <Content Include="bai6_chi_tiet.aspx" />
     <Content Include="bai6_gian_hang.aspx" />
@@ -165,6 +170,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="validation.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -173,12 +179,26 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="bai1_event.aspx.cs">
+      <DependentUpon>bai1_event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bai1_event.aspx.designer.cs">
+      <DependentUpon>bai1_event.aspx</DependentUpon>
+    </Compile>
     <Compile Include="bai1_phieu_tham_do_y_kien.aspx.cs">
       <DependentUpon>bai1_phieu_tham_do_y_kien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="bai1_phieu_tham_do_y_kien.aspx.designer.cs">
       <DependentUpon>bai1_phieu_tham_do_y_kien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bai2_hoa.aspx.cs">
+      <DependentUpon>bai2_hoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bai2_hoa.aspx.designer.cs">
+      <DependentUpon>bai2_hoa.aspx</DependentUpon>
     </Compile>
     <Compile Include="bai2_xay_dung_form_default.aspx.cs">
       <DependentUpon>bai2_xay_dung_form_default.aspx</DependentUpon>
@@ -194,12 +214,33 @@
     <Compile Include="bai3_form_nhap_va_hienthi.aspx.designer.cs">
       <DependentUpon>bai3_form_nhap_va_hienthi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="bai3_tinhluong.aspx.cs">
+      <DependentUpon>bai3_tinhluong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bai3_tinhluong.aspx.designer.cs">
+      <DependentUpon>bai3_tinhluong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bai4_form.aspx.cs">
+      <DependentUpon>bai4_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bai4_form.aspx.designer.cs">
+      <DependentUpon>bai4_form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="bai4_thuc_hien_phep_tinh.aspx.cs">
       <DependentUpon>bai4_thuc_hien_phep_tinh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="bai4_thuc_hien_phep_tinh.aspx.designer.cs">
       <DependentUpon>bai4_thuc_hien_phep_tinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bai5_giaodien.aspx.cs">
+      <DependentUpon>bai5_giaodien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bai5_giaodien.aspx.designer.cs">
+      <DependentUpon>bai5_giaodien.aspx</DependentUpon>
     </Compile>
     <Compile Include="bai5_gioi_phuongtrinh_bac2.aspx.cs">
       <DependentUpon>bai5_gioi_phuongtrinh_bac2.aspx</DependentUpon>
@@ -260,6 +301,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="validation.aspx.cs">
+      <DependentUpon>validation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="validation.aspx.designer.cs">
+      <DependentUpon>validation.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
