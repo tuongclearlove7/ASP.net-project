@@ -55,7 +55,6 @@
                         <li><a runat="server" href="~/bai2_xay_dung_form_default">Bài 2</a></li>
                         <li><a runat="server" href="~/bai3_form_nhap_va_hienthi">Bài 3</a></li>
                         <li><a runat="server" href="~/bai4_thuc_hien_phep_tinh">Bài 4</a></li>
-                        <li><a runat="server" href="~/bai4_form">Bài 4 form</a></li>
                         <li><a runat="server" href="~/bai5_gioi_phuongtrinh_bac2">Bài 5</a></li>
                         <li><a runat="server" href="~/bai6_gian_hang">Bài 6</a></li>
                         <li><a runat="server" href="~/bai7_mua_hang">Bài 7</a></li>

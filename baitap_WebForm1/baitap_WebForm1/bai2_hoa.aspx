@@ -2,18 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div style="padding-top: 20px;">
-
-    <asp:CheckBoxList ID="checkboxList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="tinh_tien">
-       <asp:ListItem Text="Hoa hồng" Value="hong"></asp:ListItem>
-       <asp:ListItem Text="Hoa tulip" Value="tulip"></asp:ListItem>
-       <asp:ListItem Text="Hoa Thủy tiên" Value="thuy_tien"></asp:ListItem>
-   </asp:CheckBoxList>
-
-</div>
-
-<div>  
-   <asp:Label ID="don_gia" runat="server" ></asp:Label>  
-</div>
+        <asp:CheckBoxList ID="checkboxList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="tinh_tien">
+           <asp:ListItem Text="Hoa hồng" Value="hong"></asp:ListItem>
+           <asp:ListItem Text="Hoa tulip" Value="tulip"></asp:ListItem>
+           <asp:ListItem Text="Hoa Thủy tiên" Value="thuy_tien"></asp:ListItem>
+       </asp:CheckBoxList>
+    </div>
+    <div>  
+       <asp:Label ID="don_gia" runat="server" ></asp:Label>  
+    </div>
 
  <br/>
 <br/>

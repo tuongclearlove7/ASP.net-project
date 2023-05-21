@@ -14,67 +14,45 @@ namespace baitap_WebForm1
         {
 
         }
-
-        private bool isValidEmail(string email)
+        protected void customValidator_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            try
+         
+
+            
+        }
+        protected void kiem_loi(object sender, EventArgs e)
+        {
+            Page.Validate();
+
+            if (Page.IsValid)
             {
-                var address = new System.Net.Mail.MailAddress(email);
-                return address.Address == email;
+                hienthi.Text = "";
+                hienthi_xacthuc.Text = "";
+                hienthi_diem.Text = "";
+                hienthi_tuoi.Text = "";
+
             }
-            catch
+            else
             {
-                return false;
+                hienthi.Text = HienthiLoi(RegularExpressionValidator1);
+                hienthi_xacthuc.Text = HienthiLoi(CompareValidator1);
+                hienthi_diem.Text = HienthiLoi(RangeValidator1);
+                //hienthi_tuoi.Text = HienthiLoi(CustomValidator1);
+
             }
         }
 
-        protected void kiemtra_loi(object sender, EventArgs e)
+        private string HienthiLoi(BaseValidator validator)
         {
-
-            try
+            if (!validator.IsValid)
             {
-                double point = Convert.ToDouble(diem.Text);
-                DateTime ngaySinh;
-
-                if (isValidEmail(email.Text))
-                    hienthi.Text = "";
-                else
-                    hienthi.Text = "<h3>Vui lòng khắc phục các lỗi sau</h3><br>"
-                                        + "<li>Email không đúng định dạng</li>";
-
-                if (xac_thuc_email.Text != email.Text)
-                    hienthi_xacthuc.Text = "<li>Xác nhận không giống email</li>";
-                else
-                    hienthi_xacthuc.Text = "";
-
-                if (DateTime.TryParseExact(ngaysinh.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaySinh))
-                {
-                    DateTime ngayHienTai = DateTime.Now;
-                    int tuoi = ngayHienTai.Year - ngaySinh.Year;
-
-                    if (ngayHienTai < ngaySinh.AddYears(tuoi))
-                        tuoi--;
-
-                    if (tuoi < 16)
-                        hienthi_tuoi.Text = "<li>Ngày sinh phải trên 16 tuổi</li>";
-                }
-                else
-                {
-                    hienthi_tuoi.Text = "<li>Ngày tháng năm sinh không hợp lệ!</li>";
-                }
-
-                if (point > 10)
-                    hienthi_diem.Text = "<li>Điểm phải từ 0 đến 10</li>";
-
-            }
-            catch (Exception error)
-            {
-                hienthi.Text = "Vui lòng nhập vào!";
+                return "<li>" + validator.ErrorMessage + "</li>";
             }
 
-
-
+            return "";
         }
+
+
 
 
     }

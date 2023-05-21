@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace baitap_WebForm1 {
-    
-    
-    public partial class bai4_form {
-        
+namespace baitap_WebForm1
+{
+
+
+    public partial class bai4_form
+    {
+
         /// <summary>
         /// label1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label1;
-        
+
         /// <summary>
         /// email control.
         /// </summary>
@@ -29,7 +31,16 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
-        
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
         /// <summary>
         /// label2 control.
         /// </summary>
@@ -38,7 +49,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label2;
-        
+
         /// <summary>
         /// xac_thuc_email control.
         /// </summary>
@@ -47,7 +58,16 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox xac_thuc_email;
-        
+
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+
         /// <summary>
         /// label3 control.
         /// </summary>
@@ -56,7 +76,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label3;
-        
+
         /// <summary>
         /// diem control.
         /// </summary>
@@ -65,7 +85,16 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox diem;
-        
+
+        /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+
         /// <summary>
         /// label4 control.
         /// </summary>
@@ -74,7 +103,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label4;
-        
+
         /// <summary>
         /// ngaysinh control.
         /// </summary>
@@ -83,16 +112,34 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ngaysinh;
-        
+
         /// <summary>
-        /// btn_kiemtra control.
+        /// CustomValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_kiemtra;
-        
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+
+        /// <summary>
+        /// ValidationSummary2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary2;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
         /// <summary>
         /// hienthi control.
         /// </summary>
@@ -101,7 +148,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label hienthi;
-        
+
         /// <summary>
         /// hienthi_xacthuc control.
         /// </summary>
@@ -110,7 +157,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label hienthi_xacthuc;
-        
+
         /// <summary>
         /// hienthi_diem control.
         /// </summary>
@@ -119,7 +166,7 @@ namespace baitap_WebForm1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label hienthi_diem;
-        
+
         /// <summary>
         /// hienthi_tuoi control.
         /// </summary>

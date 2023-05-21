@@ -12,30 +12,47 @@ namespace baitap_WebForm1
 
         private int mabm;
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Random random = new Random();
-            int randomNumber = random.Next(10000, 99999);
-            mabm = randomNumber;
-            lblMaBM.Text = "<p style='color :red;'>"+mabm.ToString()+"</p>";
+            if (!IsPostBack)
+            {
+                
+                Random random = new Random();
+                int so_ngau_nhien = random.Next(10000, 99999);
+                lblMaBM.Text = so_ngau_nhien.ToString();
+            }
         }
 
-        protected void kiemtra(object sender, EventArgs e)
+        protected void serverValidate(object source, ServerValidateEventArgs args)
         {
-            try
+            int value;
+            bool isNumber = int.TryParse(args.Value, out value);
+            args.IsValid = isNumber && value % 2 == 0;
+        }
+
+        protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string lblMaBMValue = lblMaBM.Text;
+
+            args.IsValid = (args.Value == lblMaBMValue);
+        }
+
+        protected void kiemtra_mabaomat(object sender, EventArgs e)
+        {
+        
+            if (lblMaBM.Text != ma_baomat.Text)
             {
-                int ma_bm = Convert.ToInt32(ma_baomat.Text);
-                if (mabm == ma_bm)
-                    kiemtra_mabaomat.Text = "Mã bảo mật đúng";
-                else if (mabm != ma_bm)
-                    kiemtra_mabaomat.Text = "Nhập không đúng mã bảo mật!";
+                CustomValidator2.IsValid = false;
+                CustomValidator2.ErrorMessage = "Nhập không đúng mã bảo mật!";
             }
-            catch(Exception err)
+            else
             {
-                kiemtra_mabaomat.Text = err.Message;
+                CustomValidator2.IsValid = true;
             }
-          
+
+            Page.Validate();
 
         }
 

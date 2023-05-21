@@ -39,9 +39,7 @@ namespace baitap_WebForm1
 
             don_gia.Text = "Phải trả " + sum.ToString();
 
-
         }
-
 
 
     }

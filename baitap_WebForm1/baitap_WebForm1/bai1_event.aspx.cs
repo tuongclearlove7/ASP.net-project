@@ -14,31 +14,6 @@ namespace baitap_WebForm1
 
         }
 
-        //protected void hienthi(object sender, EventArgs e)
-        //{
-
-        //    lbl_hienthi.Text = chon.Text;
-        //}
-
-        //protected void capnhat(object sender, EventArgs e)
-        //{
-
-        //    Button btt = (Button)sender;
-        //    if (btt.ID == "btn_them")
-        //    {
-        //        lbl_hienthi.Text = "<h1>them moi</h1>";
-        //    }
-        //    else if (btt.ID == "btn_sua")
-        //    {
-        //        lbl_hienthi.Text = "<h1>chỉnh sửa</h1>";
-        //    }
-        //    else
-        //    {
-        //        lbl_hienthi.Text = "<h1>xóa</h1>";
-        //    }
-
-        //}
-
 
         protected void capnhat_update(object sender, EventArgs e)
         {

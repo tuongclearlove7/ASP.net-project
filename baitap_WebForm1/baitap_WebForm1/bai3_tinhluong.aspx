@@ -5,7 +5,6 @@
        <asp:Label ID="label_username" runat="server"><h1>Bảng tính lương</h1></asp:Label>  
        </div>
            <hr/>
-
              <div>
            <asp:Label ID="label1" runat="server">Tháng</asp:Label>
            <asp:DropDownList style="width:100px;" ID="chon" runat="server" >  
@@ -20,8 +19,8 @@
        </div>
 
        <div style='padding-top:20px;'>  
-               <asp:Label ID="label2" runat="server">Hệ số lương</asp:Label>  
-               <asp:TextBox ID="he_soluong" runat="server" ToolTip="text"></asp:TextBox> 
+            <asp:Label ID="label2" runat="server">Hệ số lương</asp:Label>  
+            <asp:TextBox ID="he_soluong" runat="server" ToolTip="text"></asp:TextBox> 
         </div>
         <div>  
             <asp:Label ID="label3" runat="server"><h1>Các chi phí bảo hiểm</h1></asp:Label>  
