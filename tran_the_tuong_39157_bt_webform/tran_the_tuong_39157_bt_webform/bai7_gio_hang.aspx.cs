@@ -48,8 +48,6 @@ namespace tran_the_tuong_39157_bt_webform
 
                         Response.Redirect("bai7_mua_hang.aspx");
                     }
-
-
                 }
                 else
                 {
