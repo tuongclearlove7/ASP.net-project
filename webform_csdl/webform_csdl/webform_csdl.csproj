@@ -94,6 +94,7 @@
     <Content Include="image\tivi.jpg" />
     <Content Include="image\tui.jpg" />
     <Content Include="loaihang.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="mat_hang.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -108,6 +109,20 @@
     </Compile>
     <Compile Include="loaihang.aspx.designer.cs">
       <DependentUpon>loaihang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginSite.Master.cs">
+      <DependentUpon>loginSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginSite.Master.designer.cs">
+      <DependentUpon>loginSite.Master</DependentUpon>
     </Compile>
     <Compile Include="mat_hang.aspx.cs">
       <DependentUpon>mat_hang.aspx</DependentUpon>
@@ -133,6 +148,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="loginSite.Master" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
