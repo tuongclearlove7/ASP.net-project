@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="webform_csdl.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Web Thương mại điện tử</title>
+    <link rel="stylesheet" href="~/css/style1.css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+
+        <header>
+            <div class="header-1">
+                <nav>
+                    <div class="navbar">
+                        <div class="logo">
+                            <asp:Image ID="Image0" runat="server" />
+                        </div>
+                        <div class="text1">
+                            <h3>
+                                <asp:LinkButton ID="LinkButton0" runat="server">Web-form</asp:LinkButton>
+                            </h3>
+                        </div>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/WebForm1.aspx">Home</asp:LinkButton>
+                            </li>
+                             <li>
+                                 <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/loaihang.aspx">Loại hàng</asp:LinkButton>
+                             </li>
+                              <li>
+                                 <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="">About</asp:LinkButton>
+                             </li>
+                             <li>
+                                 <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="">Other</asp:LinkButton>
+                             </li>
+                             <li>
+                                 <asp:LinkButton ID="LinkButton5" runat="server">Profile</asp:LinkButton>
+                             </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+           <hr style="clear:both;"/>
+            <footer style="clear:both;">
+                <div class="footer-top">
+                    <h2>FOOTER</h2>
+                </div>
+                <div class="footer-bottom">
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
