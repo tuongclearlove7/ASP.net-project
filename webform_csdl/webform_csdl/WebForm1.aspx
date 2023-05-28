@@ -15,6 +15,10 @@
                 <asp:Image style="width:400px;" ID="Image2" runat="server" />
                 <asp:Image style="width:400px;" ID="Image3" runat="server" />
                 <asp:Image style="width:400px;" ID="Image4" runat="server" />
+
+                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
+
             </div>
         </aside>
 </asp:Content>

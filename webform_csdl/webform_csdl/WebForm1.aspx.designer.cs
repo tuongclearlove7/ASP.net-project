@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace webform_csdl {
-    
-    
-    public partial class WebForm1 {
-        
+namespace webform_csdl
+{
+
+
+    public partial class WebForm1
+    {
+
         /// <summary>
         /// so_sp control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace webform_csdl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label so_sp;
-        
+
         /// <summary>
         /// ddl_sanpham control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace webform_csdl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_sanpham;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace webform_csdl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// Image2 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace webform_csdl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image2;
-        
+
         /// <summary>
         /// Image3 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace webform_csdl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image3;
-        
+
         /// <summary>
         /// Image4 control.
         /// </summary>
@@ -65,5 +67,14 @@ namespace webform_csdl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image4;
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

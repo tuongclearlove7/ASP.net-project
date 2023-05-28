@@ -1,47 +1,44 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="webform_csdl.Site" %>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 <html>
 <head runat="server">
     <title>Web Thương mại điện tử</title>
-    <link rel="stylesheet" href="~/css/style1.css" />
-
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
+    <style>
+        .container-all{
+
+            padding:0px;
+            max-width:100%;
+            margin:0 auto;
+        }
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin: 0 auto;
+        }
+    </style>
+
     <form id="form1" runat="server">
-        <div class="container">
+        <div class="container-all">
 
         <header>
             <div class="header-1">
-                <nav>
-                    <div class="navbar">
-                        <div class="logo">
-                            <asp:Image ID="Image0" runat="server" />
-                        </div>
-                        <div class="text1">
-                            <h3>
-                                <asp:LinkButton ID="LinkButton0" runat="server">Web-form</asp:LinkButton>
-                            </h3>
-                        </div>
-                        <ul>
-                            <li>
-                                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/WebForm1.aspx">Home</asp:LinkButton>
-                            </li>
-                             <li>
-                                 <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/loaihang.aspx">Loại hàng</asp:LinkButton>
-                             </li>
-                              <li>
-                                 <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="">About</asp:LinkButton>
-                             </li>
-                             <li>
-                                 <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="">Other</asp:LinkButton>
-                             </li>
-                             <li>
-                                 <asp:LinkButton ID="LinkButton5" runat="server">Profile</asp:LinkButton>
-                             </li>
-                        </ul>
-                    </div>
-                </nav>
+              <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="WebForm1.aspx">Home</a></li>
+                  <li><a href="ds_loaihang.aspx">Danh sách loại hàng</a></li>
+                  <li><a href="danhsachsp.aspx">Danh sách mặt hàng</a></li>
+                </ul>
+              </div>
+            </nav>
+
             </div>
         </header>
         <div>
@@ -58,5 +55,103 @@
             </footer>
         </div>
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>--%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    .nav-pills>li.active>a{
+        background-color:#292929;
+    }
+
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+        background-color:#292929;
+    }
+
+    .row.content {height: 1500px}
+    
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+     <form id="form1" runat="server">
+         <div class="container-fluid">
+          <div class="row content">
+            <div class="col-sm-3 sidenav">
+              <h4>Webform</h4>
+                <asp:DataList ID="data1" runat="server"></asp:DataList>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a class="btn btn-dark" href="WebForm1.aspx">Home</a></li>
+                <li><a href="ds_loaihang.aspx">Danh sách loại hàng</a></li>
+                <li><a href="danhsachsp.aspx">Danh sách mặt hàng</a></li>
+                <li><a href="">About</a></li>
+              </ul><br>
+              <div class="input-group">
+                  <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Placeholder="Tìm kiếm" ></asp:TextBox>
+                <span class="input-group-btn">
+                    <asp:Button CssClass="btn btn-success" ID="Button1" runat="server" Text="Tìm kiếm" />
+                         
+                </span>
+              </div>
+            </div>
+
+            <div class="col-sm-9">
+              <h4><small>RECENT POSTS</small></h4>
+              <hr>
+              <h1>Shop Page</h1>
+              <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2023.</h5>
+              <h5><span class="label label-danger">Food</span> <span class="label label-success">Ipsum</span></h5><br>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+              <br><br><br><br><br><br><br><br>
+               
+                <div class="col-sm-10">
+                 
+                  <div class="row">
+                    <div class="col-sm-2 text-center">
+                        
+                    </div>
+                        <div class="col-xs-10">
+                         
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <footer class="container-fluid">
+              <p>Footer Text</p>
+            </footer>
+        </form>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

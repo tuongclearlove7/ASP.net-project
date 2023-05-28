@@ -75,7 +75,8 @@
     <Content Include="App_Data\ql_banhang_log.ldf">
       <DependentUpon>ql_banhang.mdf</DependentUpon>
     </Content>
-    <Content Include="css\style1.css" />
+    <Content Include="danhsachsp.aspx" />
+    <Content Include="ds_loaihang.aspx" />
     <Content Include="Global.asax" />
     <Content Include="image\ao.jpg" />
     <Content Include="image\dep.jfif" />
@@ -96,10 +97,26 @@
     <Content Include="loaihang.aspx" />
     <Content Include="login.aspx" />
     <Content Include="mat_hang.aspx" />
+    <Content Include="style\style1.css" />
+    <Content Include="them_loaihang.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="danhsachsp.aspx.cs">
+      <DependentUpon>danhsachsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="danhsachsp.aspx.designer.cs">
+      <DependentUpon>danhsachsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ds_loaihang.aspx.cs">
+      <DependentUpon>ds_loaihang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ds_loaihang.aspx.designer.cs">
+      <DependentUpon>ds_loaihang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -124,6 +141,9 @@
     <Compile Include="loginSite.Master.designer.cs">
       <DependentUpon>loginSite.Master</DependentUpon>
     </Compile>
+    <Compile Include="lopketnoi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="mat_hang.aspx.cs">
       <DependentUpon>mat_hang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,6 +158,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="them_loaihang.aspx.cs">
+      <DependentUpon>them_loaihang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="them_loaihang.aspx.designer.cs">
+      <DependentUpon>them_loaihang.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
