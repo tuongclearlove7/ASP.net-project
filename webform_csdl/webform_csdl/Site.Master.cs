@@ -22,6 +22,10 @@ namespace webform_csdl
             DataTable dt = ketnoi.docdulieu(connectionVsDB, sql1);
             //data1.DataSource = dt;
             //data1.DataBind();
+
+           
+
+
         }
 
 

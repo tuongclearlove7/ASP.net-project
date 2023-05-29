@@ -7,7 +7,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+
+   
+    .quang-cao{
+        margin:20px;
+    }
+
+      .col-sm-9{
+
+          background-color: white;
+          
+      }
+
+
+      .row content{
+          height: 100%;
+      }
+
+ 
     .nav-pills>li.active>a{
         background-color:#292929;
     }
@@ -42,8 +62,8 @@
      <form id="form1" runat="server">
          <div class="container-fluid">
           <div class="row content">
-            <div class="col-sm-3 sidenav">
-              <h4>Webform</h4>
+            <div style="height: auto;" class="col-sm-3 sidenav">
+              <h4 style="color:black;">Webform</h4>
                 <asp:DataList ID="data1" runat="server"></asp:DataList>
               <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a class="btn btn-dark" href="WebForm1.aspx">Home</a></li>
@@ -56,21 +76,46 @@
                   <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Placeholder="Tìm kiếm" ></asp:TextBox>
                 <span class="input-group-btn">
                     <asp:Button CssClass="btn btn-success" ID="Button1" runat="server" Text="Tìm kiếm" />
-                         
                 </span>
               </div>
+                 <div>
+                     <marquee behavior="" direction="right"><h3>Quảng cáo</h3></marquee>
+                </div>
+                <div class="quang-cao">
+                </div>
             </div>
-
             <div class="col-sm-9">
               <h4><small>RECENT POSTS</small></h4>
               <hr>
               <h1>Shop Page</h1>
-              <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2023.</h5>
+              <h5><span class="glyphicon glyphicon-time">
+                  </span> Post by Tường, Tín, Đức, Huy  
+                  <asp:Label ID="dongthoigian" runat="server" Text=""></asp:Label>
+              </h5>
               <h5>
-                <span class="label label-danger">Tường</span> 
-                <span class="label label-success">Huy</span>
-                <span class="label label-default">Tín</span>
-                <span class="label label-warning">Đức</span>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Tường"> 
+                     <span class="label label-danger">Member one</span> 
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Huy"> 
+                      <span class="label label-success">Member two</span>
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Tín"> 
+                     <span class="label label-default">Member three</span>
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Đức"> 
+                     <span class="label label-warning">Member four</span>
+                </a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Asp.net">
+                    <span class="label label-info">Framework</span>
+                </a>
+                <span class="label label-primary">Asp.net</span>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="C#">
+                     <span class="label label-primary">Language</span>
+                </a>
+                <span class="label label-success">C#</span>
+                <a href="#" data-toggle="tooltip" title="Visual studio">
+                    <span class="label label-primary">Tool</span>
+                </a>
               </h5><br>
                 <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
               <br><br><br><br><br><br><br><br>
@@ -92,10 +137,17 @@
             </div>
 
             <footer class="container-fluid">
-              <p>Footer Text</p>
+                <marquee behavior="" direction="right"><h3>Footer Text</h3></marquee>
             </footer>
         </form>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     
+<script src="./js/script1.js"></script>
+<script src="./js/script.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+   
 </body>
 </html>

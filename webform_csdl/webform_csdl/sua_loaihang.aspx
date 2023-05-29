@@ -14,7 +14,6 @@
     </style>
 
 <div class="them-container">
-
     <asp:DataList ID="DataList1"  runat="server">
         <ItemTemplate>
             <div class="form-group">
@@ -36,8 +35,6 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
-    
-
  </div>
 
 
