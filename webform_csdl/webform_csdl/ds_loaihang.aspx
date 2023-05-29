@@ -43,11 +43,11 @@
 
     </style>
     <div><h1>Danh sách Loại hàng</h1></div>
-     <div>
+    <%-- <div>
           <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Thêm mới" OnClick="themmoi_loaihang" />   
-    </div>
-    
- <asp:DataList ID="DataList1" runat="server">
+    </div>--%>
+  
+ <asp:DataList ID="DataList1" OnItemCommand="xoa" runat="server">
     <ItemTemplate>
             <div class="card">
              <div class="view overlay">
@@ -59,12 +59,18 @@
               <div class="card-body">
                 <h4 class="card-title">
                     <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenloai") %>' />
+                    <asp:TextBox ID="maloai" CssClass="form-control" Visible="false" runat="server" Text='<%# Eval("maloai") %>'></asp:TextBox>
                 </h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
                 <div class="lop-nut">
                     <asp:LinkButton CssClass="btn btn-warning" runat="server" PostBackUrl='<%# "mat_hang.aspx?MatHang=" + Eval("maloai") %>' Text='Xem'>
                     </asp:LinkButton>
+                     <asp:LinkButton CssClass="btn btn-warning" runat="server" PostBackUrl='<%# "sua_loaihang.aspx?loaihang=" + Eval("maloai") %>' Text='Sửa'>
+                    </asp:LinkButton>
+                     <asp:LinkButton CssClass="btn btn-warning" runat="server"  Text='Xóa' CommandName="Delete"  CommandArgument='<%# Container.ItemIndex %>'>
+                    </asp:LinkButton>
                 </div>
+
                 
               </div>
             </div>

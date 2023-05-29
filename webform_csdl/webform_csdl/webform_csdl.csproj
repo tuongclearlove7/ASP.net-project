@@ -98,6 +98,7 @@
     <Content Include="login.aspx" />
     <Content Include="mat_hang.aspx" />
     <Content Include="style\style1.css" />
+    <Content Include="sua_loaihang.aspx" />
     <Content Include="them_loaihang.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -158,6 +159,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sua_loaihang.aspx.cs">
+      <DependentUpon>sua_loaihang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sua_loaihang.aspx.designer.cs">
+      <DependentUpon>sua_loaihang.aspx</DependentUpon>
     </Compile>
     <Compile Include="them_loaihang.aspx.cs">
       <DependentUpon>them_loaihang.aspx</DependentUpon>

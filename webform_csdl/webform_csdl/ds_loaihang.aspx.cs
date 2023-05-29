@@ -32,10 +32,23 @@ namespace webform_csdl
             Response.Redirect("them_loaihang.aspx");
         }
 
-        protected void chuyenhuong_mathang(object sender, EventArgs e)
+        protected void xoa(object source, DataListCommandEventArgs e)
         {
+            string connectionVsDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/ql_banhang.mdf") + ";Integrated Security=True";
 
-            Response.Redirect("ds_mathang.aspx?MatHang=" + Eval("maloai"));
+            if (e.CommandName == "Delete")
+            {
+                int itemIndex = e.Item.ItemIndex;
+                TextBox maloaiTextBox = (TextBox)DataList1.Items[itemIndex].FindControl("maloai");
+                string maloai = maloaiTextBox.Text;
+                string sql1 = "DELETE FROM loaihang WHERE maloai = '" + maloai + "'";
+                lopketnoi kn = new lopketnoi();
+                DataTable dt = kn.docdulieu(connectionVsDB, sql1);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                Response.Redirect("ds_loaihang.aspx?");
+            }
         }
+
     }
 }
