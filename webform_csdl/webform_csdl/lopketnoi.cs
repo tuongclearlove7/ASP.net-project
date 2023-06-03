@@ -35,7 +35,8 @@ namespace webform_csdl
             catch
             {
                 dt = null;
-   
+                //Response.SubStatusCode = 404;
+
             }
             finally
             {
@@ -44,7 +45,7 @@ namespace webform_csdl
             return dt;
         }
 
-        public DataTable ExecuteQuery(string connectionString, string query)
+        public DataTable hienthi_bang(string connectionString, string query)
         {
             DataTable dataTable = new DataTable();
 

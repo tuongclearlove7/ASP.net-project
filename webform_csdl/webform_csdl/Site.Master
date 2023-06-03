@@ -1,6 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="webform_csdl.Site" %>
 
-<!DOCTYPE html>
+<%@ Register Src="~/login.ascx" TagPrefix="uc1" TagName="login" %>
+
+
+<%--<!DOCTYPE html>
 <html lang="en">
 <head runat="server">
   <title>Bootstrap Example</title>
@@ -69,7 +72,7 @@
                 <li class="active"><a class="btn btn-dark" href="WebForm1.aspx">Home</a></li>
                 <li><a href="ds_loaihang.aspx">Danh sách loại hàng</a></li>
                 <li><a href="danhsachsp.aspx">Danh sách mặt hàng</a></li>
-                  <li><a href="them_loaihang.aspx">Thêm mới loại hàng</a></li>
+                  <li><a href="them_loaihang.aspx">Thêm mới</a></li>
                 <li><a href="">About</a></li>
               </ul><br>
               <div class="input-group">
@@ -85,7 +88,10 @@
                 </div>
             </div>
             <div class="col-sm-9">
-              <h4><small>RECENT POSTS</small></h4>
+              <h4 style="width:90%;float:left;"><small>RECENT POSTS</small></h4>
+              <h4 style="width:10%;float:left;">
+                    <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" OnClick="dangxuat_Click" Text="Đăng xuất" />
+              </h4>
               <hr>
               <h1>Shop Page</h1>
               <h5><span class="glyphicon glyphicon-time">
@@ -149,5 +155,449 @@
     });
 </script>
    
+</body>
+</html>--%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE thương mại điện tử</title>
+    <link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid-ns.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+      <form id="form1" runat="server">
+    <div class="main">
+<!-- HEADER -->
+        <div class="header">
+            <div class="grid wide">
+                <!-- Header Navbar -->
+                <div class="header__navbar row hide-on-mobile-tablet">
+                    <ul class="navbar__list">
+                        <li class="list__item list__show_qr line--space">
+                            Vào cửa hàng trên ứng dụng 
+                            <div class="navbar__qr">
+                                <img src="./assets/img/qr_code.png" alt="" class="qr__code">
+                                <div class="apps__download">
+                                    <a href="" class="apps__link">
+                                        <img src="./assets/img/app_store.png" alt="" class="apps__download--img">
+                                    </a>
+                                    <a href="" class="apps__link">
+                                        <img src="./assets/img/google_play.png" alt="" class="apps__download--img">
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list__item">
+                            <span class="list__item--label">Kết nối</span>
+                            <a href="" class="header__icons">
+                                <i class="header__icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__icons">
+                                <i class="header__icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar__list">
+                        <li class="list__item list__show__notify">
+                            <a href="" class="item__link">
+                                <i class="header__icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="navbar__notify">
+                                <header class="navbar__notify--header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="notify__list">
+                                    <li class="notify__item notify__item--new">
+                                        <a href="" class="notify__item--link">
+                                            <img src="./assets/img/product_1.png" alt="" class="item__img">
+                                            <div class="item__info">
+                                                <p class="item__name">Bảng Màu Son Shu Uemura Rouge Unlimited Amplified Mới Nhất</p>
+                                                <p class="item_desc">Son Shu Uemura Rouge Unlimited Amplified phiên bản mới nhất năm 2019.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notify__item">
+                                        <a href="" class="notify__item--link">
+                                            <img src="./assets/img/product_2.png" alt="" class="item__img">
+                                            <div class="item__info">
+                                                <p class="item__name">Pô MEGAPHONE MORIWAKI (CUB 125) mã 01810-H11R3-00a</p>
+                                                <p class="item_desc">Vật liệu: Thép không gỉ, trắng sáng bóng đẹp. Âm lượng tiếng pô: 85db (zin: 73db).</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notify__item">
+                                        <a href="" class="notify__item--link">
+                                            <img src="./assets/img/product_3.png" alt="" class="item__img">
+                                            <div class="item__info">
+                                                <p class="item__name">Lòng và piston BRT 63.00mm Winner X</p>
+                                                <p class="item_desc">Bộ sản phẩm lòng BRT Super Ceramic 63.00 mm và Piston Nhôm Nén BRT kích thước 63.00 mm dành cho Winner V1 / Winner X / Sonic / CB150R / CBR150.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="navbar__notify--footer">
+                                    <a href="" class="notify__btn__footer">Xem thêm</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="list__item">
+                            <a href="" class="item__link">
+                                <i class="header__icon fa-solid fa-circle-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="list__item bold line--space">Đăng ký</li>
+                        <li class="list__item bold"> <a style="color:white;text-decoration:none;" href="./login.aspx">Đăng xuất</a></li>
+                    </ul>
+                </div>
+                <!-- Header With Search -->
+                <div class="header_with_search row">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
+                        <a href="./WebForm1.aspx" class="header__logo--link">
+                            <h1 style="margin: 20px 50px; font-size:30px;color:white;">Home</h1>
+                        </a>
+                    </div>
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+                    <div class="header__search">
+                        <div class="input__search--wrap">
+                            <input type="text" class="input__search" placeholder="Tìm kiếm sản phẩm">
+                            <div class="search__history">
+                                <h3 class="header__history">Lịch sử tìm kiếm</h3>
+                                <ul class="search__history-list">
+                                    <li class="search__history-item">
+                                        <a href="">Sonax</a>
+                                    </li>
+                                    <li class="search__history-item">
+                                        <a href="">Sagobi</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selection">
+                            <span class="selection__label">
+                                Trong shop
+                                <i class="selection__icon fa-solid fa-angle-down"></i>
+                            </span>
+                            <ul class="option-list">
+                                <li class="option-item option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                                <li class="option-item">
+                                    <span>Ngoài shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="search-btn">
+                            <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">3</span>
+                            <div class="header__cart-list header__cart-list--no-cart">
+                                <img src="./assets/img/no_cart.png" alt="" class="header__cart-list--no-cart-img">
+                                <span class="header__cart--no-cart-mess">Chưa có sản phẩm</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="ds_loaihang.aspx" class="header__sort-link">Danh sách loại hàng</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="danhsachsp.aspx" class="header__sort-link">Danh sách mặt hàng</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="them_loaihang.aspx" class="header__sort-link">Thêm mới</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+        </div>
+<!-- CONTAINER -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="row sm-gutter content-row">
+                    <!-- Category -->
+                    <div class="col l-2 m-0 c-0">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__icon fa-solid fa-list"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="ds_loaihang.aspx" class="category-item__link">Danh sách loại hàng</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="danhsachsp.aspx" class="category-item__link">Danh sách sản phẩm</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="them_loaihang.aspx" class="category-item__link">Thêm mới</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">About</a>
+                                </li>
+                              
+                            </ul>
+                        </nav>
+                          <div>
+                             <marquee behavior="" direction="right"><h3>Quảng cáo</h3></marquee>
+                        </div>
+                        <div class="quang-cao">
+
+                        </div>
+
+                    </div>
+                    <!-- Product -->
+                    <div class="col l-10 m-12 c-12">
+                        <!-- Home Product Fillter -->
+                        <div class="home-filter hide-on-mobile-tablet">
+                            <span class="home-filter__label">
+                            Sắp xếp theo
+                            </span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn__primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy nhất</button>
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="selection__icon fa-solid fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Thấp tới cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Cao tới thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/22
+                                </span>
+                                <div class="page-control">
+                                    <a class="page-control__page-btn page-control__page-btn--disable">
+                                        <i class="page-btn__icon fa-solid fa-angle-left"></i>
+                                    </a>
+                                    <a class="page-control__page-btn">
+                                        <i class="page-btn__icon fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Combo Cub 125/ MSX 125/ Future 125</a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                         <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                      
+                       
+                          <ul class="pagination home-product__pagination">
+                            <!-- Icon Left -->
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">22</a>
+                            </li>
+                            <!-- Icon Right -->
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- FOOTER -->
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row footer__container">
+                    <div class="col l-2-4 m-12 c-12">
+                        <h3 class="footer__heading">
+                            Chăm sóc khách hàng
+                        </h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">F8-Shop Mall</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-12 c-12">
+                        <h3 class="footer__heading">
+                            Giới thiệu
+                        </h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-12 c-12">
+                        <h3 class="footer__heading">
+                            Danh mục
+                        </h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Combo Cub 125/ MSX 125/ Future 125</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Combo Exciter 150/ R15/ Fz 150/ TFX </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Combo Raider/ Satria</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Accessories</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">Sticker</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-12 c-12">
+                        <h3 class="footer__heading">
+                            Theo dõi chúng tôi trên
+                        </h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">
+                                    <i class="footer__item-icon fa-brands fa-facebook-square"></i>
+                                    Facebook</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">
+                                    <i class="footer__item-icon fa-brands fa-instagram-square"></i>
+                                    Instagram</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__item-link">
+                                    <i class="footer__item-icon fa-brands fa-linkedin"></i>
+                                    Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-12 c-12">
+                        <h3 class="footer__heading">
+                            Vào cửa hàng trên ứng dụng
+                        </h3>
+                        <div class="footer__download">
+                            <img src="./assets/img/qr_code.png" alt="" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="./assets/img/app_store.png" alt="" class="footer__download-apps__img">
+                                </a>
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="./assets/img/google_play.png" alt="" class="footer__download-apps__img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="grid wide">
+                    <p class="copyright">2022 - Copyright by Clearlove7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="https://kit.fontawesome.com/0eca951f73.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js" ></script>
+</form>
+
 </body>
 </html>

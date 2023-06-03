@@ -20,30 +20,33 @@ namespace webform_csdl
             {
                 lopketnoi kn = new lopketnoi();
                 string sql1 = "select * from mathang, loaihang where mathang.maloai = loaihang.maloai";
-                DataTable dt = kn.docdulieu(connectionVsDB,sql1);
+                DataTable dt = kn.docdulieu(connectionVsDB, sql1);
                 bang_mathang.DataSource = dt;
                 bang_mathang.DataBind();
                 data_list1.DataSource = dt;
                 data_list1.DataBind();
             }
 
-
-            //using (SqlConnection connection = new SqlConnection(connectionVsDB))
-            //{
-            //    connection.Open();
-            //    string sql = "select * from mathang";
-            //    SqlDataAdapter da = new SqlDataAdapter(sql, connection);
-            //    DataSet ds = new DataSet();
-            //    da.Fill(ds);
-            //    DataTable dt = ds.Tables[0];
-            //    bang_mathang.DataSource = dt;
-            //    bang_mathang.DataBind();
-            //    data_list1.DataSource = dt;
-            //    data_list1.DataBind();
-            //    connection.Close();
-            //}
-
-
         }
+
+        protected void xoa(object sender, EventArgs e)
+        {
+
+            string connectionVsDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/ql_banhang.mdf") + ";Integrated Security=True";
+            string connectionSQLServer = "server=DESKTOP-9ER0ESK\\SQLEXPRESS;database=ban_hang;User ID=sa;Password=tuongyeuthao1";
+            Button btnXoa = (Button)sender;
+            string mahang = btnXoa.CommandArgument;
+            string sql1 = "DELETE FROM mathang WHERE mahang = '" + mahang + "'";
+            lopketnoi kn = new lopketnoi();
+            DataTable dt = kn.docdulieu(connectionVsDB, sql1);
+            kn.docdulieu(connectionSQLServer, sql1);
+            bang_mathang.DataSource = dt;
+            bang_mathang.DataBind();
+            Response.Redirect("danhsachsp.aspx?");
+            
+        }
+
     }
+
+
 }

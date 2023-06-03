@@ -9,14 +9,11 @@ using System.Web.UI.WebControls;
 namespace webform_csdl
 {
     public partial class sua_loaihang : System.Web.UI.Page
-
-   
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             string connectionVsDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/ql_banhang.mdf") + ";Integrated Security=True";
             string connectionSQLServer = "server=DESKTOP-9ER0ESK\\SQLEXPRESS;database=ban_hang;User ID=sa;Password=tuongyeuthao1";
-
             if (!IsPostBack)
             {
                 if (Request.QueryString["loaihang"] != null)
@@ -39,6 +36,7 @@ namespace webform_csdl
         protected void sua(object sender, EventArgs e)
         {
             string connectionVsDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/ql_banhang.mdf") + ";Integrated Security=True";
+            string connectionSQLServer = "server=DESKTOP-9ER0ESK\\SQLEXPRESS;database=ban_hang;User ID=sa;Password=tuongyeuthao1";
             Button button = (Button)sender;
             DataListItem item = (DataListItem)button.NamingContainer;
             TextBox maloai = (TextBox)item.FindControl("maloai");

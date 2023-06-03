@@ -38,13 +38,13 @@ namespace webform_csdl
 
                     if (maloai == Request.QueryString["MatHang"])
                     {
-                        lopketnoi ketnoi = new lopketnoi();
-                        DataTable table = ketnoi.ExecuteQuery(connectionVsDB, query);
-                        GridView1.DataSource = table;
+                        lopketnoi kn = new lopketnoi();
+                        DataTable dt = kn.docdulieu(connectionVsDB, query);
+                        GridView1.DataSource = dt;
                         GridView1.DataBind();
 
-                        // lbl_hienthi.Text =  getModel(connectionSQLServer, query3);
                     }
+     
                 }
                 else
                 {

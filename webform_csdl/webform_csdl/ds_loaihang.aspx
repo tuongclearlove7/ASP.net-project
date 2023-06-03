@@ -4,8 +4,7 @@
 
        #MainContent_DataList1 tr {
            float:left;
-           padding:10px;
-           margin:15px;
+           margin:0px;
        }
 
        td input{
@@ -15,7 +14,7 @@
        .card{
            width:285px;
            padding:15px;
-           border: 3px solid black;
+           border: 3px solid white;
            border-radius: 10px 0px;
            background-color: #ee4d2d;
        }
@@ -36,6 +35,7 @@
         }
         .ten-loai{
             color :white;
+            font-size:20px;
         }
         .card-text{
             color :white;
@@ -44,6 +44,19 @@
         #MainContent_DataList1{
             margin: 0px 45px;
         }
+        .btn-link{
+            font-size:15px;
+            margin:20px;
+          
+        }
+        .btn-link:hover{
+            text-decoration:none;
+            color:white;
+        }
+        .ma-loaihang{
+            color:white;
+            font-size:17px;
+        }
 
     </style>
     <div><h1>Danh sách Loại hàng</h1></div>
@@ -51,8 +64,9 @@
      <asp:DataList ID="DataList1" OnItemCommand="xoa" runat="server">
         <ItemTemplate>
                 <div class="card">
+                    <asp:Label CssClass="ma-loaihang" ID="Label1" runat="server" Text='<%# Eval("maloai") %>'></asp:Label>
                  <div class="view overlay">
-                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='<%# "./image/"+Eval("hinh") %>' PostBackUrl='<%# "mat_hang.aspx?MatHang=" + Eval("maloai") %>'  />
+                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='<%# Eval("hinh") %>' PostBackUrl='<%# "mat_hang.aspx?MatHang=" + Eval("maloai") %>'  />
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
@@ -64,11 +78,11 @@
                     </h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
                     <div class="lop-nut">
-                        <asp:LinkButton CssClass="btn btn-warning" runat="server" PostBackUrl='<%# "mat_hang.aspx?MatHang=" + Eval("maloai") %>' Text='Xem'>
+                        <asp:LinkButton CssClass="btn-link"  runat="server" PostBackUrl='<%# "mat_hang.aspx?MatHang=" + Eval("maloai") %>' Text='Xem'>
                         </asp:LinkButton>
-                         <asp:LinkButton CssClass="btn btn-warning" runat="server" PostBackUrl='<%# "sua_loaihang.aspx?loaihang=" + Eval("maloai") %>' Text='Sửa'>
+                         <asp:LinkButton CssClass="btn-link" runat="server" PostBackUrl='<%# "sua_loaihang.aspx?loaihang=" + Eval("maloai") %>' Text='Sửa'>
                         </asp:LinkButton>
-                         <asp:LinkButton CssClass="btn btn-warning" runat="server"  Text='Xóa' CommandName="Delete"  CommandArgument='<%# Container.ItemIndex %>'>
+                         <asp:LinkButton CssClass="btn-link" runat="server"  Text='Xóa' CommandName="Delete"  CommandArgument='<%# Container.ItemIndex %>'>
                         </asp:LinkButton>
                     </div>
                   </div>

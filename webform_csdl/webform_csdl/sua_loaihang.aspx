@@ -28,7 +28,6 @@
               <asp:Label ID="Label4" runat="server" Text="Hình ảnh"></asp:Label>
                 <asp:TextBox ID="hinh" CssClass="form-control" runat="server" Text='<%# Eval("hinh") %>'></asp:TextBox>
                 <asp:FileUpload ID="FileUpload1" runat="server" />
-               
              </div>
             <div>
                 <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Sửa" OnClick="sua" CommandArgument='<%# Container.ItemIndex %>' />

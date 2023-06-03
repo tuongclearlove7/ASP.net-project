@@ -41,13 +41,14 @@
         <Columns>
             <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />
             <asp:BoundField DataField="tenhang" HeaderText="Tên hàng" />
-            <asp:BoundField DataField="tenhang" HeaderText="Mô tả" />
+            <asp:BoundField DataField="mota" HeaderText="Mô tả" />
              <asp:TemplateField  HeaderText="Hình ảnh">
                 <ItemTemplate>
-                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# "./image/"+Eval("hinh") %>' />
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("hinh") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField DataField="tenloai" HeaderText="Tên loại" />
+             <asp:BoundField DataField="maloai" HeaderText="Mã loại" />
         </Columns>
     </asp:GridView>
 

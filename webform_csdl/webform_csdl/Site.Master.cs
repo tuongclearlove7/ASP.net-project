@@ -28,6 +28,12 @@ namespace webform_csdl
 
         }
 
+        protected void dangxuat_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        
+        }
+
 
     }
 }
