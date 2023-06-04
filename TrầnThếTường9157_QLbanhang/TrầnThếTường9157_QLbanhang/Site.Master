@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TrầnThếTường9157_QLbanhang.Site" %>
+
+<%@ Register Src="~/bai1_login.ascx" TagPrefix="uc1" TagName="bai1_login" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <img src="https://danangcanho.com.vn/wp-content/uploads/2018/06/banner-trang-ch%E1%BB%A7.jpg" alt="Alternate Text" style="width: 100%; height:300px;" />
+    </div>
+    <form id="form1" runat="server">
+        <div>
+             <table style="width: 100%; ">
+                <tr>
+                    <td style="width: 25%;">
+                     
+                        <div> 
+                            <uc1:bai1_login runat="server" id="bai1_login" />
+                        </div>
+                    </td>
+                    <td style="float:right;">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td style="width: 35%;padding-left: 20px;">
+                         <div>
+                             <h1>Các loại hàng</h1>
+                        </div>
+                           <asp:DataList ID="ds_loaihang" runat="server">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Eval("tenloai") %>'></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </td>
+                </tr>
+            </table>
+
+           
+        </div>
+    </form>
+    <div style="width:100%;">
+        footer
+    </div>
+</body>
+</html>
