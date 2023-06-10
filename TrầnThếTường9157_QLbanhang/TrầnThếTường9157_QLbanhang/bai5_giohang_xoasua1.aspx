@@ -6,6 +6,11 @@
         <div>
              <h1>Sửa xóa giỏ hàng</h1>
         </div>
+          <div>
+               <asp:Button ID="Button2" PostBackUrl="~/bai2_mathang.aspx" runat="server" Text="Trang chủ" />
+              <asp:Button ID="Button1" PostBackUrl="~/bai4_giohang.aspx" runat="server" Text="Giỏ hàng" />
+          </div>
+          <br/>
        <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" OnRowDataBound="ds_donhang_RowDataBound" >
 
             <Columns>

@@ -36,6 +36,8 @@ namespace TrầnThếTường9157_QLbanhang
 
         }
 
+   
+
         protected void mua(object sender, EventArgs e)
         {
             string mahang = Request.QueryString["MatHang"];
@@ -47,7 +49,6 @@ namespace TrầnThếTường9157_QLbanhang
             ketnoi.docdulieu(sql);
             DataTable dt = ketnoi.docdulieu(sql);
 
-
             if (dt != null && dt.Rows.Count > 0)
             {
                 // Truy cập vào DataTable 
@@ -55,15 +56,14 @@ namespace TrầnThếTường9157_QLbanhang
                 {
                     if (dt.Rows[i]["mahang"].ToString() == mahang)
                     {
-                        string sql3 = "UPDATE donhang SET soluong = " + soluong + " where donhang.mahang = " + mahang;
-                        ketnoi.docdulieu(sql3);
-
+                        string sql3 = "UPDATE donhang SET soluong = " + soluong + " where donhang.mahang = " + mahang + "and donhang.tendangnhap = '" + Session["tendangnhap"] + "'";
+                        ketnoi.capnhat(sql3);
                     }
                     else
                     {
                         string sql2 = "INSERT INTO donhang(tendangnhap, mahang, soluong) " +
-                                        "VALUES ('" + "admin" + "', " + mahang + ", " + soluong + ")";
-                        ketnoi.docdulieu(sql2);
+                                        "VALUES ('" + Session["tendangnhap"] + "', " + mahang + ", " + soluong + ")";
+                        ketnoi.capnhat(sql2);
 
                     }
                 }
@@ -72,8 +72,8 @@ namespace TrầnThếTường9157_QLbanhang
             {
                 // DataTable không có dữ liệu
                 string sql2 = "INSERT INTO donhang(tendangnhap, mahang, soluong) " +
-                                "VALUES ('" + "admin" + "', " + mahang + ", " + soluong + ")";
-                ketnoi.docdulieu(sql2);
+                                "VALUES ('" + Session["tendangnhap"] + "', " + mahang + ", " + soluong + ")";
+                ketnoi.capnhat(sql2);
 
             }
             Thread.Sleep(1000);

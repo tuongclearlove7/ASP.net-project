@@ -11,6 +11,7 @@
     </style>
      <div>
         <h1>Chi tiết mặt hàng</h1>
+        
     </div>
      <asp:DataList ID="ds_mathang" runat="server">
         <ItemTemplate>

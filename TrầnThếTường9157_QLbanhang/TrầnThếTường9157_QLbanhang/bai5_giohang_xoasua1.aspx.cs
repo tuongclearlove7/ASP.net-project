@@ -28,26 +28,41 @@ namespace TrầnThếTường9157_QLbanhang
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang";
-            ds_donhang.DataSource = ketnoi.docdulieu(sql);
-            ds_donhang.DataBind();
-            string sql2 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang";
-            DataTable dt = new DataTable();
-            dt = ketnoi.docdulieu(sql2);
-            var tong = dt.Rows[0][0];
-            tongthanhtien.Text = "Tổng thành tiền : " + tong;
-
-
+            if (!IsPostBack)
+            {
+                if (Session["tendangnhap"] != null)
+                {
+                    string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                    ds_donhang.DataSource = ketnoi.docdulieu(sql);
+                    ds_donhang.DataBind();
+                    if (ds_donhang.Rows.Count == 0)
+                    {
+                        ds_donhang = null;
+                        Response.Redirect("bai4_giohang.aspx");
+                    }
+                    else
+                    {
+                        ds_donhang.DataBind();
+                        string sql2 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                        DataTable dt = new DataTable();
+                        dt = ketnoi.docdulieu(sql2);
+                        var tong = dt.Rows[0][0];
+                        tongthanhtien.Text = "Tổng thành tiền : " + tong;
+                    }
+                }
+                else
+                {
+                    Response.Redirect("login.aspx");
+                }
+            }
         }
 
         protected void xoa(object sender, EventArgs e)
         {
             Button btnXoa = (Button)sender;
             string mahang = btnXoa.CommandArgument;
-            string sql1 = "DELETE FROM donhang WHERE donhang.mahang = " + mahang;
-            DataTable dt = ketnoi.docdulieu(sql1);
-            ds_donhang.DataSource = dt;
-            ds_donhang.DataBind();
+            string sql1 = "DELETE FROM donhang WHERE donhang.mahang = " + mahang + " and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+            ketnoi.capnhat(sql1);
             Response.Redirect("bai5_giohang_xoasua1.aspx");
 
         }
@@ -65,8 +80,8 @@ namespace TrầnThếTường9157_QLbanhang
                 string soluong = textbox_soluong.Text;
                 string mahang = textbox_mahang.Text;
 
-                string sql3 = "UPDATE donhang SET soluong = " + soluong + " WHERE donhang.mahang = " + mahang;
-                ketnoi.docdulieu(sql3);
+                string sql3 = "UPDATE donhang SET soluong = " + soluong + " WHERE donhang.mahang = " + mahang + " and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                ketnoi.capnhat(sql3);
                 Thread.Sleep(1000);
                 Response.Redirect("bai4_giohang.aspx");
             }

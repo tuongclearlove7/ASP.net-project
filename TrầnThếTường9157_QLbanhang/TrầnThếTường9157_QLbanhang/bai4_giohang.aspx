@@ -8,8 +8,9 @@
         </div>
         <div>
             <br/>
+            <asp:Button ID="Button3" runat="server" Text="Trang chủ" PostBackUrl="bai2_mathang.aspx" />   
             <asp:Button ID="Button1" runat="server" Text="Xóa sửa" PostBackUrl="bai5_giohang_xoasua1.aspx" /> 
-            <asp:Button ID="Button2" runat="server" Text="Xóa sửa nhiều" PostBackUrl="bai6_giohang_xoasuanhieu.aspx" />   
+            <asp:Button ID="Button2" runat="server" Text="Xóa sửa nhiều" PostBackUrl="bai6_giohang_xoasuanhieu.aspx" /> 
 
         </div>
         <br/>
@@ -28,7 +29,10 @@
             </Columns>
         </asp:GridView>
         <div>
-            <asp:Label ID="tongthanhtien" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="tongthanhtien" runat="server" Text=""></asp:Label>
+        </div>
+          <div>
+            <asp:Label ID="dem_sodon" runat="server" Text=""></asp:Label>
         </div>
     </div>
 </asp:Content>

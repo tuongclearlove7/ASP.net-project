@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="bai6_giohang_xoasuanhieu.aspx.cs" Inherits="TrầnThếTường9157_QLbanhang.bai6_giohang_xoasuanhieu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="bai6_giohang_xoasuanhieu.aspx.cs" Inherits="TrầnThếTường9157_QLbanhang.bai6_giohang_xoasuanhieu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,6 +6,11 @@
         <div>
              <h1>Sửa xóa nhiều mặt hàng trong giỏ hàng</h1>
         </div>
+            <div>
+               <asp:Button ID="Button2" PostBackUrl="~/bai2_mathang.aspx" runat="server" Text="Trang chủ" />
+              <asp:Button ID="Button1" PostBackUrl="~/bai4_giohang.aspx" runat="server" Text="Giỏ hàng" />
+          </div>
+            <br/>
         <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" RowCommand="ds_donhang_RowCommand" OnRowDataBound="ds_donhang_RowDataBound" >
             <Columns>
                 <asp:TemplateField HeaderText="Xóa">

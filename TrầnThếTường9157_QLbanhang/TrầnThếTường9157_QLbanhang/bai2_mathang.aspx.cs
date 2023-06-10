@@ -12,9 +12,31 @@ namespace TrầnThếTường9157_QLbanhang
         lopketnoi ketnoi = new lopketnoi();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sql = "select * from mathang";
-            ds_mathang.DataSource = ketnoi.docdulieu(sql);
-            ds_mathang.DataBind();
+            if (!IsPostBack)
+            {
+                if (Session["tendangnhap"] != null)
+                {
+                    account.Text = "Hello " + Session["tendangnhap"] + " Welcome to Shop page!!!";
+                    string sql = "select * from mathang";
+                    ds_mathang.DataSource = ketnoi.docdulieu(sql);
+                    ds_mathang.DataBind();
+                }
+                else
+                {
+                    Response.Redirect("login.aspx");
+                }
+            }
         }
+    
+        protected void dangxuat(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Session.Clear();
+            HttpCookie cookie_tendangnhap = Request.Cookies["tendangnhap"];
+            cookie_tendangnhap.Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies.Add(cookie_tendangnhap);
+            Response.Redirect("login.aspx");
+        }
+
     }
 }

@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="do_an_thuongmaidientu.master.admin" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ 
+     <style>
+
+   
+    .quang-cao{
+        margin:20px;
+    }
+
+      .col-sm-9{
+
+          background-color: white;
+          
+      }
+
+
+      .row content{
+          height: 100%;
+      }
+
+ 
+    .nav-pills>li.active>a{
+        background-color:#292929;
+    }
+
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+        background-color:#292929;
+    }
+
+    .row.content {height: 1500px}
+    
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    .navlink ul li{
+        list-style:none;
+        padding-right: 15px;
+    }
+     .navlink ul {
+         display:flex;
+        padding-left:0px;
+    }
+
+    #LinkButton1{
+        text-align:center;
+    }
+     #LinkButton2 {
+        font-size:20px;
+    }
+    .navlink{
+        padding-top:7px;
+    }
+    #Button2{
+        font-size:12px;
+    }
+  </style>
+
+    <form id="form1" runat="server">
+
+          <div class="container-fluid">
+          <div class="row content">
+            <div style="height: auto;" class="col-sm-3 sidenav">
+              <h4 style="color:black;">Webform</h4>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><asp:LinkButton ID="LinkButton1" OnClick="res_homepage" runat="server">Home</asp:LinkButton></li>
+                <li><a href="thongtinUser.aspx">Thông tin Khách hàng</a></li>
+                <li><a href="../user/thongtin.aspx">Thông tin Admin</a></li>
+                  <li><a href="donhang.aspx">Quản lý đơn hàng</a></li>
+                   <li><a href="them.aspx">Thêm mới loại hàng và mặt hàng</a></li>
+                <li><a href="">About</a></li>
+              </ul><br>
+              <div class="input-group">
+                  <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Placeholder="Tìm kiếm" ></asp:TextBox>
+                <span class="input-group-btn">
+                    <asp:Button CssClass="btn btn-success" ID="Button1" runat="server" Text="Tìm kiếm" />
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-9">
+              <h4 style="width:80%;float:left;"><small>RECENT POSTS</small></h4>
+                <div class="navlink" style="width:7%; float:left;">
+                    <ul>
+                        <li><asp:LinkButton ID="LinkButton2" OnClick="chuyen_trang" runat="server">
+                            <img width="30px" height="30px" src="data:image/png;base64,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" />
+                        </asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+              <h4 style="width:13%;float:left;">
+                <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" OnClick="dangxuat" Text="Đăng xuất" Height="30" Width="80" />
+              </h4>
+              <hr>
+              <h1>Shop Page</h1>
+              <h5><span class="glyphicon glyphicon-time">
+                    </span> <asp:Label ID="account" runat="server" Text=""></asp:Label>
+                  <asp:Label ID="dongthoigian" runat="server" Text=""></asp:Label>
+              </h5>
+              <h5>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Tường"> 
+                     <span class="label label-danger">Member one</span> 
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Huy"> 
+                      <span class="label label-success">Member two</span>
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Tín"> 
+                     <span class="label label-default">Member three</span>
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Đức"> 
+                     <span class="label label-warning">Member four</span>
+                </a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Asp.net">
+                    <span class="label label-info">Framework</span>
+                </a>
+                <span class="label label-primary">Asp.net</span>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="C#">
+                     <span class="label label-primary">Language</span>
+                </a>
+                <span class="label label-success">C#</span>
+                <a href="#" data-toggle="tooltip" title="Visual studio">
+                    <span class="label label-primary">Tool</span>
+                </a>
+              </h5><br>
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+             <br><br><br><br><br><br><br><br>
+               
+                <div class="col-sm-10">
+                 
+                  <div class="row">
+                    <div class="col-sm-2 text-center">
+                        
+                    </div>
+                        <div class="col-xs-10">
+                         
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <footer class="container-fluid">
+                <marquee behavior="" direction="right"><h3>Footer Text</h3></marquee>
+            </footer>
+
+    </form>
+     <script>
+         setInterval(demgio, 1000);
+
+        function demgio() {
+            const daytime = new Date();
+            document.getElementById("dongthoigian").innerHTML = daytime.toLocaleTimeString();
+        }
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+</body>
+</html>

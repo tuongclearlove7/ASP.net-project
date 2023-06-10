@@ -5,11 +5,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
+
 namespace TrầnThếTường9157_QLbanhang
 {
     public class lopketnoi : System.Web.UI.Page
     {
-
         SqlConnection connection;
         private void lay_ketnoi(string connectString)
         {
@@ -23,6 +23,14 @@ namespace TrầnThếTường9157_QLbanhang
                 connection.Close();
             }
         }
+
+        public void connectMongoDB()
+        {
+            string stringCN = "mongodb+srv://Clearlove7:tuongyeuthao1@atlascluster.ffbdvei.mongodb.net/webchat_db_dev";
+                
+        }
+
+
         public DataTable docdulieu(string sql)
         {
             string connectionVsDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/banhang.mdf") + ";Integrated Security=True";
@@ -46,6 +54,25 @@ namespace TrầnThếTường9157_QLbanhang
             return dt;
         }
 
+        public void capnhat(string sql)
+        {
+            string connectionVsDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/banhang.mdf") + ";Integrated Security=True";
+            try
+            {
+                lay_ketnoi(connectionVsDB);
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return;
+            }
+            finally
+            {
+                dong_ketnoi();
+            }
+        }
+
         public DataTable hienthi_bang(string connectionString, string query)
         {
             DataTable dataTable = new DataTable();
@@ -64,7 +91,6 @@ namespace TrầnThếTường9157_QLbanhang
             }
             return dataTable;
         }
-
     }
 
 

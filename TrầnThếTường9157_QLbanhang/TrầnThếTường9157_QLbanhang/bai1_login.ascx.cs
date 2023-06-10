@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -22,9 +23,21 @@ namespace TrầnThếTường9157_QLbanhang
             ketnoi.docdulieu(sql);
             DataTable dt = ketnoi.docdulieu(sql);
 
-            if (dt.Rows[0]["tendangnhap"].ToString() == tendangnhap &&
-                dt.Rows[0]["matkhau"].ToString() == matkhau)
-                return true;
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i]["tendangnhap"].ToString() == tendangnhap &&
+                        dt.Rows[i]["matkhau"].ToString() == matkhau)
+                        return true;
+                }
+            }
+            if (dt.Rows.Count == 0)
+            {
+                dt = null;
+                Thread.Sleep(1000);
+            }
+
             return false;
         }
 
@@ -32,6 +45,7 @@ namespace TrầnThếTường9157_QLbanhang
         {
             if (kiemtra(tendangnhap.Text, matkhau.Text))
             {
+                
                 Session["tendangnhap"] = tendangnhap.Text;
                 Session["matkhau"] = matkhau.Text;
                 HttpCookie cookie_tendangnhap = new HttpCookie("tendangnhap");
@@ -39,9 +53,9 @@ namespace TrầnThếTường9157_QLbanhang
                 cookie_tendangnhap.Expires = DateTime.Now.AddDays(1);
                 Response.Cookies.Add(cookie_tendangnhap);
                 string valueCookie = cookie_tendangnhap.Value;
-
-                dangnhap_thanhcong.Text = "Đăng nhập thành công tên đăng nhập đã đc lưu vào session và cookie<br>"
-                + "Session tên đăng nhập : " + Session["tendangnhap"] + "<br>Cookie tên đăng nhập : " + valueCookie;
+                Response.Redirect("bai2_mathang.aspx");
+                //dangnhap_thanhcong.Text = "Đăng nhập thành công tên đăng nhập đã đc lưu vào session và cookie<br>"
+                //+ "Session tên đăng nhập : " + Session["tendangnhap"] + "<br>Cookie tên đăng nhập : " + valueCookie;
             }
             else
             {

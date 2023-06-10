@@ -53,4 +53,4 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_csdl\webform_csdl\o
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_csdl\webform_csdl\obj\Debug\webform_csdl.csproj.CopyComplete
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_csdl\webform_csdl\obj\Debug\webform_csdl.dll
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_csdl\webform_csdl\obj\Debug\webform_csdl.pdb
-C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_csdl\webform_csdl\obj\Debug\webform_csdl.csprojAssemblyReference.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_csdl\webform_csdl\obj\Debug\webform_csdl.csproj.AssemblyReference.cache

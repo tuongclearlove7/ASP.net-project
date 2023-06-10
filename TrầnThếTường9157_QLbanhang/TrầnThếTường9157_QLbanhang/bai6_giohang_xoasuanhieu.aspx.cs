@@ -36,7 +36,9 @@ namespace TrầnThếTường9157_QLbanhang
 
                 foreach (string maHang in maHangList)
                 {
-                    ListItem item = new ListItem(maHang);
+                    ListItem item = new ListItem();
+                    item.Value = maHang;
+                    item.Text = "";    
                     checkBoxList1.Items.Add(item);
                 }
             }
@@ -61,22 +63,34 @@ namespace TrầnThếTường9157_QLbanhang
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
-                string mahang = HttpContext.Current.Items["mahang"] as string;
-                string soluong = HttpContext.Current.Items["soluong"] as string;
-
-                string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang";
-                ds_donhang.DataSource = ketnoi.docdulieu(sql);
-                ds_donhang.DataBind();
-                string sql2 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang";
-                DataTable dt = new DataTable();
-                dt = ketnoi.docdulieu(sql2);
-                var tong = dt.Rows[0][0];
-                tongthanhtien.Text = "Tổng thành tiền : " + tong;
+                if (Session["tendangnhap"] != null)
+                {
+                    string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                    ds_donhang.DataSource = ketnoi.docdulieu(sql);
+                    ds_donhang.DataBind();
+                    if (ds_donhang.Rows.Count == 0)
+                    {
+                        ds_donhang = null;
+                        Response.Redirect("bai4_giohang.aspx");
+                    }
+                    else
+                    {
+                        ds_donhang.DataBind();
+                        string sql2 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                        DataTable dt = new DataTable();
+                        dt = ketnoi.docdulieu(sql2);
+                        var tong = dt.Rows[0][0];
+                        tongthanhtien.Text = "Tổng thành tiền : " + tong;
+                    }
+                }
+                else
+                {
+                    Response.Redirect("login.aspx");
+                }
             }
-
+          
         }
 
         protected void xoa(object sender, EventArgs e)
@@ -97,6 +111,7 @@ namespace TrầnThếTường9157_QLbanhang
                             if (item.Selected)
                             {
                                 selectedMaHangList.Add(item.Value);
+
                             }
                         }
                     }
@@ -106,15 +121,14 @@ namespace TrầnThếTường9157_QLbanhang
             if (selectedMaHangList.Count > 0)
             {
                 // xóa nhiều hàng cùng 1 lúc
-
                 foreach (GridViewRow row in ds_donhang.Rows)
                 {
                     TextBox txt_soluong = row.FindControl("textbox_soluong") as TextBox;
                     TextBox txt_mahang = row.FindControl("textbox_mahang") as TextBox;
                     string soluong = txt_soluong.Text;
                     string mahang = txt_mahang.Text;
-                    string sql = "DELETE FROM donhang WHERE donhang.mahang IN ('" + string.Join("','", selectedMaHangList) + "')";
-                    ketnoi.docdulieu(sql);
+                    string sql = "DELETE FROM donhang WHERE donhang.mahang IN ('" + string.Join("','", selectedMaHangList) + "') and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                    ketnoi.capnhat(sql);
 
                 }
                 // Response.Write("Câu lệnh SQL: " + sql);
@@ -133,12 +147,13 @@ namespace TrầnThếTường9157_QLbanhang
                 string mahang = txt_mahang.Text;
                 string updateValue = "WHEN " + mahang + " THEN " + soluong;
                 updateValues.Add(updateValue);
+                //string sql = "UPDATE donhang SET soluong = " + soluong + " WHERE  donhang.mahang = " + mahang + " and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                //ketnoi.capnhat(sql);
             }
-            string sql = "UPDATE donhang SET soluong = CASE mahang " +
-                                 string.Join(" ", updateValues) +
-                                 " END WHERE mahang IN (" +
-                                 string.Join(",", updateValues.Select(v => v.Split(' ')[1])) + ")";
-            ketnoi.docdulieu(sql);
+
+            string sql = "UPDATE donhang SET soluong = CASE mahang " + string.Join(" ", updateValues) +" END WHERE mahang IN (" +
+                          string.Join(",", updateValues.Select(v => v.Split(' ')[1])) + ") and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+            ketnoi.capnhat(sql);
             Thread.Sleep(1000);
             Response.Redirect("bai4_giohang.aspx");
 
