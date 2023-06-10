@@ -32,7 +32,7 @@
         </div>
         <div>
             <br/>
-            <asp:Button ID="Button1" runat="server" Text="Xóa sửa" PostBackUrl="sua_xoa.aspx" /> 
+            <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Xóa sửa" PostBackUrl="sua_xoa.aspx" /> 
         </div>
         <br/>
          <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" OnRowDataBound="ds_donhang_RowDataBound">

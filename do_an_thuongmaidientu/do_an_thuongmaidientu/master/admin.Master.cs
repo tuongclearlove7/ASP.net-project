@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +10,7 @@ namespace do_an_thuongmaidientu.master
 {
     public partial class admin : System.Web.UI.MasterPage
     {
+        Models.ketnoi_database ketnoi = new Models.ketnoi_database();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["tendangnhap"] != null)
@@ -19,7 +21,15 @@ namespace do_an_thuongmaidientu.master
             }
         }
 
-        protected void dangxuat(object sender, EventArgs e)
+        protected void timkiem(object sender, EventArgs e)
+        {
+         
+            string nhap = nhaptimkiem.Text;
+            Response.Redirect("../admin/timkiem.aspx?donhang=" + nhap);      
+
+        }
+
+            protected void dangxuat(object sender, EventArgs e)
         {
             Session.RemoveAll();
             Session.Clear();

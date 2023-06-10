@@ -40,13 +40,13 @@ namespace do_an_thuongmaidientu.master {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// nhaptimkiem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox nhaptimkiem;
         
         /// <summary>
         /// Button1 control.

@@ -12,6 +12,10 @@
             max-width:100%;
             margin:0px 30px auto;
         }
+       .themthanhcong{
+           color:greenyellow;
+           padding-top:15px;
+       }
     </style>
     
     <div class="them-container">
@@ -58,7 +62,10 @@
         <div>
             <asp:Button ID="Button2" CssClass="btn btn-primary" OnClick="themmoi_mathang" runat="server" Text="Thêm" />
         </div>
+         <div>
+             <asp:Label ID="themmoi_thanhcong" CssClass="themthanhcong" runat="server" Text=""></asp:Label>
+        </div>
     </div>
-
+     
 
 </asp:Content>

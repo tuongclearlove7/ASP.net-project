@@ -72,6 +72,7 @@
     <Content Include="admin\sua.aspx" />
     <Content Include="admin\them.aspx" />
     <Content Include="admin\thongtinUser.aspx" />
+    <Content Include="admin\timkiem.aspx" />
     <Content Include="App_Data\quanly_banhang.mdf" />
     <Content Include="App_Data\quanly_banhang_log.ldf">
       <DependentUpon>quanly_banhang.mdf</DependentUpon>
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="admin\thongtinUser.aspx.designer.cs">
       <DependentUpon>thongtinUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\timkiem.aspx.cs">
+      <DependentUpon>timkiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\timkiem.aspx.designer.cs">
+      <DependentUpon>timkiem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

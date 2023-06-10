@@ -31,8 +31,8 @@ namespace do_an_thuongmaidientu.admin
             string sql1 = "INSERT INTO loaihang(maloai, tenloai) " +
              "VALUES(" + maloai_loaihang.Text + ", '" + tenloai.Text + "')";
             ketnoi.capnhat(sql1);
-
-            Response.Redirect("homeAdmin.aspx");
+            themmoi_thanhcong.Text = "<p style='color:green;'>Thêm mới thành công</p>";
+           // Response.Redirect("homeAdmin.aspx");
         }
 
 

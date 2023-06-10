@@ -80,8 +80,15 @@
     .navlink{
         padding-top:7px;
     }
+    #Button1{
+        
+    }
     #Button2{
         font-size:12px;
+    }
+    .error-message{
+        color:red;
+        margin:10px;
     }
   </style>
 
@@ -97,12 +104,14 @@
                 <li><a href="../user/thongtin.aspx">Thông tin Admin</a></li>
                   <li><a href="donhang.aspx">Quản lý đơn hàng</a></li>
                    <li><a href="them.aspx">Thêm mới loại hàng và mặt hàng</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="timkiem.aspx">Tìm kiếm đơn hàng</a></li>
               </ul><br>
               <div class="input-group">
-                  <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Placeholder="Tìm kiếm" ></asp:TextBox>
-                <span class="input-group-btn">
-                    <asp:Button CssClass="btn btn-success" ID="Button1" runat="server" Text="Tìm kiếm" />
+                  <asp:TextBox ID="nhaptimkiem" CssClass="form-control" runat="server" Placeholder="Nhập vào tên đăng nhập" ></asp:TextBox>
+                <%--  <asp:RequiredFieldValidator style="margin:10px;" ForeColor="Red" CssClass=".error-message" ID="isvalid_nhaptimkiem" runat="server" ControlToValidate="nhaptimkiem"
+                    ErrorMessage="Vui lòng nhập vào !"></asp:RequiredFieldValidator>--%>
+                  <span class="input-group-btn">
+                    <asp:Button CssClass="btn btn-success" ID="Button1" runat="server" OnClick="timkiem" Text="Tìm kiếm" />
                 </span>
               </div>
             </div>

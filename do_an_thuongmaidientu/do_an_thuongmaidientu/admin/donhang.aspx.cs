@@ -22,30 +22,6 @@ namespace do_an_thuongmaidientu.admin
                 Label thanhTienLabel = (Label)e.Row.FindControl("thanhtien");
                 thanhTienLabel.Text = thanhTien.ToString();
             }
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                CheckBoxList checkBoxList1 = (CheckBoxList)e.Row.FindControl("CheckBoxList1");
-                string mahang = DataBinder.Eval(e.Row.DataItem, "mahang").ToString();
-
-                List<string> maHangList = GetMaHangList(mahang);
-
-                foreach (string maHang in maHangList)
-                {
-                    ListItem item = new ListItem();
-                    item.Value = maHang;
-                    item.Text = "";
-                    checkBoxList1.Items.Add(item);
-                }
-            }
-
-
-        }
-
-        private List<string> GetMaHangList(string mahang)
-        {
-            List<string> maHangList = mahang.Split(',').ToList();
-            maHangList = maHangList.Select(m => m.Trim()).ToList();
-            return maHangList;
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -94,42 +70,17 @@ namespace do_an_thuongmaidientu.admin
 
         protected void xoa(object sender, EventArgs e)
         {
-
-            List<string> selectedMaHangList = new List<string>();
-
             foreach (GridViewRow row in ds_donhang.Rows)
             {
-                if (row.RowType == DataControlRowType.DataRow)
-                {
-                    CheckBoxList checkBoxList1 = (CheckBoxList)row.FindControl("CheckBoxList1");
-
-                    if (checkBoxList1 != null && checkBoxList1.Items.Count > 0)
-                    {
-                        foreach (ListItem item in checkBoxList1.Items)
-                        {
-                            if (item.Selected)
-                            {
-                                selectedMaHangList.Add(item.Value);
-
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (selectedMaHangList.Count > 0)
-            {
-                // xóa nhiều hàng cùng 1 lúc
-                foreach (GridViewRow row in ds_donhang.Rows)
-                {
-                    TextBox txt_mahang = row.FindControl("textbox_mahang") as TextBox;
-                    string mahang = txt_mahang.Text;
-                    string sql = "DELETE FROM donhang WHERE donhang.mahang IN ('" + string.Join("','", selectedMaHangList) + "')";
-                    ketnoi.capnhat(sql);
-
-                }
+                TextBox txt_tendangnhap = row.FindControl("textbox_tendangnhap") as TextBox;
+                string tendangnhap = txt_tendangnhap.Text;
+                Button btnXoa = (Button)sender;
+                string mahang = btnXoa.CommandArgument;
+                string sql1 = "DELETE FROM donhang WHERE donhang.mahang = " + mahang + " AND donhang.tendangnhap = '" + tendangnhap + "'";
+                ketnoi.capnhat(sql1);
                 Response.Redirect("donhang.aspx");
             }
+           
         }
 
 
