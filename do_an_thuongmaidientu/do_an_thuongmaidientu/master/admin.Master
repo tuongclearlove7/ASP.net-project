@@ -90,6 +90,19 @@
         color:red;
         margin:10px;
     }
+    .user-khachhang{
+        width: 5%;
+        float: left;
+        padding-top: 17px;
+        padding-left: 0px;
+        color: #61c301;
+        font-size: 17px;
+        font-family: fantasy;
+    }
+    #LinkButton3{
+        text-decoration:none;
+        color: #61c301;
+    }
   </style>
 
     <form id="form1" runat="server">
@@ -116,7 +129,12 @@
               </div>
             </div>
             <div class="col-sm-9">
-              <h4 style="width:80%;float:left;"><small>RECENT POSTS</small></h4>
+              <h4 style="width:75%;float:left;"><small>RECENT POSTS</small></h4>
+                <div class="user-khachhang">
+                    <asp:LinkButton PostBackUrl="../user/thongtin.aspx" ID="LinkButton3" runat="server">
+                        <asp:Label ID="account" runat="server" Text=""></asp:Label>
+                    </asp:LinkButton>
+                </div>
                 <div class="navlink" style="width:7%; float:left;">
                     <ul>
                         <li><asp:LinkButton ID="LinkButton2" OnClick="chuyen_trang" runat="server">
@@ -131,7 +149,7 @@
               <hr>
               <h1>Shop Page</h1>
               <h5><span class="glyphicon glyphicon-time">
-                    </span> <asp:Label ID="account" runat="server" Text=""></asp:Label>
+                    </span> 
                   <asp:Label ID="dongthoigian" runat="server" Text=""></asp:Label>
               </h5>
               <h5>

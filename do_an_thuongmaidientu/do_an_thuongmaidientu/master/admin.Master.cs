@@ -28,7 +28,7 @@ namespace do_an_thuongmaidientu.master
             Response.Redirect("../admin/timkiem.aspx?donhang=" + nhap);      
 
         }
-
+        //
             protected void dangxuat(object sender, EventArgs e)
         {
             Session.RemoveAll();

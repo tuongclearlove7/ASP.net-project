@@ -15,7 +15,7 @@ namespace do_an_thuongmaidientu.master
             {
                 if(Session["tendangnhap"].ToString() == "admin")
                     account.Text = Session["tendangnhap"].ToString();
-                else account.Text = "Khách hàng " + Session["tendangnhap"].ToString();
+                else account.Text = Session["tendangnhap"].ToString();
             }
         }
 

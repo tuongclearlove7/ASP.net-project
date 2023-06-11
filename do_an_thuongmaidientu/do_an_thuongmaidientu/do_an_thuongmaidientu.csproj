@@ -77,6 +77,9 @@
     <Content Include="App_Data\quanly_banhang_log.ldf">
       <DependentUpon>quanly_banhang.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\quanly_banhang_log.ldf">
+      <DependentUpon>quanly_banhang.mdf</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="indexController.aspx" />
     <Content Include="master\loginPage.aspx" />

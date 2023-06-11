@@ -53,4 +53,4 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\do_an_thuongmaidientu\do_an
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\do_an_thuongmaidientu\do_an_thuongmaidientu\obj\Debug\do_an_thuongmaidientu.csproj.CopyComplete
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\do_an_thuongmaidientu\do_an_thuongmaidientu\obj\Debug\do_an_thuongmaidientu.dll
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\do_an_thuongmaidientu\do_an_thuongmaidientu\obj\Debug\do_an_thuongmaidientu.pdb
-C:\Users\clearlove7\Documents\GitHub\ASP.net-project\do_an_thuongmaidientu\do_an_thuongmaidientu\obj\Debug\do_an_thuongmaidientu.csprojAssemblyReference.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\do_an_thuongmaidientu\do_an_thuongmaidientu\obj\Debug\do_an_thuongmaidientu.csproj.AssemblyReference.cache
