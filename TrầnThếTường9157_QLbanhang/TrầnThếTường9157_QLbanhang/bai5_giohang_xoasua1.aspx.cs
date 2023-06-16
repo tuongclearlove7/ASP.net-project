@@ -82,7 +82,7 @@ namespace TrầnThếTường9157_QLbanhang
 
                 string sql3 = "UPDATE donhang SET soluong = " + soluong + " WHERE donhang.mahang = " + mahang + " and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
                 ketnoi.capnhat(sql3);
-                Thread.Sleep(1000);
+                //Thread.Sleep(1000);
                 Response.Redirect("bai4_giohang.aspx");
             }
         }

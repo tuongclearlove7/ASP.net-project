@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="TrầnThếTường_9157.masterPage" %>
+
+<%@ Register Src="~/login.ascx" TagPrefix="uc1" TagName="login" %>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+          <table>
+
+                    <tr>
+                        <td style="width:25%;">
+                            <uc1:login runat="server" ID="login" />
+                        </td>
+                         <td style="width:50%;">
+                              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                             </asp:ContentPlaceHolder>
+                        </td>
+                         <td style="width:25%;">
+                             <div>
+                                 <h1>Danh mục</h1>
+
+                                     <asp:DataList ID="ds_danhmuc"  runat="server">
+                                    <ItemTemplate>
+                                              <div>
+                                                    <asp:LinkButton ID="LinkButton1" runat="server"><%# Eval("tendanhmuc") %></asp:LinkButton>
+                                              </div>
+                                      </ItemTemplate>
+                                </asp:DataList>
+                                
+                             </div>
+                        </td>
+                    </tr>
+                </table>
+
+        <div>
+           
+        </div>
+    </form>
+</body>
+</html>
