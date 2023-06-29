@@ -1,0 +1,7 @@
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\bin\Debug\TrầnThếTường39157_baitapCsharp.exe.config
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\bin\Debug\TrầnThếTường39157_baitapCsharp.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\bin\Debug\TrầnThếTường39157_baitapCsharp.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\obj\Debug\TrầnThếTường39157_baitapCsharp.csproj.AssemblyReference.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\obj\Debug\TrầnThếTường39157_baitapCsharp.csproj.CoreCompileInputs.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\obj\Debug\TrầnThếTường39157_baitapCsharp.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\TrầnThếTường39157_baitapCsharp\obj\Debug\TrầnThếTường39157_baitapCsharp.pdb

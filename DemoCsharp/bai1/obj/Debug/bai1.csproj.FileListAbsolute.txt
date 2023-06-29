@@ -1,0 +1,7 @@
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\bin\Debug\bai1.exe.config
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\bin\Debug\bai1.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\bin\Debug\bai1.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\obj\Debug\bai1.csproj.AssemblyReference.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\obj\Debug\bai1.csproj.CoreCompileInputs.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\obj\Debug\bai1.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\DemoCsharp\bai1\obj\Debug\bai1.pdb

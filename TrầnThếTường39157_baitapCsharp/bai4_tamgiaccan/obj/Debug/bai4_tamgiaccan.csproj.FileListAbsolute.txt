@@ -1,0 +1,6 @@
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai4_tamgiaccan\bin\Debug\bai4_tamgiaccan.exe.config
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai4_tamgiaccan\bin\Debug\bai4_tamgiaccan.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai4_tamgiaccan\bin\Debug\bai4_tamgiaccan.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai4_tamgiaccan\obj\Debug\bai4_tamgiaccan.csproj.CoreCompileInputs.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai4_tamgiaccan\obj\Debug\bai4_tamgiaccan.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai4_tamgiaccan\obj\Debug\bai4_tamgiaccan.pdb

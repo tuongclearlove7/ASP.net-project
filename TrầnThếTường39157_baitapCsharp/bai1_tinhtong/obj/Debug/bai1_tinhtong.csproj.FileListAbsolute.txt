@@ -1,0 +1,7 @@
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\bin\Debug\bai1_tinhtong.exe.config
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\bin\Debug\bai1_tinhtong.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\bin\Debug\bai1_tinhtong.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\obj\Debug\bai1_tinhtong.csproj.CoreCompileInputs.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\obj\Debug\bai1_tinhtong.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\obj\Debug\bai1_tinhtong.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai1_tinhtong\obj\Debug\bai1_tinhtong.csproj.AssemblyReference.cache

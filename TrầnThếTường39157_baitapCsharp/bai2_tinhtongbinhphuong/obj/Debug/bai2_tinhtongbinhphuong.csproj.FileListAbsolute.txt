@@ -1,0 +1,6 @@
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai2_tinhtongbinhphuong\bin\Debug\bai2_tinhtongbinhphuong.exe.config
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai2_tinhtongbinhphuong\bin\Debug\bai2_tinhtongbinhphuong.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai2_tinhtongbinhphuong\bin\Debug\bai2_tinhtongbinhphuong.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai2_tinhtongbinhphuong\obj\Debug\bai2_tinhtongbinhphuong.csproj.CoreCompileInputs.cache
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai2_tinhtongbinhphuong\obj\Debug\bai2_tinhtongbinhphuong.exe
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai2_tinhtongbinhphuong\obj\Debug\bai2_tinhtongbinhphuong.pdb

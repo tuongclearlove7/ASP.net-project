@@ -124,10 +124,12 @@ namespace DemoCsharp
 
             sv.nhap();
             gv.nhap();
-            gv.xuat();  
+            gv.xuat();
             sv.xuat();
+            Console.OutputEncoding = Encoding.UTF8;
 
-
+            Console.WriteLine("welcome to c#");
+            Console.WriteLine("Xin chào đến với chương trình Csharp");
             Console.ReadLine();
 
 
