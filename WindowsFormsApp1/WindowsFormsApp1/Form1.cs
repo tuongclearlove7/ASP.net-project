@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         {
 
             //hien thi 1 window form khac
-            Form2 f2 = new Form2();
+            App2 f2 = new App2();
             f2.Show();
             f2.label1.Text = "Count : " + i;
             i++;
@@ -52,6 +52,9 @@ namespace WindowsFormsApp1
             label.Text = "App";
         }
 
-      
+        private void App_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

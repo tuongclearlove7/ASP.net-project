@@ -4,3 +4,4 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_ba
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai5_tamgiacrong\obj\Debug\bai5_tamgiacrong.csproj.CoreCompileInputs.cache
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai5_tamgiacrong\obj\Debug\bai5_tamgiacrong.exe
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai5_tamgiacrong\obj\Debug\bai5_tamgiacrong.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai5_tamgiacrong\obj\Debug\bai5_tamgiacrong.csproj.AssemblyReference.cache

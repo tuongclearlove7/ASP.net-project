@@ -4,3 +4,4 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_ba
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai3_tinhgiaithua\obj\Debug\bai3_tinhgiaithua.csproj.CoreCompileInputs.cache
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai3_tinhgiaithua\obj\Debug\bai3_tinhgiaithua.exe
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai3_tinhgiaithua\obj\Debug\bai3_tinhgiaithua.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường39157_baitapCsharp\bai3_tinhgiaithua\obj\Debug\bai3_tinhgiaithua.csproj.AssemblyReference.cache

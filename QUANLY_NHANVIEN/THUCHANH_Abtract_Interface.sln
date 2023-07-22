@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abtract_Interface", "THUCHANH_Abtract_Interface\Abtract_Interface.csproj", "{E36B5F1E-5828-457B-AD3D-55A11EFE849E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinhVien_lam_2", "Test\SinhVien_lam_2.csproj", "{ABBB3704-A973-4347-8086-9CC259C0B63B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E36B5F1E-5828-457B-AD3D-55A11EFE849E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36B5F1E-5828-457B-AD3D-55A11EFE849E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36B5F1E-5828-457B-AD3D-55A11EFE849E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36B5F1E-5828-457B-AD3D-55A11EFE849E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBB3704-A973-4347-8086-9CC259C0B63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBB3704-A973-4347-8086-9CC259C0B63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBB3704-A973-4347-8086-9CC259C0B63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBB3704-A973-4347-8086-9CC259C0B63B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

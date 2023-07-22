@@ -73,13 +73,14 @@
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(791, 504);
+            this.ClientSize = new System.Drawing.Size(774, 504);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label);
             this.Controls.Add(this.button);
             this.DoubleBuffered = true;
             this.Name = "App";
             this.Text = "App";
+            this.Load += new System.EventHandler(this.App_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
