@@ -27,6 +27,7 @@ namespace Oop_dahinh
                 string Option;
                 Console.WriteLine("nhập 0 để đến thoát nhập, nhập B cho bệnh nhân bhxh, H cho bệnh nhân bhyt ");
                 Option = Console.ReadLine().ToUpper();
+
                 if (Option == "0") break;
                 if (Option == "B")
                 {

@@ -67,8 +67,8 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_le
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\bin\Antlr3.Runtime.pdb
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\obj\Debug\webform_leaning1.csproj.AssemblyReference.cache
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\obj\Debug\webform_leaning1.csproj.CoreCompileInputs.cache
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\obj\Debug\webform_leaning1.csproj.CopyComplete
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\obj\Debug\webform_leaning1.dll
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\obj\Debug\webform_leaning1.pdb
+C:\Users\clearlove7\Documents\GitHub\ASP.net-project\webform_leaning1\webform_leaning1\obj\Debug\webform_leaning1.csprojAssemblyReference.cache

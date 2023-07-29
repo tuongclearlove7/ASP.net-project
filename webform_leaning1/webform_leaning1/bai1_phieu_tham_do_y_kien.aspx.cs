@@ -13,7 +13,13 @@ namespace webform_leaning1
         {
 
         }
-        protected void hien_thi(object sender, EventArgs e)
+
+        protected void huy(object sender, EventArgs e)
+        {
+
+            label_hienthi.Text = "";
+        }
+            protected void hien_thi(object sender, EventArgs e)
         {
             string gender = gioitinh.SelectedValue;
             string result = "";

@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.33529.398
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{54255D4A-C24E-470E-9CF2-2AFDDF4896CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDI_chacon", "..\MDI_chacon\MDI_chacon.csproj", "{CFF36028-C43D-4E8C-9AE9-9FA096D8114D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ketnoi_database", "ketnoi_database\ketnoi_database.csproj", "{2E4B3493-B302-4BD9-AD37-3BAD45313F8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{54255D4A-C24E-470E-9CF2-2AFDDF4896CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54255D4A-C24E-470E-9CF2-2AFDDF4896CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54255D4A-C24E-470E-9CF2-2AFDDF4896CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF36028-C43D-4E8C-9AE9-9FA096D8114D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF36028-C43D-4E8C-9AE9-9FA096D8114D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF36028-C43D-4E8C-9AE9-9FA096D8114D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF36028-C43D-4E8C-9AE9-9FA096D8114D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E4B3493-B302-4BD9-AD37-3BAD45313F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4B3493-B302-4BD9-AD37-3BAD45313F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4B3493-B302-4BD9-AD37-3BAD45313F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4B3493-B302-4BD9-AD37-3BAD45313F8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

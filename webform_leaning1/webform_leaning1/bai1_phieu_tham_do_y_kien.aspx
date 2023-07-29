@@ -32,7 +32,7 @@
                  </div>
                 <div style='padding-top:10px;'>  
                     <asp:Button style='width:100px;height:30px;' ID="Button1" runat="server" Text="Chọn" OnClick="hien_thi"/>  
-                    <asp:Button style='width:100px;height:30px;' ID="Button2" runat="server" Text="Hủy" />  
+                    <asp:Button style='width:100px;height:30px;' ID="Button2" runat="server" Text="Hủy" OnClick="huy" />  
                 </div> 
                 <div style="padding-top:20px;">  
                    <asp:Label ID="label_hienthi" runat="server" ></asp:Label>  

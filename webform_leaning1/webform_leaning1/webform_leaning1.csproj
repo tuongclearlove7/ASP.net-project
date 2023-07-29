@@ -135,6 +135,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="bai4_thuc_hien_phep_tinh.aspx" />
     <Content Include="bai2_xay_dung_form_default.aspx" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="bai1_phieu_tham_do_y_kien.aspx" />
     <Content Include="bai7_mua_hang.aspx" />
@@ -283,6 +284,13 @@
     </Compile>
     <Compile Include="bai2_xay_dung_form_default.aspx.designer.cs">
       <DependentUpon>bai2_xay_dung_form_default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
