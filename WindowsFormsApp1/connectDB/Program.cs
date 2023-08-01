@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ketnoi_database
+namespace connectDB
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ketnoi_database
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_sinhvien());
+            Application.Run(new app_quanly_sinhvien());
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ketnoi_database")]
+[assembly: AssemblyTitle("connectDB")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ketnoi_database")]
+[assembly: AssemblyProduct("connectDB")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2e4b3493-b302-4bd9-ad37-3bad45313f8d")]
+[assembly: Guid("d1add2cb-5b5a-4dfe-840d-520d29158b83")]
 
 // Version information for an assembly consists of the following four values:
 //
