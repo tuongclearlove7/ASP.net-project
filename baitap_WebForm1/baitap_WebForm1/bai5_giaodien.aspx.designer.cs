@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace baitap_WebForm1
-{
-
-
-    public partial class bai5_giaodien
-    {
-
+namespace baitap_WebForm1 {
+    
+    
+    public partial class bai5_giaodien {
+        
         /// <summary>
         /// label1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label1;
-
+        
         /// <summary>
         /// so_chan control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox so_chan;
-
+        
         /// <summary>
         /// CustomValidator1 control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
-
+        
         /// <summary>
         /// label2 control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label2;
-
+        
         /// <summary>
         /// ma_baomat control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ma_baomat;
-
+        
         /// <summary>
         /// lblMaBM control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMaBM;
-
+        
         /// <summary>
         /// CustomValidator2 control.
         /// </summary>
@@ -76,7 +74,16 @@ namespace baitap_WebForm1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator2;
-
+        
+        /// <summary>
+        /// success control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label success;
+        
         /// <summary>
         /// btn_kiemtra control.
         /// </summary>

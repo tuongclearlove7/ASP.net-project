@@ -12,6 +12,7 @@
             <asp:Label style="color:red;" ID="lblMaBM" runat="server"></asp:Label>  
             <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="ma_baomat" Display="Dynamic" OnServerValidate="CustomValidator2_ServerValidate">
             </asp:CustomValidator>
+             <asp:Label ID="success" runat="server" Text=""></asp:Label>
          </div>
         <div style='padding-top:10px;'>  
             <asp:Button style='width:70px;height:20px;' ID="btn_kiemtra" runat="server" Text="Kiểm lỗi" OnClick="kiemtra_mabaomat" />  
