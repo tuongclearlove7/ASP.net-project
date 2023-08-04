@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,10 @@ namespace connectDB
 {
     public partial class app_quanly_sinhvien : Form
     {
-        static string databaseFileName = "DBsinhvien.mdf";
 
-        public string DatabaseFileName { get => databaseFileName; set => databaseFileName = value; }
+        int c = 0;
 
-        string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\clearlove7\Documents\GitHub\ASP.net-project\WindowsFormsApp1\connectDB\{databaseFileName};Integrated Security=True";
-
+        connectDB ketnoi = new connectDB();
 
         public app_quanly_sinhvien()
         {
@@ -37,51 +36,26 @@ namespace connectDB
 
         public int loadData(string sql)
         {
-
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = ketnoi.loadData(sql);
 
             return 0;
         }
 
         public int loadDataKhoa(string sql)
         {
-
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            combox_khoa.DataSource = dt;
+            combox_khoa.DataSource = ketnoi.loadData(sql);
             combox_khoa.DisplayMember = "tenkhoa";
-
-            return 0;
-        }
-
-        public int changeDB(string sql)
-        {
-
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            connection.Open();
-            int res = cmd.ExecuteNonQuery();
-            if (res >= 1)
-                MessageBox.Show("successfully");
-            else MessageBox.Show("failed");
-            connection.Close();
-            loadData("SELECT * FROM SINHVIEN");
+            combox_khoa.ValueMember = "makhoa";
 
             return 0;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sql = $@"insert into SINHVIEN values ('{txt_masv.Text}', N'{txt_hoten.Text}', '{dateTimePicker1.Value}', '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}')";
-            changeDB(sql);
+            string sql = $@"insert into SINHVIEN values ('{txt_masv.Text}', N'{txt_hoten.Text}', '{dateTimePicker1.Value}', '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}', '{txt_hinhanh.Text}')";
+            image_sv.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanh.Text}");
+            ketnoi.changeDB(sql);
+            loadData("SELECT * FROM SINHVIEN");
 
         }
 
@@ -89,31 +63,36 @@ namespace connectDB
         {
 
             string sql = $@"DELETE FROM SINHVIEN WHERE masv = '{txt_masv.Text}'";
-            changeDB(sql);
+            File.Delete(Application.StartupPath + $@"\\Resources\\{txt_hinhanh.Text}");
+            ketnoi.changeDB(sql);
+            loadData("SELECT * FROM SINHVIEN");
 
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            DateTime currentDate = DateTime.Now;
-            string sql = $@"UPDATE SINHVIEN SET hoten = N'{txt_hoten.Text}', ngaynhaphoc = '{dateTimePicker1.Value}', makhoa = '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}' WHERE masv = '{txt_masv.Text}'";
-            changeDB(sql);
+       
+            string sql = $@"UPDATE SINHVIEN SET hoten = N'{txt_hoten.Text}', ngaynhaphoc = '{dateTimePicker1.Value}', makhoa = '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}', hinhanh = '{txt_hinhanh.Text}' WHERE masv = '{txt_masv.Text}'";
+            image_sv.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanh.Text}");
+            ketnoi.changeDB(sql);
+            loadData("SELECT * FROM SINHVIEN");
         }
-        int c = 0;
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             combox_khoa.ValueMember = "makhoa";
             combox_khoa.DisplayMember = "tenkhoa";
-
             txt_masv.Text = dataGridView1.CurrentRow.Cells["masv"].Value.ToString();
             txt_hoten.Text = dataGridView1.CurrentRow.Cells["hoten"].Value.ToString();
+            txt_search.Text = dataGridView1.CurrentRow.Cells["hoten"].Value.ToString();
             dateTimePicker1.Text = dataGridView1.CurrentRow.Cells["ngaynhaphoc"].Value.ToString();
+            txt_hinhanh.Text = dataGridView1.CurrentRow.Cells["hinhanh"].Value.ToString();
+            image_sv.ImageLocation = Application.StartupPath + $@"\\Resources\\{txt_hinhanh.Text}";
             c = 1;
             combox_khoa.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells["makhoa"].Value.ToString();
             c = 0;
-
 
         }
 
@@ -121,11 +100,8 @@ namespace connectDB
 
         private void btnCount_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand("SELECT count(*) FROM SINHVIEN", connection);
-            connection.Open();
-            int count = (int)cmd.ExecuteScalar();
-            connection.Close();
+            //loadData("SELECT count(*) FROM SINHVIEN");
+            int count = (int)ketnoi.countRecord("SELECT count(*) FROM SINHVIEN");
             lbCount.Text = "Số sinh viên : " + count.ToString();
 
         }
@@ -135,14 +111,8 @@ namespace connectDB
 
             if (c == 0)
             {
-                SqlConnection connection = new SqlConnection(connectionString);
-
                 string sql = $@"SELECT * FROM SINHVIEN WHERE makhoa = '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}'";
-                SqlCommand cmd = new SqlCommand(sql, connection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = ketnoi.loadData(sql);
             }
 
             if (((DataRowView)combox_khoa.SelectedItem)["makhoa"].ToString() == "XTC")
@@ -153,15 +123,27 @@ namespace connectDB
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-         
-        }
-
+     
         private void button_load_Click(object sender, EventArgs e)
         {
             loadDataKhoa("SELECT * FROM KHOA");
             loadData("SELECT * FROM SINHVIEN");
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            string sql = $@"SELECT * FROM SINHVIEN WHERE masv like '%{txt_search.Text}%' OR hoten like N'%{txt_search.Text}%' OR hinhanh like '%{txt_search.Text}%'";
+            loadData(sql);
+        }
+
+        private void add_image(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Hãy chọn ảnh";
+            ofd.Filter = "Tất cả đuôi ảnh|*.*|JPG|*.jpg|PNG|*.png|JEPG|*.jpeg|GIF|*.gif";
+            if (ofd.ShowDialog() == DialogResult.OK) {
+                image_sv.Image = Image.FromFile(ofd.FileName);
+            }
         }
 
 

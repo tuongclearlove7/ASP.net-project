@@ -17,6 +17,7 @@ namespace TrầnThếTường9157_đồ_án
         bool top, left, right, down;
         int playerMoveRight = 0;
         int speed = 50;
+        bool shoot;
 
         public Form1()
         {
@@ -28,29 +29,11 @@ namespace TrầnThếTường9157_đồ_án
             player.Top = player.Top + 30;
             player2.Top = player.Top + 30;
 
-            if (left == true && player.Left > 0)
-            {
-                playerMoveRight -= speed;
-                if (playerMoveRight < 0)
-                {
-                    playerMoveRight = 0;
-                }
-                player.Left = playerMoveRight;
-            }
-            if (right == true && player.Left < 1050)
-            {
-                playerMoveRight += speed; 
-                //if (playerLeft > this.Width - player.Width)
-                //{
-                //    playerLeft = this.Width - player.Width; 
-                //}
-                // player.Image = new Bitmap("image\\player_dambay.gif");
-                //  player.Image = Image.FromFile(@"Resources\\player.png");
-               
-               
-                // player.Image = new Bitmap(imagePath);
-                player.Left = playerMoveRight;
-            }
+           
+            bullet_player1.Image = new Bitmap(Application.StartupPath + "\\Resources\\bullet.png");
+            bullet_player1.Top = bullet_player1.Top + 30;
+       
+
             if (top == true && player.Top > 0)
             {
                 player.Top -= speed;
@@ -60,18 +43,22 @@ namespace TrầnThếTường9157_đồ_án
                 player.Top += speed;
             }
 
+            
 
 
         }
 
         private void player_LocationChanged(object sender, EventArgs e)
         {
-            lb_location_p1.Text = $@"{player.Top.ToString()}, { player.Left.ToString()}";
-            
-            if (player.Top > 350)
+            location_p1.Text = $@"{player.Top.ToString()}, { player.Left.ToString()}";
+            if (player.Top < 0)
             {
-                player.Top = 350;
-               
+                player.Top = -20;
+
+            }
+            if (player.Top > 460)
+            {
+                player.Top = 460;
             }
         }
 
@@ -86,8 +73,31 @@ namespace TrầnThếTường9157_đồ_án
             }
         }
 
+
+        private void bullet_player1_LocationChanged(object sender, EventArgs e)
+        {
+            bullet_location.Text = $@"{bullet_player1.Top.ToString()}, { bullet_player1.Left.ToString()}";
+            if (bullet_player1.Left > 1200)
+            {
+                bullet_player1.Left = 100;
+            }
+
+            if (bullet_player1.Top > 400)
+            {
+                bullet_player1.Top = 400;
+            }
+        }
+
+    
         private void IsKeyDown(object sender, KeyEventArgs e)
         {
+
+            if (e.KeyCode == Keys.S)
+            {
+                shoot = true;
+            }
+
+
             if (e.KeyCode == Keys.Left)
             {
                 left = true;
@@ -108,6 +118,12 @@ namespace TrầnThếTường9157_đồ_án
 
         private void IsKeyUp(object sender, KeyEventArgs e)
         {
+
+            if (e.KeyCode == Keys.S)
+            {
+                shoot = false;
+            }
+
             if (e.KeyCode == Keys.Left)
             {
                 left = false;

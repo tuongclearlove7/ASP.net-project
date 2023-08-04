@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,16 +61,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BLL\BLL_dangnhap.cs" />
+    <Compile Include="BLL\BLL_nguoichoi.cs" />
+    <Compile Include="BLL\BLL_nguoichoidangky.cs" />
+    <Compile Include="DAL\DAL_dangnhap.cs" />
+    <Compile Include="DAL\DAL_nguoichoi.cs" />
+    <Compile Include="DAL\DAL_nguoichoidangky.cs" />
+    <Compile Include="GUI\fromGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\fromGame.Designer.cs">
+      <DependentUpon>fromGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formUser.Designer.cs">
+      <DependentUpon>formUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\form_quanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\form_quanly.Designer.cs">
+      <DependentUpon>form_quanly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\form_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\form_register.Designer.cs">
+      <DependentUpon>form_register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketnoi_database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fromGame.resx">
+      <DependentUpon>fromGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formUser.resx">
+      <DependentUpon>formUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\form_quanly.resx">
+      <DependentUpon>form_quanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\form_register.resx">
+      <DependentUpon>form_register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,9 +139,49 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bgblue.jpg" />
+    <None Include="Resources\aaaa.jpeg" />
+    <None Include="Resources\aa.png" />
+    <None Include="Resources\thaorose.jpg" />
+    <None Include="Resources\rose.png" />
+    <None Include="Resources\bglol.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="bin\Debug\Resources\bullet.png" />
+    <Content Include="bin\Debug\Resources\catlyn.jpeg" />
+    <Content Include="bin\Debug\Resources\jinx.jpeg" />
+    <Content Include="bin\Debug\Resources\lucian.jpeg" />
+    <Content Include="bin\Debug\Resources\morgana.jpeg" />
+    <Content Include="bin\Debug\Resources\plane1.png" />
+    <Content Include="bin\Debug\Resources\plane2.png" />
+    <Content Include="bin\Debug\Resources\thaorose.jpg" />
+    <Content Include="bin\Debug\Resources\user1.png" />
+    <Content Include="bin\Debug\Resources\yasuo.jpg" />
+    <Content Include="bin\Debug\Resources\zed.jpg" />
+    <Content Include="db.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="db_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>db.mdf</DependentUpon>
+    </Content>
     <Content Include="image\player.png" />
     <Content Include="image\player_dambay.gif" />
+    <None Include="Resources\bullet.png" />
+    <None Include="Resources\plane1.png" />
     <None Include="Resources\player.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

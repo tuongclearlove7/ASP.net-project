@@ -16,7 +16,7 @@ namespace connectDB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new app_quanly_sinhvien());
+            Application.Run(new form_login());
         }
     }
 }
