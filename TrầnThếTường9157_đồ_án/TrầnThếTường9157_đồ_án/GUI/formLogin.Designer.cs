@@ -84,7 +84,7 @@
             // btn_register
             // 
             this.btn_register.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
-            this.btn_register.Location = new System.Drawing.Point(321, 310);
+            this.btn_register.Location = new System.Drawing.Point(321, 309);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(127, 36);
             this.btn_register.TabIndex = 7;
@@ -106,7 +106,7 @@
             this.Controls.Add(this.txt_matkhau);
             this.Controls.Add(this.txt_tendangnhap);
             this.Name = "formLogin";
-            this.Text = "formLogin";
+            this.Text = "Đăng nhập tài khoản";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

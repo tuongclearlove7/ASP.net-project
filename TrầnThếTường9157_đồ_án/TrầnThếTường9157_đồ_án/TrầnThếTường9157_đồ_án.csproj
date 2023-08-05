@@ -67,6 +67,12 @@
     <Compile Include="DAL\DAL_dangnhap.cs" />
     <Compile Include="DAL\DAL_nguoichoi.cs" />
     <Compile Include="DAL\DAL_nguoichoidangky.cs" />
+    <Compile Include="GUI\form_nguoichoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\form_nguoichoi.Designer.cs">
+      <DependentUpon>form_nguoichoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fromGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +84,6 @@
     </Compile>
     <Compile Include="GUI\formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\formUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\formUser.Designer.cs">
-      <DependentUpon>formUser.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\form_quanly.cs">
       <SubType>Form</SubType>
@@ -100,14 +100,14 @@
     <Compile Include="ketnoi_database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\form_nguoichoi.resx">
+      <DependentUpon>form_nguoichoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fromGame.resx">
       <DependentUpon>fromGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\formUser.resx">
-      <DependentUpon>formUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\form_quanly.resx">
       <DependentUpon>form_quanly.cs</DependentUpon>

@@ -29,12 +29,6 @@ namespace TrầnThếTường9157_đồ_án.BLL
             string hinh_nv = APP.cb_nhanvat.ValueMember = "hinhanh";
        
         }
-
-        public bool checkIsvalid(string tendangnhap, string matkhau, string hoten, string sdt)
-        {
-                
-                return !string.IsNullOrEmpty(tendangnhap);
-        }
         
         public void BLL_dangky()
         {
@@ -77,6 +71,7 @@ namespace TrầnThếTường9157_đồ_án.BLL
                 {
                     tendn = APP.txt_tendangnhap.Text;
                 }
+             
                 DAL_NCDK.DAL_dangky(manc, tendn, APP.txt_matkhau.Text, APP.txt_hoten.Text, APP.txt_sdt.Text, current_date, "user1.png", manv);
 
 

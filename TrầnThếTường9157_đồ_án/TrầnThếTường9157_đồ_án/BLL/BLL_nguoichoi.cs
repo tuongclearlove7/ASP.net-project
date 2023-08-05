@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,29 +14,25 @@ namespace TrầnThếTường9157_đồ_án.BLL
 
         DAL.DAL_nguoichoi DAL_NC;
         form_quanly APP;
+        form_nguoichoi APP_NC;
         int manv;
-
+        
         public BLL_nguoichoi(form_quanly app)
         {
             DAL_NC = new DAL.DAL_nguoichoi();
             APP = app;
         }
 
-        public void BLL_loadDataNhanvat(string sql)
+        public BLL_nguoichoi(form_nguoichoi app_nc)
         {
-            
-            APP.cb_nhanvat.DataSource = DAL_NC.DAL_loadDataNhanvat(sql);
-            APP.cb_nhanvat.DisplayMember = "tennhanvat";
-            APP.cb_nhanvat.ValueMember = "manhanvat";
-
+            DAL_NC = new DAL.DAL_nguoichoi();
+            APP_NC = app_nc;
         }
 
         public DataTable BLL_loadData(string sql)
         {
-           // APP.dataGridView1.DataSource = DAL_NC.DAL_loadData(sql);
-            DataTable dt = DAL_NC.DAL_loadData(sql);
 
-            return dt;
+            return DAL_NC.DAL_loadData(sql);
         }
 
         public void BLL_them() {
@@ -59,14 +56,81 @@ namespace TrầnThếTường9157_đồ_án.BLL
 
         public void BLL_xoa()
         {
-            int manhanvat = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
+            int manhanvat = (int)((DataRowView)APP.chon_nhanvat.SelectedItem)["manhanvat"];
             DAL_NC.DAL_xoa(manhanvat);
         }
 
-        public void BLL_sua()
+        public void BLL_xoa_nc(int manc)
+        { 
+            DAL_NC.DAL_xoa_nc(manc);
+        }
+
+        public void BLL_sua(int manhanvat)
         {           
-            int manhanvat = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
+            
             DAL_NC.DAL_sua(manhanvat, APP.txt_tennv.Text, APP.txt_maunv.Text, APP.txt_nlnv.Text, APP.txt_hinhanhnv.Text);
+
+        }
+
+        public void BLL_sua_nv_nc(int manhanvat, string tendangnhap)
+        {
+            DialogResult res = MessageBox.Show("Bạn chắc chắn muốn đổi nhân vật chứ ?", "Xác nhận", MessageBoxButtons.OKCancel);
+           
+            if (res == DialogResult.OK)
+            {
+                DAL_NC.DAL_sua_nv(manhanvat, tendangnhap);
+            }
+            else if(res == DialogResult.Cancel)
+            {
+                return;
+            }
+
+        }
+
+
+        private bool checkIsvalid(DataTable dt)
+        {
+            if (dt.Rows[0]["hinhanh"].ToString() != "user1.png")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void BLL_sua_anhdaidien(string anhdaidien, string tendangnhap)
+        {
+            DialogResult res = MessageBox.Show("Bạn chắc chắn muốn đổi ảnh đại diện chứ ?", "Xác nhận", MessageBoxButtons.OKCancel);
+
+            if (res == DialogResult.OK)
+            {
+
+                DataTable dt = DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI WHERE tendangnhap = '{APP_NC.lb_nc.Text}'");
+                DataTable dt_all = DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI");
+                try
+                {
+
+                   
+                        
+                        if (dt.Rows[0]["hinhanh"].ToString() == dt_all.Rows[0]["hinhanh"].ToString()
+                            || dt.Rows[0]["hinhanh"].ToString() == "user1.png")
+                        {
+                        }
+
+                    APP_NC.img_nc.Image.Save(Application.StartupPath + $@"\\Resources\\{APP_NC.txt_filename.Text}");
+                    DAL_NC.DAL_sua_anhdaidien(anhdaidien, tendangnhap);
+
+
+                }
+                catch
+                {
+                    return;
+                }
+
+            }
+            else if (res == DialogResult.Cancel)
+            {
+                return;
+            }
 
         }
 
@@ -84,7 +148,7 @@ namespace TrầnThếTường9157_đồ_án.BLL
                 APP.txt_maunv.Text = dt.Rows[0]["mau"].ToString();
                 APP.txt_nlnv.Text = dt.Rows[0]["nangluong"].ToString();
                 APP.txt_hinhanhnv.Text = dt.Rows[0]["hinhanh"].ToString();
-                APP.cb_nhanvat.SelectedValue = manv;
+                APP.chon_nhanvat.SelectedValue = manv;
             }
             catch
             {

@@ -24,21 +24,35 @@ namespace TrầnThếTường9157_đồ_án
             this.MinimumSize = this.Size;
             this.Resize += Form1_Resize;
 
-
-
             ketnoi = new ketnoi_database();
             BLL_NC = new BLL.BLL_nguoichoi(this);
 
-            BLL_NC.BLL_loadDataNhanvat($@"SELECT * FROM NHANVAT");
+            chon_nhanvat.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            chon_nhanvat.DisplayMember = "tennhanvat";
+            chon_nhanvat.ValueMember = "manhanvat";
+
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
             dataGridView1.Columns["matkhau"].Visible = false;
 
             DataTable dt_nc = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
-            string userImage = dt_nc.Rows[0]["hinhanh"].ToString();
-            string hotenNC = dt_nc.Rows[0]["hoten"].ToString();
-            img_user.ImageLocation = Application.StartupPath + $@"\\Resources\\{userImage}";
-            lb_player.Text = hotenNC;
+            string userImage, hotenNC, maNC;
+            try
+            {
+                userImage = dt_nc.Rows[0]["hinhanh"].ToString();
+                hotenNC = dt_nc.Rows[0]["hoten"].ToString();
+                maNC = dt_nc.Rows[0]["manguoichoi"].ToString();
+                img_user.ImageLocation = Application.StartupPath + $@"\\Resources\\{userImage}";
+                lb_player.Text = hotenNC;
+                lb_manc.Text = maNC;
+            }
+            catch
+            {
+                img_user.ImageLocation = Application.StartupPath + $@"\\Resources\\user1.png";
+                lb_player.Text = "Hiện không có người chơi nào!";
+                
+            }
+          
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -67,9 +81,11 @@ namespace TrầnThếTường9157_đồ_án
                 DataTable dt_nc = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI WHERE manguoichoi = {manc} ");
                 string userImage = dt_nc.Rows[0]["hinhanh"].ToString();
                 string hotenNC = dt_nc.Rows[0]["hoten"].ToString();
+                string maNC = dt_nc.Rows[0]["manguoichoi"].ToString();
                 img_user.ImageLocation = Application.StartupPath + $@"\\Resources\\{userImage}";
                 lb_player.Text = hotenNC;
-                
+                lb_manc.Text = maNC;
+               
                 int manv = (int)dataGridView1.Rows[e.RowIndex].Cells["manhanvat"].Value;
                 BLL_NC.DLL_filterRecord(manv);
 
@@ -105,11 +121,11 @@ namespace TrầnThếTường9157_đồ_án
          
             if (c == false)
             {
-                int manv = (int)((DataRowView)cb_nhanvat.SelectedItem)["manhanvat"];
-                DataTable dt = ketnoi.loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
+                int manv = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
+                DataTable dt = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
                 string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
                 img_player.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
-                dt.Rows[0]["tennhanvat"].ToString();
+                txt_tennv.Text =  dt.Rows[0]["tennhanvat"].ToString();
                 lb_nv.Text = txt_tennv.Text;
                 txt_maunv.Text = dt.Rows[0]["mau"].ToString();
                 txt_nlnv.Text = dt.Rows[0]["nangluong"].ToString();
@@ -123,7 +139,7 @@ namespace TrầnThếTường9157_đồ_án
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            BLL_NC.BLL_loadDataNhanvat($@"SELECT * FROM NHANVAT");
+            BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
 
@@ -133,7 +149,7 @@ namespace TrầnThếTường9157_đồ_án
         {
             img_player.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanhnv.Text}");
             BLL_NC.BLL_them();
-            BLL_NC.BLL_loadDataNhanvat($@"SELECT * FROM NHANVAT");
+            BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
         }
@@ -141,7 +157,8 @@ namespace TrầnThếTường9157_đồ_án
         private void btn_sua_nhanvat_Click(object sender, EventArgs e)
         {
             img_player.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanhnv.Text}");
-            BLL_NC.BLL_sua();
+            int manhanvat = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
+            BLL_NC.BLL_sua(manhanvat);
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             
         }
@@ -149,6 +166,14 @@ namespace TrầnThếTường9157_đồ_án
         private void btn_xoa_nhanvat_Click(object sender, EventArgs e)
         {
             BLL_NC.BLL_xoa();
+            dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
+        }
+
+        private void btnXoa_nc_Click(object sender, EventArgs e)
+        {
+            int manc = Convert.ToInt32(lb_manc.Text);
+            BLL_NC.BLL_xoa_nc(manc);
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
         }
@@ -184,6 +209,6 @@ namespace TrầnThếTường9157_đồ_án
             }
         }
 
-        
+       
     }
 }

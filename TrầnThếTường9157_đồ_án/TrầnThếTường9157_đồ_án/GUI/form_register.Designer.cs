@@ -142,7 +142,7 @@
             // lb_tennhanvat
             // 
             this.lb_tennhanvat.AutoSize = true;
-            this.lb_tennhanvat.Location = new System.Drawing.Point(589, 300);
+            this.lb_tennhanvat.Location = new System.Drawing.Point(625, 347);
             this.lb_tennhanvat.Name = "lb_tennhanvat";
             this.lb_tennhanvat.Size = new System.Drawing.Size(65, 17);
             this.lb_tennhanvat.TabIndex = 12;
@@ -165,7 +165,7 @@
             this.img_player.InitialImage = null;
             this.img_player.Location = new System.Drawing.Point(513, 48);
             this.img_player.Name = "img_player";
-            this.img_player.Size = new System.Drawing.Size(219, 230);
+            this.img_player.Size = new System.Drawing.Size(299, 277);
             this.img_player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_player.TabIndex = 7;
             this.img_player.TabStop = false;
@@ -177,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(744, 460);
+            this.ClientSize = new System.Drawing.Size(833, 460);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.lb_tennhanvat);
             this.Controls.Add(this.label4);
@@ -193,7 +193,8 @@
             this.Controls.Add(this.txt_matkhau);
             this.Controls.Add(this.txt_tendangnhap);
             this.Name = "form_register";
-            this.Text = "form_register";
+            this.Text = "Đăng ký tài khoản";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_register_Closing);
             ((System.ComponentModel.ISupportInitialize)(this.img_player)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

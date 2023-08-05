@@ -51,11 +51,30 @@ namespace TrầnThếTường9157_đồ_án.DAL
             ketnoi.changeDB(sql);
         }
 
+        public void DAL_xoa_nc(int manc)
+        {
+            string sql = $@"DELETE FROM NGUOICHOI WHERE manguoichoi = {manc}";
+            ketnoi.changeDB(sql);
+        }
+
         public void DAL_sua(int manhanvat, string tennhanvat, string mau, string nangluong, string hinhanh)
         {
             string sql = $@"UPDATE NHANVAT SET tennhanvat = N'{tennhanvat}', mau = {mau}, nangluong = {nangluong}, hinhanh = '{hinhanh}' WHERE manhanvat = {manhanvat}";
             ketnoi.changeDB(sql);
         }
+
+        public void DAL_sua_nv(int manhanvat, string tendangnhap)
+        {
+            string sql = $@"UPDATE NGUOICHOI SET manhanvat = {manhanvat} WHERE tendangnhap = '{tendangnhap}'";
+            ketnoi.changeDB(sql);
+        }
+
+        public void DAL_sua_anhdaidien(string anhdaidien, string tendangnhap)
+        {
+            string sql = $@"UPDATE NGUOICHOI SET hinhanh = '{anhdaidien}' WHERE tendangnhap = '{tendangnhap}'";
+            ketnoi.changeDB(sql);
+        }
+
 
 
     }

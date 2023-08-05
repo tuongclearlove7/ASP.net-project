@@ -11,7 +11,6 @@ namespace TrầnThếTường9157_đồ_án.DAL
 
         ketnoi_database ketnoi;
 
-
         public DAL_dangnhap()
         {
             ketnoi = new ketnoi_database();
