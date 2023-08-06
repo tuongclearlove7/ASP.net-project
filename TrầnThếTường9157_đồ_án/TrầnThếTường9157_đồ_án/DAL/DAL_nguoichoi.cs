@@ -45,6 +45,12 @@ namespace TrầnThếTường9157_đồ_án.DAL
             return dt;
         }
 
+        public DataTable DAL_query(string sql)
+        {
+
+            return ketnoi.loadData(sql);
+        }
+
 
         public void DAL_xoa(int manhanvat)
         {
@@ -76,7 +82,7 @@ namespace TrầnThếTường9157_đồ_án.DAL
             ketnoi.changeDB(sql);
         }
 
-
+        
 
     }
 }

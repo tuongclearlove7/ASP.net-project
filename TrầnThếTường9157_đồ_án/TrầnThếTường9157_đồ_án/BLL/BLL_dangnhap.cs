@@ -72,9 +72,9 @@ namespace TrầnThếTường9157_đồ_án.BLL
                         MessageBox.Show($@"Bạn đã nhập sai tên đăng nhập hoặc mật khẩu lần {close} !");
                     }
                 }
-                if (close == 3)
+                if (close > 3)
                 {
-                    MessageBox.Show($@"Bạn đã nhập sai {close} lần chương trình phải thoát");
+                    MessageBox.Show($@"Bạn đã nhập sai quá {close-1} lần chương trình phải thoát");
                     Application.Exit();
                 }
             }

@@ -14,8 +14,6 @@ namespace TrầnThếTường9157_đồ_án.BLL
         //BUSSINESS LAYER
 
         int manc=1;
-        int mangc=1;
-        string tendn;
         DAL.DAL_nguoichoidangky DAL_NCDK;
         form_register APP;
         

@@ -1,4 +1,6 @@
-﻿namespace TrầnThếTường9157_đồ_án
+﻿using System.Drawing;
+
+namespace TrầnThếTường9157_đồ_án
 {
     partial class form_quanly
     {
@@ -63,6 +65,10 @@
             this.btnXoa_nc = new System.Windows.Forms.Button();
             this.tab_nv = new System.Windows.Forms.TabPage();
             this.tab_tool = new System.Windows.Forms.TabPage();
+            this.btn_query = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_query = new System.Windows.Forms.TextBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -71,6 +77,8 @@
             this.tabControl1.SuspendLayout();
             this.tab_nc.SuspendLayout();
             this.tab_nv.SuspendLayout();
+            this.tab_tool.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -427,6 +435,10 @@
             // 
             // tab_tool
             // 
+            this.tab_tool.Controls.Add(this.btn_query);
+            this.tab_tool.Controls.Add(this.label6);
+            this.tab_tool.Controls.Add(this.txt_query);
+            this.tab_tool.Controls.Add(this.dataGridView3);
             this.tab_tool.Location = new System.Drawing.Point(4, 25);
             this.tab_tool.Name = "tab_tool";
             this.tab_tool.Padding = new System.Windows.Forms.Padding(3);
@@ -434,6 +446,44 @@
             this.tab_tool.TabIndex = 2;
             this.tab_tool.Text = "Cộng cụ";
             this.tab_tool.UseVisualStyleBackColor = true;
+            // 
+            // btn_query
+            // 
+            this.btn_query.Location = new System.Drawing.Point(3, 553);
+            this.btn_query.Name = "btn_query";
+            this.btn_query.Size = new System.Drawing.Size(747, 81);
+            this.btn_query.TabIndex = 26;
+            this.btn_query.Text = "QUERY";
+            this.btn_query.UseVisualStyleBackColor = true;
+            this.btn_query.Click += new System.EventHandler(this.btn_query_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 362);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(280, 17);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Nhập vào câu lệnh SQL để truy vấn dữ liệu";
+            // 
+            // txt_query
+            // 
+            this.txt_query.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txt_query.Location = new System.Drawing.Point(3, 405);
+            this.txt_query.Multiline = true;
+            this.txt_query.Name = "txt_query";
+            this.txt_query.Size = new System.Drawing.Size(747, 100);
+            this.txt_query.TabIndex = 24;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(752, 281);
+            this.dataGridView3.TabIndex = 23;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
             // form_quanly
             // 
@@ -457,6 +507,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tab_nc.ResumeLayout(false);
             this.tab_nv.ResumeLayout(false);
+            this.tab_tool.ResumeLayout(false);
+            this.tab_tool.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +551,9 @@
         public System.Windows.Forms.ComboBox chon_nhanvat;
         private System.Windows.Forms.Button btnXoa_nc;
         private System.Windows.Forms.Label lb_manc;
+        public System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.TextBox txt_query;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_query;
     }
 }

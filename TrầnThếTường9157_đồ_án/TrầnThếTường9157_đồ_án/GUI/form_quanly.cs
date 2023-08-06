@@ -23,6 +23,7 @@ namespace TrầnThếTường9157_đồ_án
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimumSize = this.Size;
             this.Resize += Form1_Resize;
+           
 
             ketnoi = new ketnoi_database();
             BLL_NC = new BLL.BLL_nguoichoi(this);
@@ -31,6 +32,7 @@ namespace TrầnThếTường9157_đồ_án
             chon_nhanvat.DisplayMember = "tennhanvat";
             chon_nhanvat.ValueMember = "manhanvat";
 
+            dataGridView3.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
             dataGridView1.Columns["matkhau"].Visible = false;
@@ -72,8 +74,9 @@ namespace TrầnThếTường9157_đồ_án
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-        
-            try { 
+
+            try
+            {
 
                 c = true;
 
@@ -85,7 +88,7 @@ namespace TrầnThếTường9157_đồ_án
                 img_user.ImageLocation = Application.StartupPath + $@"\\Resources\\{userImage}";
                 lb_player.Text = hotenNC;
                 lb_manc.Text = maNC;
-               
+
                 int manv = (int)dataGridView1.Rows[e.RowIndex].Cells["manhanvat"].Value;
                 BLL_NC.DLL_filterRecord(manv);
 
@@ -95,7 +98,9 @@ namespace TrầnThếTường9157_đồ_án
             {
                 return;
             }
-     
+
+
+
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -113,6 +118,33 @@ namespace TrầnThếTường9157_đồ_án
                 return;
             }
 
+        }
+
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                c = true;
+
+                int manc = (int)dataGridView3.Rows[e.RowIndex].Cells["manguoichoi"].Value;
+                DataTable dt_nc = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI WHERE manguoichoi = {manc} ");
+                string userImage = dt_nc.Rows[0]["hinhanh"].ToString();
+                string hotenNC = dt_nc.Rows[0]["hoten"].ToString();
+                string maNC = dt_nc.Rows[0]["manguoichoi"].ToString();
+                img_user.ImageLocation = Application.StartupPath + $@"\\Resources\\{userImage}";
+                lb_player.Text = hotenNC;
+                lb_manc.Text = maNC;
+
+                int manv = (int)dataGridView3.Rows[e.RowIndex].Cells["manhanvat"].Value;
+                BLL_NC.DLL_filterRecord(manv);
+
+                c = false;
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void cb_nhanvat_SelectedIndexChanged(object sender, EventArgs e)
@@ -189,6 +221,21 @@ namespace TrầnThếTường9157_đồ_án
           
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI ORDER BY manguoichoi DESC");
 
+        }
+
+        private void btn_query_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView3.DataSource = BLL_NC.BLL_loadDataQuery(txt_query.Text);
+                dataGridView3.Columns["matkhau"].Visible = false;
+            }
+            catch
+            {
+                dataGridView3.DataSource = BLL_NC.BLL_loadDataQuery(txt_query.Text);
+                //MessageBox.Show("Vui lòng nhập đúng cú pháp!");
+            }
+           
         }
 
         private void btnDX_Click(object sender, EventArgs e)

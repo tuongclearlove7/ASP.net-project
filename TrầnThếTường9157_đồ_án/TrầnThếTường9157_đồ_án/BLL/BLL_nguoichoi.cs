@@ -50,6 +50,12 @@ namespace TrầnThếTường9157_đồ_án.BLL
             return DAL_NC.DAL_loadData(sql);
         }
 
+        public DataTable BLL_loadDataQuery(string sql)
+        {
+
+            return DAL_NC.DAL_query(sql);
+        }
+
         public void BLL_them() {
 
             string sql = $@"SELECT * FROM NHANVAT";
@@ -119,8 +125,8 @@ namespace TrầnThếTường9157_đồ_án.BLL
             if (res == DialogResult.OK)
             {
 
-                DataTable dt = DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI WHERE tendangnhap = '{APP_NC.lb_nc.Text}'");
-                DataTable dt_all = DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI");
+                DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI WHERE tendangnhap = '{APP_NC.lb_nc.Text}'");
+                DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI");
                 try
                 {
                     APP_NC.img_nc.Image.Save(Application.StartupPath + $@"\\Resources\\{APP_NC.txt_filename.Text}");

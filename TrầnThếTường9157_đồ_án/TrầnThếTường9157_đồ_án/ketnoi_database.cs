@@ -22,11 +22,20 @@ namespace TrầnThếTường9157_đồ_án
 
         public DataTable loadData(string sql)
         {
-
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                
+                da.Fill(dt);
+                
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng nhập đúng cú pháp!");
+            }
             return dt;
         }
 
