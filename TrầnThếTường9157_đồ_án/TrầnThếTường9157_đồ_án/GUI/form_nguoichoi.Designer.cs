@@ -46,6 +46,7 @@
             this.label = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.tab_cc = new System.Windows.Forms.TabPage();
+            this.btn_playgame = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_nv)).BeginInit();
@@ -67,6 +68,7 @@
             // tab_home
             // 
             this.tab_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tab_home.Controls.Add(this.btn_playgame);
             this.tab_home.Controls.Add(this.lb_doinv);
             this.tab_home.Controls.Add(this.btn_doi);
             this.tab_home.Controls.Add(this.chon_nhanvat);
@@ -249,6 +251,17 @@
             this.tab_cc.Text = "Cửa hàng";
             this.tab_cc.UseVisualStyleBackColor = true;
             // 
+            // btn_playgame
+            // 
+            this.btn_playgame.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
+            this.btn_playgame.Location = new System.Drawing.Point(461, 504);
+            this.btn_playgame.Name = "btn_playgame";
+            this.btn_playgame.Size = new System.Drawing.Size(281, 38);
+            this.btn_playgame.TabIndex = 13;
+            this.btn_playgame.Text = "Vào game";
+            this.btn_playgame.UseVisualStyleBackColor = true;
+            this.btn_playgame.Click += new System.EventHandler(this.btn_playgame_Click);
+            // 
             // form_nguoichoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,5 +301,6 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btn_doianh;
         public System.Windows.Forms.TextBox txt_filename;
+        private System.Windows.Forms.Button btn_playgame;
     }
 }

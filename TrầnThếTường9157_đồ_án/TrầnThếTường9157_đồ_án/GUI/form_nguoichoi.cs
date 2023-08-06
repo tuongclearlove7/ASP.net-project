@@ -103,6 +103,11 @@ namespace TrầnThếTường9157_đồ_án
             login.Show();
         }
 
-       
+        private void btn_playgame_Click(object sender, EventArgs e)
+        {
+            formGame game = new formGame();
+            this.Hide();
+            game.Show();
+        }
     }
 }

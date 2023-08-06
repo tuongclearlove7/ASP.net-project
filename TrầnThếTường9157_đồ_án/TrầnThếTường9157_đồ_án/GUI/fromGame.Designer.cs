@@ -1,6 +1,6 @@
 ﻿namespace TrầnThếTường9157_đồ_án
 {
-    partial class Form1
+    partial class formGame
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGame));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lb_location_p2 = new System.Windows.Forms.Label();
             this.lb_path = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             this.player2.TabStop = false;
             this.player2.LocationChanged += new System.EventHandler(this.player2_LocationChanged);
             // 
-            // Form1
+            // formGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,8 +126,9 @@
             this.Controls.Add(this.lb_path);
             this.Controls.Add(this.lb_location_p2);
             this.Controls.Add(this.player2);
-            this.Name = "Form1";
+            this.Name = "formGame";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_game_Closing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsKeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.IsKeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();

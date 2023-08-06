@@ -11,6 +11,7 @@ namespace TrầnThếTường9157_đồ_án.BLL
 {
     class BLL_dangnhap
     {
+        //BUSSINESS LAYER
 
         DAL.DAL_dangnhap DAL_DN;
         formLogin LOGIN;
@@ -46,7 +47,8 @@ namespace TrầnThếTường9157_đồ_án.BLL
             if (!string.IsNullOrEmpty(LOGIN.txt_tendangnhap.Text) && 
                   !string.IsNullOrEmpty(LOGIN.txt_matkhau.Text))
             {
-                if (LOGIN.txt_tendangnhap.Text == "admin" && LOGIN.txt_matkhau.Text == "123")
+                int res_admin = DAL_DN.dal_Dangnhap_Admin(LOGIN.txt_tendangnhap.Text, LOGIN.txt_matkhau.Text);
+                if (res_admin >=1)
                 {
                     close = 0;
                     LOGIN.Hide();
@@ -80,10 +82,8 @@ namespace TrầnThếTường9157_đồ_án.BLL
             {
                 MessageBox.Show("Vui lòng nhập vào");
             }
-            
+          
 
-
-           
         }
 
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace TrầnThếTường9157_đồ_án
 {
-    public partial class Form1 : Form
+    public partial class formGame : Form
     {
 
         bool top, left, right, down;
@@ -19,7 +19,7 @@ namespace TrầnThếTường9157_đồ_án
         int speed = 50;
         bool shoot;
 
-        public Form1()
+        public formGame()
         {
             InitializeComponent();
         }
@@ -141,5 +141,19 @@ namespace TrầnThếTường9157_đồ_án
                 top = false;
             }
         }
+
+
+        private void form_game_Closing(object sender, FormClosingEventArgs e)
+        {
+
+            if (sender is formGame)
+            {
+                Application.Exit();
+            }
+        }
+
+
+
+
     }
 }

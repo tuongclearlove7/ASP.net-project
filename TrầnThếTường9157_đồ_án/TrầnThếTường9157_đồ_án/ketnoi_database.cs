@@ -44,7 +44,7 @@ namespace TrầnThếTường9157_đồ_án
             }
             catch (Exception error)
             {
-               MessageBox.Show("Lỗi trùng mã! " +  error);
+               MessageBox.Show("Bạn đã nhập tên đăng nhập trùng với người chơi khác vui lòng nhập tên đăng nhập khác!");
             }
 
             connection.Close();

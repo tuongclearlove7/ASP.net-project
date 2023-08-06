@@ -9,6 +9,7 @@ namespace TrầnThếTường9157_đồ_án.DAL
 {
     class DAL_nguoichoidangky
     {
+        //DATA LAYER
 
         ketnoi_database ketnoi;
         public DAL_nguoichoidangky()
@@ -21,6 +22,14 @@ namespace TrầnThếTường9157_đồ_án.DAL
         {
 
             string sql = $@"SELECT * FROM NGUOICHOI";
+
+            return ketnoi.loadData(sql);
+        }
+
+        public DataTable DAL_loadDataAdmin()
+        {
+
+            string sql = $@"SELECT * FROM ADMIN";
 
             return ketnoi.loadData(sql);
         }
@@ -40,8 +49,17 @@ namespace TrầnThếTường9157_đồ_án.DAL
             ketnoi.changeDB(sql);
         }
 
+        public int DAL_comfirm_dk()
+        {
+            string sql = $@"SELECT COUNT(*) FROM NGUOICHOI";
+            return (int)ketnoi.countRecord(sql);
+        }
 
-
+        public int DAL_comfirm_admin(string tendangnhap)
+        {
+            string sql = $@"SELECT COUNT(*) FROM ADMIN WHERE tendangnhap = '{tendangnhap}'";
+            return (int)ketnoi.countRecord(sql);
+        }
 
 
     }

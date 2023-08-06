@@ -11,10 +11,13 @@ namespace TrầnThếTường9157_đồ_án.BLL
 {
     class BLL_nguoichoi
     {
+        //BUSSINESS LAYER
 
         DAL.DAL_nguoichoi DAL_NC;
         form_quanly APP;
         form_nguoichoi APP_NC;
+        form_register APP_RG;
+        formGame APP_GE;
         int manv;
         
         public BLL_nguoichoi(form_quanly app)
@@ -27,6 +30,18 @@ namespace TrầnThếTường9157_đồ_án.BLL
         {
             DAL_NC = new DAL.DAL_nguoichoi();
             APP_NC = app_nc;
+        }
+
+        public BLL_nguoichoi(form_register app_rg)
+        {
+            DAL_NC = new DAL.DAL_nguoichoi();
+            APP_RG = app_rg;
+        }
+
+        public BLL_nguoichoi(formGame app_ge)
+        {
+            DAL_NC = new DAL.DAL_nguoichoi();
+            APP_GE = app_ge;
         }
 
         public DataTable BLL_loadData(string sql)
@@ -108,29 +123,19 @@ namespace TrầnThếTường9157_đồ_án.BLL
                 DataTable dt_all = DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI");
                 try
                 {
-
-                   
-                        
-                        if (dt.Rows[0]["hinhanh"].ToString() == dt_all.Rows[0]["hinhanh"].ToString()
-                            || dt.Rows[0]["hinhanh"].ToString() == "user1.png")
-                        {
-                        }
-
                     APP_NC.img_nc.Image.Save(Application.StartupPath + $@"\\Resources\\{APP_NC.txt_filename.Text}");
                     DAL_NC.DAL_sua_anhdaidien(anhdaidien, tendangnhap);
-
-
                 }
                 catch
                 {
                     return;
                 }
-
             }
             else if (res == DialogResult.Cancel)
             {
                 return;
             }
+
 
         }
 

@@ -10,7 +10,11 @@ namespace TrầnThếTường9157_đồ_án.BLL
 {
     class BLL_nguoichoidangky
     {
-        int manc;
+
+        //BUSSINESS LAYER
+
+        int manc=1;
+        int mangc=1;
         string tendn;
         DAL.DAL_nguoichoidangky DAL_NCDK;
         form_register APP;
@@ -34,59 +38,44 @@ namespace TrầnThếTường9157_đồ_án.BLL
         {
             DateTime current_date = DateTime.Now;
             DataTable dt = DAL_NCDK.DAL_loadData();
-            manc++;
-
-          // if (checkIsvalid(APP.txt_tendangnhap.Text, APP.txt_matkhau.Text, APP.txt_hoten.Text, APP.txt_sdt.Text))
+            DataTable dt_ad = DAL_NCDK.DAL_loadDataAdmin();
+            int manv = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
+           
             if (!string.IsNullOrEmpty(APP.txt_tendangnhap.Text) && !string.IsNullOrEmpty(APP.txt_matkhau.Text)
-                   && !string.IsNullOrEmpty(APP.txt_hoten.Text) && !string.IsNullOrEmpty(APP.txt_sdt.Text)){
-
-                if (dt != null && dt.Rows.Count > 0)
+                   && !string.IsNullOrEmpty(APP.txt_hoten.Text) && !string.IsNullOrEmpty(APP.txt_sdt.Text))
+            {
+             
+                int comfirmAD = DAL_NCDK.DAL_comfirm_admin(APP.txt_tendangnhap.Text);
+                if (comfirmAD < 1)
                 {
-                    foreach (DataRow row in dt.Rows)
+                    int comfirm = DAL_NCDK.DAL_comfirm_dk();
+                    if (dt != null && dt.Rows.Count > 0)
                     {
-                        object mancValue = row["manguoichoi"];
-
-                        object tendangnhapValue = row["tendangnhap"];
-
-                        if ((int)mancValue == manc) manc++;
-
-                        if (APP.txt_tendangnhap.Text == tendangnhapValue.ToString())
+                        foreach (DataRow row in dt.Rows)
                         {
-                            int maxManc = 0;
-                            foreach (DataRow id in dt.Rows)
-                            {
-                                if ((int)id["manguoichoi"] > maxManc) maxManc = (int)id["manguoichoi"];
-                            }
-
-                            tendn = APP.txt_tendangnhap.Text + (maxManc + 1).ToString();
-                            MessageBox.Show($@"Bạn nhập tên đăng nhập trùng với người chơi khác nên chúng tôi thêm id sau tên đăng nhập của bạn {tendn}");
-
+                            object mancValue = row["manguoichoi"];
+                            if (comfirm <= (int)mancValue) manc = comfirm + 1;
                         }
                     }
+
+                    DAL_NCDK.DAL_dangky(manc, APP.txt_tendangnhap.Text, APP.txt_matkhau.Text, APP.txt_hoten.Text, APP.txt_sdt.Text, current_date, "user1.png", manv);
                 }
-
-                int manv = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
-
-                if (tendn == null)
+                else
                 {
-                    tendn = APP.txt_tendangnhap.Text;
+                    MessageBox.Show("Bạn đã nhập tên đăng nhập trùng với người chơi khác vui lòng nhập tên đăng nhập khác!"); 
                 }
-             
-                DAL_NCDK.DAL_dangky(manc, tendn, APP.txt_matkhau.Text, APP.txt_hoten.Text, APP.txt_sdt.Text, current_date, "user1.png", manv);
 
-
+               
             }
             else
             {
                 MessageBox.Show("Vui lòng nhập vào");
-
-
-
             }
 
 
 
         }
+           
 
 
     }

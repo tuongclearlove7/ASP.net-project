@@ -9,6 +9,7 @@ namespace TrầnThếTường9157_đồ_án.DAL
 {
     class DAL_nguoichoi
     {
+        //DATA LAYER
 
         ketnoi_database ketnoi;
 

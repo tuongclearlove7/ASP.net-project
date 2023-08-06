@@ -14,12 +14,14 @@ namespace TrầnThếTường9157_đồ_án
     {
         int c = 0;
         BLL.BLL_nguoichoidangky BLL_NCDK;
+        BLL.BLL_nguoichoi BLL_NC;
         ketnoi_database ketnoi;
 
         public form_register()
         {
             InitializeComponent();
             ketnoi = new ketnoi_database();
+            BLL_NC = new BLL.BLL_nguoichoi(this);
             BLL_NCDK = new BLL.BLL_nguoichoidangky(this);
             BLL_NCDK.BLL_loadDataNhanvat();
         }
@@ -27,7 +29,7 @@ namespace TrầnThếTường9157_đồ_án
         private void cb_nhanvat_SelectedIndexChanged(object sender, EventArgs e)
         {
                 string sql = $@"SELECT * FROM NHANVAT WHERE manhanvat = {((DataRowView)cb_nhanvat.SelectedItem)["manhanvat"]}";
-                DataTable dt = ketnoi.loadData(sql);
+                DataTable dt = BLL_NC.BLL_loadData(sql);
                 lb_tennhanvat.Text = dt.Rows[0]["tennhanvat"].ToString();
                 string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
                 img_player.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
