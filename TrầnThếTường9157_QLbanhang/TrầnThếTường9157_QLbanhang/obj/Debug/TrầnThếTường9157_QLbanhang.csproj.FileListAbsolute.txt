@@ -53,4 +53,3 @@ C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường9157_QLb
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường9157_QLbanhang\TrầnThếTường9157_QLbanhang\obj\Debug\TrầnThếTường9157_QLbanhang.csproj.CopyComplete
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường9157_QLbanhang\TrầnThếTường9157_QLbanhang\obj\Debug\TrầnThếTường9157_QLbanhang.dll
 C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường9157_QLbanhang\TrầnThếTường9157_QLbanhang\obj\Debug\TrầnThếTường9157_QLbanhang.pdb
-C:\Users\clearlove7\Documents\GitHub\ASP.net-project\TrầnThếTường9157_QLbanhang\TrầnThếTường9157_QLbanhang\obj\Debug\TrầnThếTường9157_QLbanhang.csproj.AssemblyReference.cache
