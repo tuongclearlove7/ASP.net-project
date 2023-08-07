@@ -397,6 +397,7 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // tab_nc
             // 
+            this.tab_nc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tab_nc.Controls.Add(this.btnXoa_nc);
             this.tab_nc.Controls.Add(this.dataGridView1);
             this.tab_nc.Controls.Add(this.btn_load);

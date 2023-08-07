@@ -60,7 +60,7 @@ namespace TrầnThếTường9157_đồ_án.BLL
 
             string sql = $@"SELECT * FROM NHANVAT";
             DataTable dt = DAL_NC.DAL_loadData(sql);
-            manv++;
+            manv++; 
 
             if (dt != null && dt.Rows.Count > 0)
             {
