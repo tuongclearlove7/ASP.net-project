@@ -13,7 +13,9 @@ namespace TrầnThếTường9157_đồ_án.BLL
 
         //BUSSINESS LAYER
 
-        int manc=1;
+        int manc;
+        int manv;
+        string anhdaidien;
         DAL.DAL_nguoichoidangky DAL_NCDK;
         form_register APP;
         
@@ -37,8 +39,10 @@ namespace TrầnThếTường9157_đồ_án.BLL
             DateTime current_date = DateTime.Now;
             DataTable dt = DAL_NCDK.DAL_loadData();
             DataTable dt_ad = DAL_NCDK.DAL_loadDataAdmin();
-            int manv = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
            
+            
+            manv = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
+            
             if (!string.IsNullOrEmpty(APP.txt_tendangnhap.Text) && !string.IsNullOrEmpty(APP.txt_matkhau.Text)
                    && !string.IsNullOrEmpty(APP.txt_hoten.Text) && !string.IsNullOrEmpty(APP.txt_sdt.Text))
             {
@@ -53,10 +57,13 @@ namespace TrầnThếTường9157_đồ_án.BLL
                         {
                             object mancValue = row["manguoichoi"];
                             if (comfirm <= (int)mancValue) manc = comfirm + 1;
+                            if(manc > 1 && manc <=3) anhdaidien = "leesin_quyenthai.gif";
+                            else if(manc > 3) anhdaidien = "user1.png";                 
                         }
                     }
 
-                    DAL_NCDK.DAL_dangky(manc, APP.txt_tendangnhap.Text, APP.txt_matkhau.Text, APP.txt_hoten.Text, APP.txt_sdt.Text, current_date, "user1.png", manv);
+ 
+                    DAL_NCDK.DAL_dangky(manc, APP.txt_tendangnhap.Text, APP.txt_matkhau.Text, APP.txt_hoten.Text, APP.txt_sdt.Text, current_date, anhdaidien, manv);
                 }
                 else
                 {

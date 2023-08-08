@@ -38,7 +38,19 @@ namespace TrầnThếTường9157_đồ_án
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-            BLL_NCDK.BLL_dangky();
+
+            int manv = Convert.ToInt32(((DataRowView)cb_nhanvat.SelectedItem)["manhanvat"]);
+
+            try
+            {
+                BLL_NCDK.BLL_dangky();
+            }
+            catch
+            {
+                string sql = $@"insert into NGUOICHOI values (1, '{txt_tendangnhap.Text}', '{txt_matkhau.Text}', N'{txt_hoten.Text}', '{txt_sdt.Text}', '{DateTime.Now}', 'thaorose.jpg', {manv})";
+                ketnoi.changeDB(sql);
+            }
+             
         }
 
         private void btn_login_Click(object sender, EventArgs e)

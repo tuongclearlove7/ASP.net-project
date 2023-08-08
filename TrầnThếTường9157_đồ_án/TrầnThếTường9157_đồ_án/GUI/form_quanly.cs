@@ -32,7 +32,7 @@ namespace TrầnThếTường9157_đồ_án
             chon_nhanvat.DisplayMember = "tennhanvat";
             chon_nhanvat.ValueMember = "manhanvat";
 
-            dataGridView3.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            dataGridView3.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT, NGUOICHOI WHERE NHANVAT.manhanvat = NGUOICHOI.manhanvat");
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
             dataGridView1.Columns["matkhau"].Visible = false;
