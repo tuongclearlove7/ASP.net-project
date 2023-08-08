@@ -151,27 +151,28 @@ namespace TrầnThếTường9157_đồ_án
         private void cb_nhanvat_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-         
-            if (c == false)
+
+            switch (c)
             {
-                int manv = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
+                case false:
 
-                DataTable dt = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
-                string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
-                img_player.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
-                txt_tennv.Text = dt.Rows[0]["tennhanvat"].ToString();
-                lb_nv.Text = txt_tennv.Text;
-                txt_maunv.Text = dt.Rows[0]["mau"].ToString();
-                txt_nlnv.Text = dt.Rows[0]["nangluong"].ToString();
-                txt_hinhanhnv.Text = dt.Rows[0]["hinhanh"].ToString();
-                dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI WHERE manhanvat = {manv}");
-                dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE NHANVAT.manhanvat = {manv}");
-                dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+                    int manv = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
+                    DataTable dt = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
+                    string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
+                    img_player.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
+                    txt_tennv.Text = dt.Rows[0]["tennhanvat"].ToString();
+                    lb_nv.Text = txt_tennv.Text;
+                    txt_maunv.Text = dt.Rows[0]["mau"].ToString();
+                    txt_nlnv.Text = dt.Rows[0]["nangluong"].ToString();
+                    txt_hinhanhnv.Text = dt.Rows[0]["hinhanh"].ToString();
+                    dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI WHERE manhanvat = {manv}");
+                    dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE NHANVAT.manhanvat = {manv}");
+                    dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
 
-
-
+                    break;
             }
-
+         
+        
         }
 
         private void btn_load_Click(object sender, EventArgs e)
@@ -258,7 +259,7 @@ namespace TrầnThếTường9157_đồ_án
             catch
             {
                 dataGridView3.DataSource = BLL_NC.BLL_loadDataQuery(txt_query.Text);
-                //MessageBox.Show("Vui lòng nhập đúng cú pháp!");
+   
             }
            
         }
@@ -272,21 +273,27 @@ namespace TrầnThếTường9157_đồ_án
 
         private void img_player_Click(object sender, EventArgs e)
         {
+            switch (lb_nv.Text)
+            {
+                case "Default":
+                break;
+                default:
 
-            if (lb_nv.Text != "Default")
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Title = "Hãy chọn ảnh";
-                ofd.Filter = "Tất cả đuôi ảnh|*.*|JPG|*.jpg|PNG|*.png|JPEG|*.jpeg|GIF|*.gif";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    img_player.Image = Image.FromFile(ofd.FileName);
-                }
+                    OpenFileDialog ofd = new OpenFileDialog();
+                    ofd.Title = "Hãy chọn ảnh";
+                    ofd.Filter = "Tất cả đuôi ảnh|*.*|JPG|*.jpg|PNG|*.png|JPEG|*.jpeg|GIF|*.gif";
+                
+                    switch (ofd.ShowDialog())
+                    {
+                        case DialogResult.OK:
+                            img_player.Image = Image.FromFile(ofd.FileName);
+                        break;
+                    }
+
+                break;
             }
-            else
-            {
-                return;
-            }
+
+            
          
 
         }

@@ -56,9 +56,10 @@ namespace TrầnThếTường9157_đồ_án.BLL
                         foreach (DataRow row in dt.Rows)
                         {
                             object mancValue = row["manguoichoi"];
-                            if (comfirm <= (int)mancValue) manc = comfirm + 1;
-                            if(manc > 1 && manc <=3) anhdaidien = "leesin_quyenthai.gif";
-                            else if(manc > 3) anhdaidien = "user1.png";                 
+                          
+                            manc = comfirm <= (int)mancValue ? comfirm + 1 : manc;
+
+                            anhdaidien = manc > 1 && manc <= 3 ? "leesin_quyenthai.gif" : manc > 3 ? "user1.png"  : "";
                         }
                     }
 

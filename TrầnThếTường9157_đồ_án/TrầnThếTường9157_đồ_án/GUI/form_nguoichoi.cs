@@ -49,15 +49,18 @@ namespace TrầnThếTường9157_đồ_án
 
         private void chon_nhanvat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (c == false)
+            switch (c)
             {
-                int manv = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
-                DataTable dt = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
-                string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
-                img_nv.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
+                case false:
+                    int manv = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
+                    DataTable dt = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
+                    string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
+                    img_nv.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
 
-
+                break;
             }
+
+           
         }
 
         private void btn_doi_Click(object sender, EventArgs e)
@@ -86,14 +89,19 @@ namespace TrầnThếTường9157_đồ_án
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Hãy chọn ảnh";
             ofd.Filter = "Tất cả đuôi ảnh|*.*|JPG|*.jpg|PNG|*.png|JPEG|*.jpeg|GIF|*.gif";
-            if (ofd.ShowDialog() == DialogResult.OK)
+
+            switch (ofd.ShowDialog())
             {
-                img_nc.Image = Image.FromFile(ofd.FileName);
-                string fileName = Path.GetFileName(ofd.FileName);
-                txt_filename.Text = fileName;
-                BLL_NC.BLL_sua_anhdaidien(fileName, tendangnhap);
-                
+                case DialogResult.OK:
+                    img_nc.Image = Image.FromFile(ofd.FileName);
+                    string fileName = Path.GetFileName(ofd.FileName);
+                    txt_filename.Text = fileName;
+                    BLL_NC.BLL_sua_anhdaidien(fileName, tendangnhap);
+
+                break;
             }
+
+          
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

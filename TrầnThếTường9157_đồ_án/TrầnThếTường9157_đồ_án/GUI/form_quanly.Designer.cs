@@ -65,8 +65,8 @@ namespace TrầnThếTường9157_đồ_án
             this.btnXoa_nc = new System.Windows.Forms.Button();
             this.tab_nv = new System.Windows.Forms.TabPage();
             this.tab_tool = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_query = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.txt_query = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -413,7 +413,7 @@ namespace TrầnThếTường9157_đồ_án
             // 
             this.btnXoa_nc.Location = new System.Drawing.Point(-1, 427);
             this.btnXoa_nc.Name = "btnXoa_nc";
-            this.btnXoa_nc.Size = new System.Drawing.Size(741, 51);
+            this.btnXoa_nc.Size = new System.Drawing.Size(751, 51);
             this.btnXoa_nc.TabIndex = 31;
             this.btnXoa_nc.Text = "XÓA NGƯỜI CHƠI";
             this.btnXoa_nc.UseVisualStyleBackColor = true;
@@ -433,8 +433,8 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // tab_tool
             // 
+            this.tab_tool.Controls.Add(this.label7);
             this.tab_tool.Controls.Add(this.btn_query);
-            this.tab_tool.Controls.Add(this.label6);
             this.tab_tool.Controls.Add(this.txt_query);
             this.tab_tool.Controls.Add(this.dataGridView3);
             this.tab_tool.Location = new System.Drawing.Point(4, 25);
@@ -445,32 +445,35 @@ namespace TrầnThếTường9157_đồ_án
             this.tab_tool.Text = "Cộng cụ";
             this.tab_tool.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label7.Location = new System.Drawing.Point(1, 358);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(535, 32);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Nhập vào câu lệnh SQL để truy vấn dữ liệu";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btn_query
             // 
-            this.btn_query.Location = new System.Drawing.Point(3, 553);
+            this.btn_query.Location = new System.Drawing.Point(215, 545);
             this.btn_query.Name = "btn_query";
-            this.btn_query.Size = new System.Drawing.Size(747, 81);
+            this.btn_query.Size = new System.Drawing.Size(301, 45);
             this.btn_query.TabIndex = 26;
             this.btn_query.Text = "QUERY";
             this.btn_query.UseVisualStyleBackColor = true;
             this.btn_query.Click += new System.EventHandler(this.btn_query_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 362);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(280, 17);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Nhập vào câu lệnh SQL để truy vấn dữ liệu";
-            // 
             // txt_query
             // 
             this.txt_query.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txt_query.Location = new System.Drawing.Point(3, 405);
+            this.txt_query.Location = new System.Drawing.Point(6, 405);
             this.txt_query.Multiline = true;
             this.txt_query.Name = "txt_query";
-            this.txt_query.Size = new System.Drawing.Size(747, 100);
+            this.txt_query.Size = new System.Drawing.Size(735, 103);
             this.txt_query.TabIndex = 24;
             // 
             // dataGridView3
@@ -551,7 +554,7 @@ namespace TrầnThếTường9157_đồ_án
         private System.Windows.Forms.Label lb_manc;
         public System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox txt_query;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_query;
+        private System.Windows.Forms.Label label7;
     }
 }

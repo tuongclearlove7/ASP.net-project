@@ -96,52 +96,40 @@ namespace TrầnThếTường9157_đồ_án.BLL
         public void BLL_sua_nv_nc(int manhanvat, string tendangnhap)
         {
             DialogResult res = MessageBox.Show("Bạn chắc chắn muốn đổi nhân vật chứ ?", "Xác nhận", MessageBoxButtons.OKCancel);
-           
-            if (res == DialogResult.OK)
+
+            switch (res)
             {
-                DAL_NC.DAL_sua_nv(manhanvat, tendangnhap);
+                case DialogResult.OK:
+                    DAL_NC.DAL_sua_nv(manhanvat, tendangnhap);
+                break;
             }
-            else if(res == DialogResult.Cancel)
-            {
-                return;
-            }
+          
 
         }
 
-
-        private bool checkIsvalid(DataTable dt)
-        {
-            if (dt.Rows[0]["hinhanh"].ToString() != "user1.png")
-            {
-                return true;
-            }
-            return false;
-        }
 
         public void BLL_sua_anhdaidien(string anhdaidien, string tendangnhap)
         {
             DialogResult res = MessageBox.Show("Bạn chắc chắn muốn đổi ảnh đại diện chứ ?", "Xác nhận", MessageBoxButtons.OKCancel);
 
-            if (res == DialogResult.OK)
+            switch (res)
             {
+                case DialogResult.OK:
 
-                DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI WHERE tendangnhap = '{APP_NC.lb_nc.Text}'");
-                DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI");
-                try
-                {
-                    APP_NC.img_nc.Image.Save(Application.StartupPath + $@"\\Resources\\{APP_NC.txt_filename.Text}");
-                    DAL_NC.DAL_sua_anhdaidien(anhdaidien, tendangnhap);
-                }
-                catch
-                {
-                    return;
-                }
-            }
-            else if (res == DialogResult.Cancel)
-            {
-                return;
-            }
+                    DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI WHERE tendangnhap = '{APP_NC.lb_nc.Text}'");
+                    DAL_NC.DAL_loadData($@"SELECT * FROM NGUOICHOI");
+                    try
+                    {
+                        APP_NC.img_nc.Image.Save(Application.StartupPath + $@"\\Resources\\{APP_NC.txt_filename.Text}");
+                        DAL_NC.DAL_sua_anhdaidien(anhdaidien, tendangnhap);
+                    }
+                    catch
+                    {
+                        return;
+                    }
 
+                break;
+            }
 
         }
 
