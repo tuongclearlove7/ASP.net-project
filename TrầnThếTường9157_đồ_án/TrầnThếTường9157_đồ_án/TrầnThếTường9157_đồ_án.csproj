@@ -117,18 +117,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -139,24 +139,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bgblue.jpg" />
-    <None Include="Resources\aaaa.jpeg" />
-    <None Include="Resources\aa.png" />
-    <None Include="Resources\thaorose.jpg" />
-    <None Include="Resources\rose.png" />
-    <None Include="Resources\bglol.png" />
-    <None Include="Resources\user1.png" />
-    <None Include="bin\Debug\Resources\bullet.png" />
-    <Content Include="bin\Debug\Resources\catlyn.jpeg" />
-    <Content Include="bin\Debug\Resources\jinx.jpeg" />
-    <Content Include="bin\Debug\Resources\lucian.jpeg" />
-    <Content Include="bin\Debug\Resources\morgana.jpeg" />
-    <Content Include="bin\Debug\Resources\plane1.png" />
-    <Content Include="bin\Debug\Resources\plane2.png" />
+    <None Include="vayne_pink.gif" />
     <Content Include="bin\Debug\Resources\thaorose.jpg" />
     <Content Include="bin\Debug\Resources\user1.png" />
-    <Content Include="bin\Debug\Resources\yasuo.jpg" />
-    <Content Include="bin\Debug\Resources\zed.jpg" />
+    <None Include="bin\Release\Resources\vayne_pink.gif" />
     <Content Include="db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -164,11 +150,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>db.mdf</DependentUpon>
     </Content>
-    <Content Include="image\player.png" />
-    <Content Include="image\player_dambay.gif" />
-    <None Include="Resources\bullet.png" />
-    <None Include="Resources\plane1.png" />
-    <None Include="Resources\player.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

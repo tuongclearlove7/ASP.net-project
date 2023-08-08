@@ -34,6 +34,8 @@
             this.lb_mk = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
             this.btn_register = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_tendangnhap
@@ -72,7 +74,6 @@
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_login.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_login.Location = new System.Drawing.Point(321, 253);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(127, 36);
@@ -83,7 +84,6 @@
             // 
             // btn_register
             // 
-            this.btn_register.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_register.Location = new System.Drawing.Point(321, 309);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(127, 36);
@@ -92,13 +92,33 @@
             this.btn_register.UseVisualStyleBackColor = true;
             this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 32);
+            this.label1.Name = "label1";
+            
+            this.label1.Size = new System.Drawing.Size(182, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "tai khoan admin tđn : admin";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "pass : 123";
+            // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.lb_mk);
@@ -121,5 +141,7 @@
         private System.Windows.Forms.Label lb_mk;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Button btn_register;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

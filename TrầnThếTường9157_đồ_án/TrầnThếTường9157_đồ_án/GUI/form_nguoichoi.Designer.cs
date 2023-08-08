@@ -95,7 +95,6 @@
             // 
             // btn_doi
             // 
-            this.btn_doi.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_doi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_doi.Location = new System.Drawing.Point(461, 437);
             this.btn_doi.Name = "btn_doi";
@@ -162,7 +161,6 @@
             // 
             // btn_doianh
             // 
-            this.btn_doianh.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.aaaa;
             this.btn_doianh.Location = new System.Drawing.Point(56, 437);
             this.btn_doianh.Name = "btn_doianh";
             this.btn_doianh.Size = new System.Drawing.Size(281, 38);
@@ -233,7 +231,6 @@
             // 
             // btn_logout
             // 
-            this.btn_logout.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_logout.Location = new System.Drawing.Point(786, 504);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(95, 43);
@@ -253,7 +250,6 @@
             // 
             // btn_playgame
             // 
-            this.btn_playgame.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_playgame.Location = new System.Drawing.Point(461, 504);
             this.btn_playgame.Name = "btn_playgame";
             this.btn_playgame.Size = new System.Drawing.Size(281, 38);

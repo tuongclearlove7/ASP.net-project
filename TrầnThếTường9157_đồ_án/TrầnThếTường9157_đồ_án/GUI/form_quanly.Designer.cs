@@ -93,7 +93,6 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // btn_load
             // 
-            this.btn_load.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.aaaa;
             this.btn_load.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_load.Location = new System.Drawing.Point(465, 684);
             this.btn_load.Name = "btn_load";
@@ -119,6 +118,7 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // img_player
             // 
+            this.img_player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.img_player.InitialImage = null;
             this.img_player.Location = new System.Drawing.Point(239, 145);
             this.img_player.Name = "img_player";
@@ -274,7 +274,6 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // btn_sapxep
             // 
-            this.btn_sapxep.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.aaaa;
             this.btn_sapxep.Location = new System.Drawing.Point(559, 684);
             this.btn_sapxep.Name = "btn_sapxep";
             this.btn_sapxep.Size = new System.Drawing.Size(88, 67);
@@ -285,7 +284,6 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // btnDX
             // 
-            this.btnDX.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.aaaa;
             this.btnDX.Location = new System.Drawing.Point(653, 684);
             this.btnDX.Name = "btnDX";
             this.btnDX.Size = new System.Drawing.Size(88, 67);
@@ -423,7 +421,6 @@ namespace TrầnThếTường9157_đồ_án
             // 
             // tab_nv
             // 
-            this.tab_nv.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.tab_nv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tab_nv.Controls.Add(this.dataGridView2);
             this.tab_nv.Location = new System.Drawing.Point(4, 25);

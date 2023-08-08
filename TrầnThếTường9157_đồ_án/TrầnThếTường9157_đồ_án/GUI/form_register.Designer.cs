@@ -61,7 +61,6 @@
             // 
             // btn_register
             // 
-            this.btn_register.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_register.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_register.Location = new System.Drawing.Point(96, 330);
             this.btn_register.Name = "btn_register";
@@ -150,7 +149,6 @@
             // 
             // btn_login
             // 
-            this.btn_login.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.btn_login.Location = new System.Drawing.Point(260, 330);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(122, 34);
@@ -161,7 +159,6 @@
             // 
             // img_player
             // 
-            this.img_player.Image = global::TrầnThếTường9157_đồ_án.Properties.Resources.user1;
             this.img_player.InitialImage = null;
             this.img_player.Location = new System.Drawing.Point(513, 48);
             this.img_player.Name = "img_player";
@@ -175,7 +172,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TrầnThếTường9157_đồ_án.Properties.Resources.bgblue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(833, 460);
             this.Controls.Add(this.btn_login);

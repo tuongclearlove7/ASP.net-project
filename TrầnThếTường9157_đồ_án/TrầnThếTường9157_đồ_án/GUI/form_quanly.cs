@@ -24,7 +24,6 @@ namespace TrầnThếTường9157_đồ_án
             this.MinimumSize = this.Size;
             this.Resize += Form1_Resize;
            
-
             ketnoi = new ketnoi_database();
             BLL_NC = new BLL.BLL_nguoichoi(this);
 
@@ -36,7 +35,9 @@ namespace TrầnThếTường9157_đồ_án
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
             dataGridView1.Columns["matkhau"].Visible = false;
-
+            img_player.ImageLocation = Application.StartupPath + $@"\\Resources\\vayne_pink.gif";
+            lb_nv.Text = "Default";
+           
             DataTable dt_nc = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
             string userImage, hotenNC, maNC;
             try
@@ -154,16 +155,20 @@ namespace TrầnThếTường9157_đồ_án
             if (c == false)
             {
                 int manv = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
+
                 DataTable dt = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manv}");
                 string hinh_nv = dt.Rows[0]["hinhanh"].ToString();
                 img_player.ImageLocation = Application.StartupPath + $@"\\Resources\\{hinh_nv}";
-                txt_tennv.Text =  dt.Rows[0]["tennhanvat"].ToString();
+                txt_tennv.Text = dt.Rows[0]["tennhanvat"].ToString();
                 lb_nv.Text = txt_tennv.Text;
                 txt_maunv.Text = dt.Rows[0]["mau"].ToString();
                 txt_nlnv.Text = dt.Rows[0]["nangluong"].ToString();
                 txt_hinhanhnv.Text = dt.Rows[0]["hinhanh"].ToString();
                 dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI WHERE manhanvat = {manv}");
-                dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE NHANVAT.manhanvat = {manv}"); 
+                dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE NHANVAT.manhanvat = {manv}");
+                dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+
+
 
             }
 
@@ -182,6 +187,9 @@ namespace TrầnThếTường9157_đồ_án
             img_player.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanhnv.Text}");
             BLL_NC.BLL_them();
             BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            chon_nhanvat.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            chon_nhanvat.DisplayMember = "tennhanvat";
+            chon_nhanvat.ValueMember = "manhanvat";
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
         }
@@ -191,6 +199,9 @@ namespace TrầnThếTường9157_đồ_án
             img_player.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanhnv.Text}");
             int manhanvat = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
             BLL_NC.BLL_sua(manhanvat);
+            chon_nhanvat.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            chon_nhanvat.DisplayMember = "tennhanvat";
+            chon_nhanvat.ValueMember = "manhanvat";
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             
         }
@@ -198,16 +209,30 @@ namespace TrầnThếTường9157_đồ_án
         private void btn_xoa_nhanvat_Click(object sender, EventArgs e)
         {
             BLL_NC.BLL_xoa();
+            chon_nhanvat.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+            chon_nhanvat.DisplayMember = "tennhanvat";
+            chon_nhanvat.ValueMember = "manhanvat";
             dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
             dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
+
         }
 
         private void btnXoa_nc_Click(object sender, EventArgs e)
         {
-            int manc = Convert.ToInt32(lb_manc.Text);
-            BLL_NC.BLL_xoa_nc(manc);
-            dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
-            dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
+            
+            try
+            {
+                int manc = Convert.ToInt32(lb_manc.Text);
+                BLL_NC.BLL_xoa_nc(manc);
+                dataGridView2.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT");
+                dataGridView1.DataSource = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI");
+            }
+            catch
+            {
+                MessageBox.Show("k có người chơi nào để xóa!");
+            }
+            
+
         }
 
         private void btn_search_Click(object sender, EventArgs e)
@@ -247,13 +272,23 @@ namespace TrầnThếTường9157_đồ_án
 
         private void img_player_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Hãy chọn ảnh";
-            ofd.Filter = "Tất cả đuôi ảnh|*.*|JPG|*.jpg|PNG|*.png|JPEG|*.jpeg|GIF|*.gif";
-            if (ofd.ShowDialog() == DialogResult.OK)
+
+            if (lb_nv.Text != "Default")
             {
-                img_player.Image = Image.FromFile(ofd.FileName);
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Title = "Hãy chọn ảnh";
+                ofd.Filter = "Tất cả đuôi ảnh|*.*|JPG|*.jpg|PNG|*.png|JPEG|*.jpeg|GIF|*.gif";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    img_player.Image = Image.FromFile(ofd.FileName);
+                }
             }
+            else
+            {
+                return;
+            }
+         
+
         }
 
        
