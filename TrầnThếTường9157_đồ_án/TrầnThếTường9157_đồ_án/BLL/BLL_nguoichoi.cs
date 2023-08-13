@@ -17,6 +17,7 @@ namespace TrầnThếTường9157_đồ_án.BLL
         form_quanly APP;
         form_nguoichoi APP_NC;
         form_register APP_RG;
+        formLogin APP_LOGIN;
         formGame APP_GE;
         int manv;
         

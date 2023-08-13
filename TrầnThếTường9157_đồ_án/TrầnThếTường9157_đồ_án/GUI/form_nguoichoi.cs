@@ -30,7 +30,7 @@ namespace TrầnThếTường9157_đồ_án
             chon_nhanvat.ValueMember = "manhanvat";
 
             DataTable dt_nc = BLL_NC.BLL_loadData($@"SELECT * FROM NGUOICHOI WHERE tendangnhap = '{tendangnhap}'");
-            lb_nc.Text = BLL.BLL_dangnhap.SESSION.tendangnhap;
+            lb_nc.Text = tendangnhap;
             lb_ten_nc.Text = $@"Họ tên : {dt_nc.Rows[0]["hoten"].ToString()}";
             lb_sdt.Text = $@"Số điện thoại : {dt_nc.Rows[0]["sodienthoai"].ToString()}";
             lb_ngdk.Text = $@"Ngày đăng ký : {dt_nc.Rows[0]["ngaydangky"].ToString()}";
@@ -66,7 +66,6 @@ namespace TrầnThếTường9157_đồ_án
         private void btn_doi_Click(object sender, EventArgs e)
         {
             int manhanvat = (int)((DataRowView)chon_nhanvat.SelectedItem)["manhanvat"];
-            string tendangnhap = BLL.BLL_dangnhap.SESSION.tendangnhap;
             BLL_NC.BLL_sua_nv_nc(manhanvat, tendangnhap);
            
             DataTable dt_nv = BLL_NC.BLL_loadData($@"SELECT * FROM NHANVAT WHERE manhanvat = {manhanvat}");
@@ -78,10 +77,8 @@ namespace TrầnThếTường9157_đồ_án
         private void form_nc_Closing(object sender, FormClosingEventArgs e)
         {
 
-            if (sender is form_nguoichoi)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
+            
         }
 
         private void btn_doianh_Click(object sender, EventArgs e)

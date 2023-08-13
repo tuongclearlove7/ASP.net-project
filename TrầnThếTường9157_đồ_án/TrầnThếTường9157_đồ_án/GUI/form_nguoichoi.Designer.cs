@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_home = new System.Windows.Forms.TabPage();
+            this.btn_playgame = new System.Windows.Forms.Button();
             this.lb_doinv = new System.Windows.Forms.Label();
             this.btn_doi = new System.Windows.Forms.Button();
             this.chon_nhanvat = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,6 @@
             this.label = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.tab_cc = new System.Windows.Forms.TabPage();
-            this.btn_playgame = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_nv)).BeginInit();
@@ -83,6 +83,16 @@
             this.tab_home.TabIndex = 0;
             this.tab_home.Text = "Thông tin tài khoản";
             this.tab_home.UseVisualStyleBackColor = true;
+            // 
+            // btn_playgame
+            // 
+            this.btn_playgame.Location = new System.Drawing.Point(461, 504);
+            this.btn_playgame.Name = "btn_playgame";
+            this.btn_playgame.Size = new System.Drawing.Size(281, 38);
+            this.btn_playgame.TabIndex = 13;
+            this.btn_playgame.Text = "Vào game";
+            this.btn_playgame.UseVisualStyleBackColor = true;
+            this.btn_playgame.Click += new System.EventHandler(this.btn_playgame_Click);
             // 
             // lb_doinv
             // 
@@ -153,9 +163,9 @@
             // 
             // txt_filename
             // 
-            this.txt_filename.Location = new System.Drawing.Point(76, 533);
+            this.txt_filename.Location = new System.Drawing.Point(56, 533);
             this.txt_filename.Name = "txt_filename";
-            this.txt_filename.Size = new System.Drawing.Size(239, 22);
+            this.txt_filename.Size = new System.Drawing.Size(281, 22);
             this.txt_filename.TabIndex = 12;
             this.txt_filename.Visible = false;
             // 
@@ -247,16 +257,6 @@
             this.tab_cc.TabIndex = 1;
             this.tab_cc.Text = "Cửa hàng";
             this.tab_cc.UseVisualStyleBackColor = true;
-            // 
-            // btn_playgame
-            // 
-            this.btn_playgame.Location = new System.Drawing.Point(461, 504);
-            this.btn_playgame.Name = "btn_playgame";
-            this.btn_playgame.Size = new System.Drawing.Size(281, 38);
-            this.btn_playgame.TabIndex = 13;
-            this.btn_playgame.Text = "Vào game";
-            this.btn_playgame.UseVisualStyleBackColor = true;
-            this.btn_playgame.Click += new System.EventHandler(this.btn_playgame_Click);
             // 
             // form_nguoichoi
             // 

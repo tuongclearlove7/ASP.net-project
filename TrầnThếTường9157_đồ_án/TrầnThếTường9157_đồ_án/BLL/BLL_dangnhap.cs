@@ -73,12 +73,12 @@ namespace TrầnThếTường9157_đồ_án.BLL
                     }
                 }
 
-             
                 if (close > 3)
                 {
                     MessageBox.Show($@"Bạn đã nhập sai quá {close-1} lần chương trình phải thoát");
                     Application.Exit();
                 }
+
             }
             else
             {

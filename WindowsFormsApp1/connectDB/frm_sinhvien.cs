@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using System.Drawing
 
 namespace connectDB
 {
@@ -22,8 +24,9 @@ namespace connectDB
         public app_quanly_sinhvien()
         {
             InitializeComponent();
-            loadDataKhoa("SELECT * FROM KHOA");
-            loadData("SELECT * FROM SINHVIEN");
+            //loadDataKhoa("SELECT * FROM KHOA");
+            loadDataKhoaDataReader();
+            loadDataSet();
 
         }
 
@@ -41,6 +44,27 @@ namespace connectDB
             return 0;
         }
 
+        public int loadDataSet()
+        {
+
+            string sql = "select * from sinhvien";
+
+            //dataGridView1.DataSource = ketnoi.loadData(sql);
+
+            dataGridView1.DataSource = ketnoi.loadDataSet(sql);
+            dataGridView1.DataMember = "sinhvien";
+            return 0;
+        }
+
+        public int loadDataKhoaDataReader()
+        {
+            string sql = "SELECT * FROM KHOA";
+
+            ketnoi.loadReader(sql, combox_khoa, "tenkhoa");
+
+            return 0;
+        }
+
         public int loadDataKhoa(string sql)
         {
             combox_khoa.DataSource = ketnoi.loadData(sql);
@@ -52,7 +76,7 @@ namespace connectDB
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sql = $@"insert into SINHVIEN values ('{txt_masv.Text}', N'{txt_hoten.Text}', '{dateTimePicker1.Value}', '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}', '{txt_hinhanh.Text}')";
+            string sql = $@"insert into SINHVIEN values ('{txt_masv.Text}', N'{txt_hoten.Text}', '{dateTimePicker1.Value}', '{combox_khoa.SelectedValue = "makhoa"}', '{txt_hinhanh.Text}')";
             image_sv.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanh.Text}");
             ketnoi.changeDB(sql);
             loadData("SELECT * FROM SINHVIEN");
@@ -72,7 +96,7 @@ namespace connectDB
         private void btnSua_Click(object sender, EventArgs e)
         {
        
-            string sql = $@"UPDATE SINHVIEN SET hoten = N'{txt_hoten.Text}', ngaynhaphoc = '{dateTimePicker1.Value}', makhoa = '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}', hinhanh = '{txt_hinhanh.Text}' WHERE masv = '{txt_masv.Text}'";
+            string sql = $@"UPDATE SINHVIEN SET hoten = N'{txt_hoten.Text}', ngaynhaphoc = '{dateTimePicker1.Value}', makhoa = '{combox_khoa.SelectedValue="makhoa"}', hinhanh = '{txt_hinhanh.Text}' WHERE masv = '{txt_masv.Text}'";
             image_sv.Image.Save(Application.StartupPath + $@"\\Resources\\{txt_hinhanh.Text}");
             ketnoi.changeDB(sql);
             loadData("SELECT * FROM SINHVIEN");
@@ -108,14 +132,15 @@ namespace connectDB
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string selectedValue = combox_khoa.SelectedItem.ToString();
 
             if (c == 0)
             {
-                string sql = $@"SELECT * FROM SINHVIEN WHERE makhoa = '{((DataRowView)combox_khoa.SelectedItem)["makhoa"]}'";
+                string sql = $@"SELECT * FROM SINHVIEN WHERE makhoa = '{selectedValue}'";
                 dataGridView1.DataSource = ketnoi.loadData(sql);
             }
 
-            if (((DataRowView)combox_khoa.SelectedItem)["makhoa"].ToString() == "XTC")
+            if (selectedValue == "XTC")
             {
                 loadData("SELECT * FROM SINHVIEN");
             }
@@ -132,7 +157,12 @@ namespace connectDB
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            string sql = $@"SELECT * FROM SINHVIEN WHERE masv like '%{txt_search.Text}%' OR hoten like N'%{txt_search.Text}%' OR hinhanh like '%{txt_search.Text}%'";
+
+            string content = Interaction.InputBox("mời bạn nhập vào ô bên dưới để tìm ");
+
+
+
+            string sql = $@"SELECT * FROM SINHVIEN WHERE masv like '%{content}%' OR hoten like N'%{content}%' OR hinhanh like '%{content}%'";
             loadData(sql);
         }
 
@@ -146,7 +176,9 @@ namespace connectDB
             }
         }
 
-
-
+        private void btn_update_grid_Click(object sender, EventArgs e)
+        {
+            ketnoi.updateGrid();
+        }
     }
 }

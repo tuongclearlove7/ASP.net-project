@@ -14,6 +14,10 @@ namespace connectDB
 
         static string dbName = "DBsinhvien.mdf";
         SqlConnection connection;
+        SqlDataAdapter da;
+        DataTable dt;
+
+
         string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\clearlove7\Documents\GitHub\ASP.net-project\WindowsFormsApp1\connectDB\{dbName};Integrated Security=True";
         public connectDB()
         {
@@ -24,9 +28,43 @@ namespace connectDB
         {
 
             SqlCommand cmd = new SqlCommand(sql, connection);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
             da.Fill(dt);
+            return dt;
+        }
+
+        public DataSet loadDataSet(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "sinhvien");
+
+            return ds;
+        }
+
+        public void loadReader(string sql, ComboBox cb, string column)
+        {
+            SqlCommand cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
+            cmd.CommandText = sql;
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cb.Items.Add(dr[column]);
+                cb.Items.Add(dr["makhoa"]);
+            }
+            connection.Close();
+
+        }
+
+        public DataTable updateGrid()
+        {
+            SqlCommandBuilder scb = new SqlCommandBuilder(da);
+            da.Update(dt);
+
             return dt;
         }
 

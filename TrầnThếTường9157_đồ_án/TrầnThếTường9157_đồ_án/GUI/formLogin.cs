@@ -22,11 +22,8 @@ namespace TrầnThếTường9157_đồ_án
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
-            if (sender is formLogin)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
+
         }
 
         private void btn_login_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.image_sv = new System.Windows.Forms.PictureBox();
             this.txt_hinhanh = new System.Windows.Forms.TextBox();
+            this.btn_update_grid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_sv)).BeginInit();
             this.SuspendLayout();
@@ -208,11 +209,22 @@
             this.txt_hinhanh.Size = new System.Drawing.Size(215, 22);
             this.txt_hinhanh.TabIndex = 16;
             // 
+            // btn_update_grid
+            // 
+            this.btn_update_grid.Location = new System.Drawing.Point(783, 378);
+            this.btn_update_grid.Name = "btn_update_grid";
+            this.btn_update_grid.Size = new System.Drawing.Size(110, 50);
+            this.btn_update_grid.TabIndex = 17;
+            this.btn_update_grid.Text = "update grid";
+            this.btn_update_grid.UseVisualStyleBackColor = true;
+            this.btn_update_grid.Click += new System.EventHandler(this.btn_update_grid_Click);
+            // 
             // app_quanly_sinhvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 544);
+            this.Controls.Add(this.btn_update_grid);
             this.Controls.Add(this.txt_hinhanh);
             this.Controls.Add(this.image_sv);
             this.Controls.Add(this.txt_search);
@@ -259,5 +271,6 @@
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.PictureBox image_sv;
         private System.Windows.Forms.TextBox txt_hinhanh;
+        private System.Windows.Forms.Button btn_update_grid;
     }
 }

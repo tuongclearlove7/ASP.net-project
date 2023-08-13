@@ -47,8 +47,7 @@ namespace TrầnThếTường9157_đồ_án
             try
             {
                 int res = cmd.ExecuteNonQuery();
-                if (res >= 1)
-                    MessageBox.Show("successfully");
+                if (res >= 1) MessageBox.Show("successfully");
                 else MessageBox.Show("Vui lòng nhập vào mã!");
             }
             catch (Exception error)

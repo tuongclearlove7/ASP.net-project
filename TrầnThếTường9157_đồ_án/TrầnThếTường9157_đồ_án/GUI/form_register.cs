@@ -68,7 +68,7 @@ namespace TrầnThếTường9157_đồ_án
         private void form_register_Closing(object sender, FormClosingEventArgs e)
         {
 
-            if (sender is form_register) Application.Exit();
+             Application.Exit();
         }
 
 

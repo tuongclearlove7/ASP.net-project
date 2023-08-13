@@ -40,7 +40,6 @@ namespace TrầnThếTường9157_đồ_án.BLL
             DataTable dt = DAL_NCDK.DAL_loadData();
             DataTable dt_ad = DAL_NCDK.DAL_loadDataAdmin();
            
-            
             manv = (int)((DataRowView)APP.cb_nhanvat.SelectedItem)["manhanvat"];
             
             if (!string.IsNullOrEmpty(APP.txt_tendangnhap.Text) && !string.IsNullOrEmpty(APP.txt_matkhau.Text)
@@ -51,6 +50,7 @@ namespace TrầnThếTường9157_đồ_án.BLL
                 if (comfirmAD < 1)
                 {
                     int comfirm = DAL_NCDK.DAL_comfirm_dk();
+
                     if (dt != null && dt.Rows.Count > 0)
                     {
                         foreach (DataRow row in dt.Rows)

@@ -150,8 +150,6 @@ namespace TrầnThếTường9157_đồ_án
 
         private void cb_nhanvat_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             switch (c)
             {
                 case false:

@@ -51,7 +51,6 @@ namespace TrầnThếTường9157_đồ_án.DAL
 
         public int DAL_comfirm_dk()
         {
-          //  string sql = $@"SELECT COUNT(*) FROM NGUOICHOI";
             string sql = $@"SELECT MAX(manguoichoi) FROM NGUOICHOI";
             return (int)ketnoi.countRecord(sql);
         }
